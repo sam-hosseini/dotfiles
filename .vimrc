@@ -17,6 +17,9 @@ filetype plugin indent on
 
 " Put your non-Plugin stuff after this line "
 
+" Setting shell explicitly to bash
+set shell=/bin/bash
+
 " Turning tabs into 4 spaces " 
 set tabstop=4
 set shiftwidth=4
