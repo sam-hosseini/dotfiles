@@ -10,6 +10,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'vim-syntastic/syntastic'
 
 " END PLUGIN LIST "
 
@@ -37,5 +38,9 @@ au VimEnter * NoMatchParen
 
 " Set desired color scheme
 colorscheme dracula
+
+" Syntastic configurations
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 
