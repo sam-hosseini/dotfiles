@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim' " Required
 Plugin 'tpope/vim-sensible'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'rafi/awesome-vim-colorschemes'
 
 " END PLUGIN LIST "
 
@@ -33,5 +34,8 @@ set expandtab
 
 " Disable matchparen plugin at startup
 au VimEnter * NoMatchParen
+
+" Set desired color scheme
+colorscheme dracula
 
 
