@@ -14,6 +14,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'airblade/vim-gitgutter'
+Plugin '907th/vim-auto-save'
 
 " END PLUGIN LIST "
 
@@ -56,5 +57,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " Set Vim's updatetime delay
 set updatetime=1000
+
+" Autosave configurations
+let g:auto_save = 1
 
 
