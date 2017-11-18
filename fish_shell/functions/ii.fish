@@ -1,3 +1,3 @@
 function ii
-    curl ipinfo.io
+    clear; and http ipinfo.io --print=b
 end

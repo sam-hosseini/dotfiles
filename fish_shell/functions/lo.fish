@@ -1,3 +1,3 @@
 function lo
-    git log --oneline $argv
+    clear; and git log --oneline $argv
 end

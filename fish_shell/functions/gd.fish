@@ -1,3 +1,3 @@
 function gd
-    git diff $argv
+    clear; and git diff $argv
 end
