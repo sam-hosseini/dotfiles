@@ -13,6 +13,7 @@ Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'airblade/vim-gitgutter'
 
 " END PLUGIN LIST "
 
@@ -52,4 +53,8 @@ set clipboard=unnamed
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" Set Vim's updatetime delay
+set updatetime=1000
+
 
