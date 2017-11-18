@@ -15,6 +15,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save'
+Plugin 'scrooloose/nerdtree'
 
 " END PLUGIN LIST "
 
@@ -60,5 +61,16 @@ set updatetime=1000
 
 " Autosave configurations
 let g:auto_save = 1
+
+" NERDTree configurations
+" always show hidden files
+let NERDTreeShowHidden = 1
+" open NERDTree when vim starts up with no files specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" map control-n to toggle the tree
+map <C-n> :NERDTreeToggle<CR>
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
