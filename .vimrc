@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' " Required
 Plugin 'tpope/vim-sensible'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'jiangmiao/auto-pairs'
 
 " END PLUGIN LIST "
 
@@ -29,5 +30,8 @@ set expandtab
 "python from powerline.vim import setup as powerline_setup
 "python powerline_setup()
 "python del powerline_setup
+
+" Disable matchparen plugin at startup
+au VimEnter * NoMatchParen
 
 
