@@ -11,6 +11,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " END PLUGIN LIST "
 
@@ -45,4 +47,9 @@ let g:syntastic_check_on_wq = 0
 
 " Making Vim work with system clipboard 
 set clipboard=unnamed
+
+" Snippet engine configuration
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
