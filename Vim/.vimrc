@@ -72,5 +72,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
+" automatically close NerdTree when you open a file
+let NERDTreeQuitOnOpen = 1
+" disable that old “Press ? for help”
+let NERDTreeMinimalUI = 1
+" ignore files
+let NERDTreeIgnore = ['\.swp$', '\.DS_Store$', '\.git$']
 
