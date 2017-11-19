@@ -16,6 +16,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Yggdroot/indentLine'
 
 " END PLUGIN LIST "
 
