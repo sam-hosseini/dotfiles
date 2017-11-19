@@ -77,5 +77,5 @@ let NERDTreeQuitOnOpen = 1
 " disable that old “Press ? for help”
 let NERDTreeMinimalUI = 1
 " ignore files
-let NERDTreeIgnore = ['\.swp$', '\.DS_Store$', '\.git$']
+let NERDTreeIgnore = ['\.swp$', '\.DS_Store$', '\.git$', '\.node_modules$']
 
