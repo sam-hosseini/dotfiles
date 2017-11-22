@@ -85,3 +85,6 @@ let NERDTreeIgnore = ['\.swp$', '\.DS_Store$', '\.git$', '\.node_modules$']
 nmap <CR> :write<CR>
 cabbrev w use enter to save the file
 
+" Show only filename in statusline and enable line number 
+set statusline=%f
+set number
