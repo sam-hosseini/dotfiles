@@ -30,9 +30,10 @@ filetype plugin indent on
 set shell=/bin/bash
 
 " Turning tabs into 4 spaces " 
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set tabstop=4 " use 4 spaces to represent tab
+set softtabstop=4
+set shiftwidth=4 " number of spaces to use for auto indent
+set expandtab " enter spaces when tab is pressed
 
 " Uncomment following lines for Powerline configuration
 "python from powerline.vim import setup as powerline_setup
@@ -61,7 +62,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 set updatetime=1000
 
 " Autosave configurations
-let g:auto_save = 1
+let g:auto_save = 0
 
 " NERDTree configurations
 " always show hidden files
@@ -79,4 +80,8 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 " ignore files
 let NERDTreeIgnore = ['\.swp$', '\.DS_Store$', '\.git$', '\.node_modules$']
+
+" Re-map enter to save the file
+nmap <CR> :write<CR>
+cabbrev w use enter to save the file
 
