@@ -9,7 +9,7 @@ set --global --export LANG en_US.UTF-8
 set --global --export EDITOR vim 
 
 # Configuration for Powerline
-set --local POWERLINE_ROOT_REPO /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
+set --global --export POWERLINE_ROOT_REPO /usr/local/lib/python3.6/site-packages
 set fish_function_path $fish_function_path "$POWERLINE_ROOT_REPO/powerline/bindings/fish"
 powerline-daemon --quiet
 powerline-setup
