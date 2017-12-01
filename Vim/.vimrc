@@ -88,3 +88,6 @@ cabbrev w use enter to save the file
 " Show only filename in statusline and enable line number 
 set statusline=%f
 set number
+
+" Preserving soft/hard links https://goo.gl/QDC1sU
+set backupcopy=yes
