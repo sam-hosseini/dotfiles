@@ -91,3 +91,8 @@ set number
 
 " Preserving soft/hard links https://goo.gl/QDC1sU
 set backupcopy=yes
+
+" YouCompleteMe configurations
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
