@@ -18,6 +18,7 @@ Plugin '907th/vim-auto-save'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'djoshea/vim-autoread'
+Plugin 'terryma/vim-multiple-cursors'
 
 " END PLUGIN LIST "
 
