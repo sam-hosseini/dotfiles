@@ -72,8 +72,8 @@ let NERDTreeShowHidden = 1
 " open NERDTree when vim starts up with no files specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" map control-n to toggle the tree
-map <C-n> :NERDTreeToggle<CR>
+" map control-o, to toggle the tree
+map <C-o> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " automatically close NerdTree when you open a file
