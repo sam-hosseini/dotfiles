@@ -1,12 +1,16 @@
 # Remove fish_greeting
 set fish_greeting
 
+####### Environment Variables #######
+# Disabling bytecode (.pyc) files
+set --global --export PYTHONDONTWRITEBYTECODE 1
+
 # Set locale
 set --global --export LC_ALL en_US.UTF-8
 set --global --export LANG en_US.UTF-8
 
 # Set EDITOR
-set --global --export EDITOR vim 
+set --global --export EDITOR vim
 
 # Configuration for Powerline
 set --global --export POWERLINE_ROOT_REPO /usr/local/lib/python3.6/site-packages
