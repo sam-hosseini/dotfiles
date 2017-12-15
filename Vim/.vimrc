@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'djoshea/vim-autoread'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " END PLUGIN LIST "
 
@@ -31,7 +32,7 @@ filetype plugin indent on
 " Setting shell explicitly to bash
 set shell=/bin/bash
 
-" Turning tabs into 4 spaces " 
+" Turning tabs into 4 spaces "
 set tabstop=4 " use 4 spaces to represent tab
 set softtabstop=4
 set shiftwidth=4 " number of spaces to use for auto indent
@@ -52,7 +53,7 @@ colorscheme dracula
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Making Vim work with system clipboard 
+" Making Vim work with system clipboard
 set clipboard=unnamed
 
 " Snippet engine configuration
@@ -87,7 +88,7 @@ let NERDTreeIgnore = ['\.swp$', '\.DS_Store$', '\.git$', '\.node_modules$']
 nmap <CR> :write<CR>
 cabbrev w use enter to save the file
 
-" Show only filename in statusline and enable line number 
+" Show only filename in statusline and enable line number
 set statusline=%f
 set number
 
@@ -98,3 +99,5 @@ set backupcopy=yes
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
+" vim-better-whitespace plugin configurations
+autocmd BufEnter * EnableStripWhitespaceOnSave
