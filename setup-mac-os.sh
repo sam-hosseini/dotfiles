@@ -6,6 +6,7 @@ main() {
     brew_install mas
     login_to_app_store
     install_packages_with_brewfile
+    change_shell_to_fish
 }
 
 function ask_for_sudo() {
@@ -59,6 +60,25 @@ function brew_install() {
         brew install "$package_to_install"
         coloredEcho "Package ${package_to_install} successfully installed." green
     fi
+}
+
+function change_shell_to_fish() {
+    user=$(whoami)
+    coloredEcho "Fish shell setup..." blue
+    coloredEcho "Adding Fish executable to /etc/shells"  magenta
+    if grep --fixed-strings --line-regexp --quiet "/usr/local/bin/fish" /etc/shells; then
+        coloredEcho "Fish executable already exists in /etc/shells" green
+    else
+        coloredEcho "Switching from \"${user}\" to \"root\"" magenta
+        sudo su << END
+echo /usr/local/bin/fish >> /etc/shells
+END
+        coloredEcho "Switched from \"root\" to \"${user}\"" magenta
+        coloredEcho "Fish executable successfully added to /etc/shells" green
+    fi
+    coloredEcho "Switching shell to Fish"  magenta
+    chsh -s /usr/local/bin/fish
+    coloredEcho "Fish shell successfully set for \"${user}\"" green
 }
 
 function coloredEcho() {
