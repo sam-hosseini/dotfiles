@@ -7,6 +7,7 @@ main() {
     login_to_app_store
     install_packages_with_brewfile
     change_shell_to_fish
+    configure_git
 }
 
 function ask_for_sudo() {
@@ -79,6 +80,13 @@ END
     coloredEcho "Switching shell to Fish"  magenta
     chsh -s /usr/local/bin/fish
     coloredEcho "Fish shell successfully set for \"${user}\"" green
+}
+
+function configure_git() {
+    coloredEcho "Configuring git..." blue
+    git config --global user.name "Sajjad Hosseini"
+    git config --global user.email "sajjad.hosseini@futurice.com"
+    coloredEcho "git successfully configured." green
 }
 
 function coloredEcho() {
