@@ -1,6 +1,7 @@
 ##################### taps #####################
 tap "homebrew/core"
 tap "homebrew/bundle"
+tap "homebrew/services"
 tap "caskroom/cask"
 
 ##################### brew #####################
@@ -12,7 +13,7 @@ brew "httpie"
 brew "hub"
 brew "mas"
 brew "pipenv"
-brew "postgresql"
+brew "postgresql", restart_service: :changed
 brew "reattach-to-user-namespace"
 brew "tldr"
 brew "tmux"
