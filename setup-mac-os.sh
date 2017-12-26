@@ -9,6 +9,7 @@ main() {
     change_shell_to_fish
     configure_git
     setup_vim
+    setup_symlinks
 }
 
 function ask_for_sudo() {
@@ -108,6 +109,14 @@ function setup_vim() {
     coloredEcho "vim successfully setup." green
 }
 
+function setup_symlinks() {
+    coloredEcho "Setting up symlinks..." blue
+    coloredEcho "Fetching setup-symlinks.sh from dotfiles repository" magenta
+    url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/setup-symlinks.sh
+    curl --silent "$url" | bash
+    coloredEcho "Symlinks successfully setup." green
+}
+
 function coloredEcho() {
     local exp=$1;
     local color=$2;
@@ -127,6 +136,18 @@ function coloredEcho() {
     tput setaf $color;
     echo "===> $exp";
     tput sgr0;
+}
+
+function info() {
+    coloredEcho "$1" blue
+}
+
+function substep() {
+    coloredEcho "$1" magenta
+}
+
+function success() {
+    coloredEcho "$1" green
 }
 
 main "$@"
