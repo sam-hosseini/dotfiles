@@ -12,7 +12,7 @@ main() {
     pip3_install powerline-status
     setup_symlinks
     setup_vim
-    #configure_iterm2
+    configure_iterm2
 }
 
 function ask_for_sudo() {
@@ -136,7 +136,12 @@ function setup_vim() {
 }
 
 function configure_iterm2() {
-    echo salam
+    info "Configuring iTerm2..."
+    defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -int 1
+    defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/personal/dotfiles/iTerm2"
+    substep "Opening iTerm2"
+    osascript -e 'tell application "iTerm" to activate'
+    success "iTerm2 successfully configured."
 }
 
 function setup_symlinks() {
