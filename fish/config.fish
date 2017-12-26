@@ -2,6 +2,9 @@
 set fish_greeting
 
 ####### Environment Variables #######
+# Ensure homebrew programs will be used before system-provided programs
+set --universal fish_user_paths /usr/local/bin $fish_user_paths
+
 # Disabling bytecode (.pyc) files
 set --global --export PYTHONDONTWRITEBYTECODE 1
 
