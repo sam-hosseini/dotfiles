@@ -8,8 +8,11 @@ main() {
     install_packages_with_brewfile
     change_shell_to_fish
     configure_git
-    setup_vim
+    clone_dotfiles_repo
+    pip3_install powerline-status
     setup_symlinks
+    setup_vim
+    #configure_iterm2
 }
 
 function ask_for_sudo() {
@@ -97,8 +100,25 @@ function configure_git() {
     success "git successfully configured."
 }
 
+function clone_dotfiles_repo() {
+    info "Cloning dotfiles repository into ~/personal/dotfiles ..."
+    if test -e ~/personal/dotfiles; then
+        success "~/personal/dotfiles already exists."
+    else
+        url=https://github.com/Sajjadhosn/dotfiles.git
+        git clone "$url" ~/personal/dotfiles
+        success "Clonned into ~/personal/dotfiles"
+    fi
+}
+
 function setup_vim() {
     info "Setting up vim..."
+    substep "Installing Vundle"
+    if test -e ~/.vim/bundle/Vundle.vim; then
+        substep "Vundle already exists."
+    else
+        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    fi
     substep "Installing all plugins"
     vim +PluginInstall +qall
     substep "Compile the compiled component of YouCompleteMe?"
@@ -115,12 +135,27 @@ function setup_vim() {
     success "vim successfully setup."
 }
 
+function configure_iterm2() {
+    echo salam
+}
+
 function setup_symlinks() {
     info "Setting up symlinks..."
     substep "Fetching setup-symlinks.sh from dotfiles repository"
     url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/setup-symlinks.sh
     curl --silent "$url" | bash
     success "Symlinks successfully setup."
+}
+
+function pip3_install() {
+    package_to_install="$1"
+    info "pip3 install ${package_to_install}"
+    if pip3 --quiet show "$package_to_install"; then
+        success "${package_to_install} already exists."
+    else
+        pip3 install "$package_to_install"
+        success "Package ${package_to_install} successfully installed."
+    fi
 }
 
 function coloredEcho() {
