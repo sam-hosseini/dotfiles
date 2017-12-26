@@ -2,6 +2,7 @@
 tap "homebrew/core"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "caskroom/fonts"
 tap "caskroom/cask"
 
 ##################### brew #####################
@@ -24,6 +25,7 @@ brew "wget"
 brew "yarn"
 brew "youtube-dl"
 brew "z"
+brew "wifi-password"
 
 ##################### cask #####################
 cask "dropbox"
@@ -33,6 +35,7 @@ cask "iterm2"
 cask "spotify"
 cask "transmission"
 cask "vlc"
+cask "caskroom/fonts/font-fira-mono-for-powerline"
 
 ##################### mas #####################
 mas "Amphetamine", id: 937984704
