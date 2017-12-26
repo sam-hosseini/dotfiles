@@ -5,3 +5,8 @@
     curl --silent https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/setup-mac-os.sh | bash
     ```
 
+* Install Oh-My-Fish using custom installer that can be run repeatedly 🐟
+    ```
+    curl --silent https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/fish/omf_installer | fish
+    ```
+
