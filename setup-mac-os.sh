@@ -65,22 +65,29 @@ function brew_install() {
 }
 
 function change_shell_to_fish() {
-    user=$(whoami)
     info "Fish shell setup..."
-    substep "Adding Fish executable to /etc/shells"
-    if grep --fixed-strings --line-regexp --quiet "/usr/local/bin/fish" /etc/shells; then
-        success "Fish executable already exists in /etc/shells"
+    if grep --quiet fish <<< "$SHELL"; then
+        success "Fish shell already exists."
     else
-        substep "Switching from \"${user}\" to \"root\""
-        sudo su << END
+        user=$(whoami)
+        substep "Adding Fish executable to /etc/shells"
+        if grep --fixed-strings --line-regexp --quiet "/usr/local/bin/fish" /etc/shells; then
+            substep "Fish executable already exists in /etc/shells"
+        else
+            substep "Switching from \"${user}\" to \"root\""
+            sudo su << END
 echo /usr/local/bin/fish >> /etc/shells
 END
-        substep "Switched from \"root\" to \"${user}\""
-        success "Fish executable successfully added to /etc/shells"
+            substep "Switched from \"root\" to \"${user}\""
+            substep "Fish executable successfully added to /etc/shells"
+        fi
+        substep "Switching shell to Fish"
+        if chsh -s /usr/local/bin/fish; then
+            success "Fish shell successfully set for \"${user}\""
+        else
+            error "Please try setting the Fish shell again."
+        fi
     fi
-    substep "Switching shell to Fish"
-    chsh -s /usr/local/bin/fish
-    success "Fish shell successfully set for \"${user}\""
 }
 
 function configure_git() {
@@ -148,6 +155,10 @@ function substep() {
 
 function success() {
     coloredEcho "$1" green "========>"
+}
+
+function error() {
+    coloredEcho "$1" red "========>"
 }
 
 main "$@"
