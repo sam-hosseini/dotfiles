@@ -13,113 +13,113 @@ main() {
 }
 
 function ask_for_sudo() {
-    coloredEcho "Prompting for sudo password..." blue
+    info "Prompting for sudo password..."
     sudo --validate
     # Keep-alive
     while true; do sudo --non-interactive true; \
         sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-    coloredEcho "Sudo credentials updated." green
+    success "Sudo credentials updated."
 }
 
 function login_to_app_store() {
-    coloredEcho "Logging into app store..." blue
+    info "Logging into app store..."
     if mas account >/dev/null; then
-        coloredEcho "Already logged in." green
+        success "Already logged in."
     else
         open -a "/Applications/App Store.app"
         until (mas account > /dev/null);
         do
             sleep 3
         done
-        coloredEcho "Login to app store successful." green
+        success "Login to app store successful."
     fi
 }
 
 function install_homebrew() {
-    coloredEcho "Installing Homebrew..." blue
+    info "Installing Homebrew..."
     if hash brew 2>/dev/null; then
-        coloredEcho "Homebrew already exists." green
+        success "Homebrew already exists."
     else
         url=https://raw.githubusercontent.com/Homebrew/install/master/install
         /usr/bin/ruby -e "$(curl -fsSL ${url})"
-        coloredEcho "Homebrew successfully installed." green
+        success "Homebrew successfully installed."
     fi
 }
 
 function install_packages_with_brewfile() {
-    coloredEcho \
-        "Fetching Brewfile from dotfiles repository and installating packages..." blue
+    info "Fetching Brewfile from dotfiles repository and installating packages..."
     url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/brew/macOS.Brewfile
     curl --silent "$url" | brew bundle --file=-
-    coloredEcho "Brewfile packages successfully installed." green
+    success "Brewfile packages successfully installed."
 }
 
 function brew_install() {
     package_to_install=$1
-    coloredEcho "brew install ${package_to_install}" blue
+    info "brew install ${package_to_install}"
     if hash "$package_to_install" 2>/dev/null; then
-        coloredEcho "${package_to_install} already exists." green
+        success "${package_to_install} already exists."
     else
         brew install "$package_to_install"
-        coloredEcho "Package ${package_to_install} successfully installed." green
+        success "Package ${package_to_install} successfully installed."
     fi
 }
 
 function change_shell_to_fish() {
     user=$(whoami)
-    coloredEcho "Fish shell setup..." blue
-    coloredEcho "Adding Fish executable to /etc/shells"  magenta
+    info "Fish shell setup..."
+    substep "Adding Fish executable to /etc/shells"
     if grep --fixed-strings --line-regexp --quiet "/usr/local/bin/fish" /etc/shells; then
-        coloredEcho "Fish executable already exists in /etc/shells" green
+        success "Fish executable already exists in /etc/shells"
     else
-        coloredEcho "Switching from \"${user}\" to \"root\"" magenta
+        substep "Switching from \"${user}\" to \"root\""
         sudo su << END
 echo /usr/local/bin/fish >> /etc/shells
 END
-        coloredEcho "Switched from \"root\" to \"${user}\"" magenta
-        coloredEcho "Fish executable successfully added to /etc/shells" green
+        substep "Switched from \"root\" to \"${user}\""
+        success "Fish executable successfully added to /etc/shells"
     fi
-    coloredEcho "Switching shell to Fish"  magenta
+    substep "Switching shell to Fish"
     chsh -s /usr/local/bin/fish
-    coloredEcho "Fish shell successfully set for \"${user}\"" green
+    success "Fish shell successfully set for \"${user}\""
 }
 
 function configure_git() {
-    coloredEcho "Configuring git..." blue
+    info "Configuring git..."
     git config --global user.name "Sajjad Hosseini"
     git config --global user.email "sajjad.hosseini@futurice.com"
-    coloredEcho "git successfully configured." green
+    success "git successfully configured."
 }
 
 function setup_vim() {
-    coloredEcho "Setting up vim..." blue
-    coloredEcho "Installing all plugins"  magenta
+    info "Setting up vim..."
+    substep "Installing all plugins"
     vim +PluginInstall +qall
-    coloredEcho "Compile the compiled component of YouCompleteMe?"  magenta
+    substep "Compile the compiled component of YouCompleteMe?"
     select response in yes no
     do
         if [ "$response" == "yes" ]; then
-            coloredEcho "Compiling the compiled component of YouCompleteMe"  magenta
+            substep "Compiling the compiled component of YouCompleteMe"
             python3 ~/.vim/bundle/YouCompleteMe/install.py
         else
-            coloredEcho "No compilation needed." green
+            success "No compilation needed."
         fi
         break;
     done
-    coloredEcho "vim successfully setup." green
+    success "vim successfully setup."
 }
 
 function setup_symlinks() {
-    coloredEcho "Setting up symlinks..." blue
-    coloredEcho "Fetching setup-symlinks.sh from dotfiles repository" magenta
+    info "Setting up symlinks..."
+    substep "Fetching setup-symlinks.sh from dotfiles repository"
     url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/setup-symlinks.sh
     curl --silent "$url" | bash
-    coloredEcho "Symlinks successfully setup." green
+    success "Symlinks successfully setup."
 }
 
 function coloredEcho() {
-    local exp=$1;
-    local color=$2;
+    local exp="$1";
+    local color="$2";
+    local arrow="$3";
     if ! [[ $color =~ '^[0-9]$' ]] ; then
        case $(echo $color | tr '[:upper:]' '[:lower:]') in
         black) color=0 ;;
@@ -133,21 +133,21 @@ function coloredEcho() {
        esac
     fi
     tput bold;
-    tput setaf $color;
-    echo "===> $exp";
+    tput setaf "$color";
+    echo "$arrow $exp";
     tput sgr0;
 }
 
 function info() {
-    coloredEcho "$1" blue
+    coloredEcho "$1" blue "========>"
 }
 
 function substep() {
-    coloredEcho "$1" magenta
+    coloredEcho "$1" magenta "===="
 }
 
 function success() {
-    coloredEcho "$1" green
+    coloredEcho "$1" green "========>"
 }
 
 main "$@"
