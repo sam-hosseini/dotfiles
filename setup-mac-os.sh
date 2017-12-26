@@ -8,6 +8,7 @@ main() {
     install_packages_with_brewfile
     change_shell_to_fish
     configure_git
+    setup_vim
 }
 
 function ask_for_sudo() {
@@ -87,6 +88,24 @@ function configure_git() {
     git config --global user.name "Sajjad Hosseini"
     git config --global user.email "sajjad.hosseini@futurice.com"
     coloredEcho "git successfully configured." green
+}
+
+function setup_vim() {
+    coloredEcho "Setting up vim..." blue
+    coloredEcho "Installing all plugins"  magenta
+    vim +PluginInstall +qall
+    coloredEcho "Compile the compiled component of YouCompleteMe?"  magenta
+    select response in yes no
+    do
+        if [ "$response" == "yes" ]; then
+            coloredEcho "Compiling the compiled component of YouCompleteMe"  magenta
+            python3 ~/.vim/bundle/YouCompleteMe/install.py
+        else
+            coloredEcho "No compilation needed." green
+        fi
+        break;
+    done
+    coloredEcho "vim successfully setup." green
 }
 
 function coloredEcho() {
