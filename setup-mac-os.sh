@@ -9,7 +9,7 @@ main() {
     change_shell_to_fish
     configure_git
     clone_dotfiles_repo
-    pip3_install powerline-status
+    pip2_install powerline-status
     setup_symlinks
     setup_vim
     configure_iterm2
@@ -165,13 +165,13 @@ function setup_symlinks() {
     success "Symlinks successfully setup."
 }
 
-function pip3_install() {
+function pip2_install() {
     package_to_install="$1"
-    info "pip3 install ${package_to_install}"
-    if pip3 --quiet show "$package_to_install"; then
+    info "pip2 install ${package_to_install}"
+    if pip2 --quiet show "$package_to_install"; then
         success "${package_to_install} already exists."
     else
-        pip3 install "$package_to_install"
+        pip2 install "$package_to_install"
         success "Package ${package_to_install} successfully installed."
     fi
 }
