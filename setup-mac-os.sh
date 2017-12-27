@@ -148,17 +148,6 @@ function setup_vim() {
     fi
     substep "Installing all plugins"
     vim +PluginInstall +qall
-    substep "Compile the compiled component of YouCompleteMe?"
-    select response in yes no
-    do
-        if [ "$response" == "yes" ]; then
-            substep "Compiling the compiled component of YouCompleteMe"
-            python3 ~/.vim/bundle/YouCompleteMe/install.py
-        else
-            success "No compilation needed."
-        fi
-        break;
-    done
     success "vim successfully setup."
 }
 
