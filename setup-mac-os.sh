@@ -158,10 +158,30 @@ function configure_iterm2() {
 }
 
 function setup_symlinks() {
+    POWERLINE_ROOT_REPO=/usr/local/lib/python2.7/site-packages
     info "Setting up symlinks..."
-    substep "Fetching setup-symlinks.sh from dotfiles repository"
-    url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/setup-symlinks.sh
-    curl --silent "$url" | bash
+
+    substep "Symlinking vim"
+    rm -f ~/.vimrc
+    ln -s "${DOTFILES_REPO}/vim/.vimrc" ~/.vimrc
+
+    substep "Symlinking fish"
+    rm -rf ~/.config/fish/{completions,functions,config.fish}
+    rm -rf ~/.config/omf
+    ln -s "${DOTFILES_REPO}/fish/completions" ~/.config/fish/completions
+    ln -s "${DOTFILES_REPO}/fish/functions"   ~/.config/fish/functions
+    ln -s "${DOTFILES_REPO}/fish/config.fish" ~/.config/fish/config.fish
+    ln -s "${DOTFILES_REPO}/fish/oh_my_fish"  ~/.config/omf
+
+    substep "Symlinking powerline"
+    rm -rf "${POWERLINE_ROOT_REPO}/powerline/config_files"
+    ln -s "${DOTFILES_REPO}/powerline" \
+          "${POWERLINE_ROOT_REPO}/powerline/config_files"
+
+    substep "Symlinking tmux"
+    rm -f ~/.tmux.conf
+    ln -s "${DOTFILES_REPO}/tmux/.tmux.conf" ~/.tmux.conf
+
     success "Symlinks successfully setup."
 }
 
