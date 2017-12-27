@@ -104,10 +104,20 @@ function clone_dotfiles_repo() {
     info "Cloning dotfiles repository into ~/personal/dotfiles ..."
     if test -e ~/personal/dotfiles; then
         success "~/personal/dotfiles already exists."
+        pull_latest ~/personal/dotfiles
     else
         url=https://github.com/Sajjadhosn/dotfiles.git
         git clone "$url" ~/personal/dotfiles
         success "Clonned into ~/personal/dotfiles"
+    fi
+}
+
+function pull_latest() {
+    info "Pulling latest changes in ${1} repository..."
+    if git -C "$1" pull origin master; then
+        success "Pull successful in ${1} repository."
+    else
+        error "Please pull the latest changes in ${1} repository manually."
     fi
 }
 
@@ -116,6 +126,7 @@ function setup_vim() {
     substep "Installing Vundle"
     if test -e ~/.vim/bundle/Vundle.vim; then
         substep "Vundle already exists."
+        pull_latest ~/.vim/bundle/Vundle.vim
     else
         git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     fi
