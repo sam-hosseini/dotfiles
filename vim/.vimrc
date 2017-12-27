@@ -91,11 +91,6 @@ let NERDTreeIgnore = ['\.swp$', '\.DS_Store$', '\.git$', '\.node_modules$']
 nmap <CR> :write<CR>
 cabbrev w use enter to save the file
 
-" Statusline configuration
-set statusline=%f      "filename
-set statusline+=%=     "left/right separator
-set statusline+=%c     "cursor column
-
 " Show line number next to lines
 set number
 
