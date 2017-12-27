@@ -38,10 +38,13 @@ set softtabstop=4
 set shiftwidth=4 " number of spaces to use for auto indent
 set expandtab " enter spaces when tab is pressed
 
-" Uncomment following lines for Powerline configuration
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
+" Powerline configuration
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set laststatus=2 " Always display the statusline in all windows
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 " Disable matchparen plugin at startup
 au VimEnter * NoMatchParen
