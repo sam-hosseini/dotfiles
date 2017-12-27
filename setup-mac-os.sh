@@ -1,17 +1,32 @@
 #!/usr/bin/env bash
 
 main() {
+    # First things first, asking for sudo credentials
     ask_for_sudo
+    # Installing Homebrew, the basis of anything and everything
     install_homebrew
+    # Installing mas using brew as the requirement for login_to_app_store
     brew_install mas
+    # Ensuring the user is logged in the App Store so that
+    # install_packages_with_brewfile can install App Store applications
+    # using mas cli application
     login_to_app_store
-    install_packages_with_brewfile
-    change_shell_to_fish
-    configure_git
+    # Cloning Dotfiles repository for install_packages_with_brewfile
+    # to have access to Brewfile
     clone_dotfiles_repo
+    # Installing all packages in Dotfiles repository's Brewfile
+    install_packages_with_brewfile
+    # Changing default shell to Fish
+    change_shell_to_fish
+    # Configuring git config file
+    configure_git
+    # Installing powerline-status so that setup_symlinks can setup the symlinks
     pip2_install powerline-status
+    # Setting up symlinks so that setup_vim can install all plugins
     setup_symlinks
+    # Setting up Vim
     setup_vim
+    # Configuring iTerm2
     configure_iterm2
 }
 
@@ -52,9 +67,8 @@ function install_homebrew() {
 }
 
 function install_packages_with_brewfile() {
-    info "Fetching Brewfile from dotfiles repository and installating packages..."
-    url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/brew/macOS.Brewfile
-    curl --silent "$url" | brew bundle --file=-
+    info "Installing packages within ${DOTFILES_REPO}/brew/macOS.Brewfile ..."
+    brew bundle --file=$DOTFILES_REPO/brew/macOS.Brewfile
     success "Brewfile packages successfully installed."
 }
 
