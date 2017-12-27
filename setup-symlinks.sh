@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DOTFILE_REPO=~/personal/dotfiles
-POWERLINE_ROOT_REPO=/usr/local/lib/python3.6/site-packages
+POWERLINE_ROOT_REPO=/usr/local/lib/python2.7/site-packages
 
 # vim
 rm -f ~/.vimrc
