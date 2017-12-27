@@ -88,8 +88,12 @@ let NERDTreeIgnore = ['\.swp$', '\.DS_Store$', '\.git$', '\.node_modules$']
 nmap <CR> :write<CR>
 cabbrev w use enter to save the file
 
-" Show only filename in statusline and enable line number
-set statusline=%f
+" Statusline configuration
+set statusline=%f      "filename
+set statusline+=%=     "left/right separator
+set statusline+=%c     "cursor column
+
+" Show line number next to lines
 set number
 
 " Preserving soft/hard links https://goo.gl/QDC1sU
