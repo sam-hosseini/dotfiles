@@ -50,7 +50,7 @@ set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusl
 au VimEnter * NoMatchParen
 
 " Set desired color scheme
-colorscheme dracula
+silent! colorscheme dracula
 
 " Syntastic configurations
 let g:syntastic_check_on_open = 1
