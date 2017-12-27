@@ -15,6 +15,8 @@ main() {
     configure_iterm2
 }
 
+DOTFILES_REPO=~/personal/dotfiles
+
 function ask_for_sudo() {
     info "Prompting for sudo password..."
     sudo --validate
@@ -101,14 +103,14 @@ function configure_git() {
 }
 
 function clone_dotfiles_repo() {
-    info "Cloning dotfiles repository into ~/personal/dotfiles ..."
-    if test -e ~/personal/dotfiles; then
-        success "~/personal/dotfiles already exists."
-        pull_latest ~/personal/dotfiles
+    info "Cloning dotfiles repository into ${DOTFILES_REPO} ..."
+    if test -e $DOTFILES_REPO; then
+        success "${DOTFILES_REPO} already exists."
+        pull_latest $DOTFILES_REPO
     else
         url=https://github.com/Sajjadhosn/dotfiles.git
-        git clone "$url" ~/personal/dotfiles
-        success "Clonned into ~/personal/dotfiles"
+        git clone "$url" $DOTFILES_REPO
+        success "Clonned into ${DOTFILES_REPO}"
     fi
 }
 
@@ -149,7 +151,7 @@ function setup_vim() {
 function configure_iterm2() {
     info "Configuring iTerm2..."
     defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -int 1
-    defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/personal/dotfiles/iTerm2"
+    defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${DOTFILES_REPO}/iTerm2"
     substep "Opening iTerm2"
     osascript -e 'tell application "iTerm" to activate'
     success "iTerm2 successfully configured."
