@@ -26,6 +26,8 @@ main() {
     setup_symlinks
     # Setting up Vim
     setup_vim
+    # Setting up tmux
+    setup_tmux
     # Configuring iTerm2
     configure_iterm2
 }
@@ -149,6 +151,22 @@ function setup_vim() {
     substep "Installing all plugins"
     vim +PluginInstall +qall 2> /dev/null
     success "vim successfully setup."
+}
+
+function setup_tmux() {
+    info "Setting up tmux..."
+    substep "Installing tpm"
+    if test -e ~/.tmux/plugins/tpm; then
+        substep "tpm already exists."
+        pull_latest ~/.tmux/plugins/tpm
+    else
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    fi
+    substep "Sourcing tmux configuration file"
+    tmux source-file ~/.tmux.conf
+    substep "Installing all plugins"
+    ~/.tmux/plugins/tpm/bin/./install_plugins
+    success "tmux successfully setup."
 }
 
 function configure_iterm2() {
