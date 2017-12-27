@@ -147,7 +147,7 @@ function setup_vim() {
         git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     fi
     substep "Installing all plugins"
-    vim +PluginInstall +qall
+    vim +PluginInstall +qall 2> /dev/null
     success "vim successfully setup."
 }
 
