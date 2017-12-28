@@ -99,7 +99,6 @@ Options:
     if is_install_dir "$OMF_PATH"
       say "Existing installation detected at $OMF_PATH"
 
-      confirm_yes "Would you like to remove the existing installation?"
       uninstall_omf
     else
       abort "Target directory $OMF_PATH already exists"
@@ -345,7 +344,6 @@ function uninstall_omf
     say (set_color -o ^ /dev/null)"Your configuration will not be modified. You may need to remove Oh My Fish startup code from $FISH_CONFIG/config.fish."(set_color normal ^ /dev/null)
   end
 
-  confirm_yes "Are you sure you want to continue?"
   say "Uninstalling from $OMF_PATH..."
 
   # Trigger package uninstall events
