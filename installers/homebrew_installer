@@ -231,8 +231,6 @@ if should_install_command_line_tools?
   ohai "The Xcode Command Line Tools will be installed."
 end
 
-wait_for_user if STDIN.tty? && !ENV["TRAVIS"]
-
 if File.directory? HOMEBREW_PREFIX
   sudo "/bin/chmod", "u+rwx", *chmods unless chmods.empty?
   sudo "/bin/chmod", "g+rwx", *group_chmods unless group_chmods.empty?
