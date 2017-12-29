@@ -7,6 +7,6 @@
 
 * Install Oh-My-Fish using custom installer that can be run repeatedly 🐟
     ```
-    curl --silent https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/fish/omf_installer | fish
+    curl --silent https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/installers/oh_my_fish_installer | fish
     ```
 
