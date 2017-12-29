@@ -103,3 +103,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 " vim-better-whitespace plugin configurations
 autocmd BufEnter * EnableStripWhitespaceOnSave
+
+" Switch between tabs with Shift-h and Shift-l
+nnoremap H gT
+nnoremap L gt
