@@ -36,11 +36,15 @@ DOTFILES_REPO=~/personal/dotfiles
 
 function ask_for_sudo() {
     info "Prompting for sudo password..."
-    sudo --validate
-    # Keep-alive
-    while true; do sudo --non-interactive true; \
-        sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-    success "Sudo credentials updated."
+    if sudo --validate; then
+        # Keep-alive
+        while true; do sudo --non-interactive true; \
+            sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+        success "Sudo credentials updated."
+    else
+        error "Obtaining sudo credentials failed."
+        exit 1
+    fi
 }
 
 function login_to_app_store() {
@@ -62,26 +66,38 @@ function install_homebrew() {
     if hash brew 2>/dev/null; then
         success "Homebrew already exists."
     else
-        url=https://raw.githubusercontent.com/Homebrew/install/master/install
-        /usr/bin/ruby -e "$(curl -fsSL ${url})"
-        success "Homebrew successfully installed."
+url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/installers/homebrew_installer
+        if /usr/bin/ruby -e "$(curl -fsSL ${url})"; then
+            success "Homebrew installation succeeded."
+        else
+            error "Homebrew installation failed."
+            exit 1
+        fi
     fi
 }
 
 function install_packages_with_brewfile() {
     info "Installing packages within ${DOTFILES_REPO}/brew/macOS.Brewfile ..."
-    brew bundle --file=$DOTFILES_REPO/brew/macOS.Brewfile
-    success "Brewfile packages successfully installed."
+    if brew bundle --file=$DOTFILES_REPO/brew/macOS.Brewfile; then
+        success "Brewfile installation succeeded."
+    else
+        error "Brewfile installation failed."
+        exit 1
+    fi
 }
 
 function brew_install() {
-    package_to_install=$1
+    package_to_install="$1"
     info "brew install ${package_to_install}"
     if hash "$package_to_install" 2>/dev/null; then
         success "${package_to_install} already exists."
     else
-        brew install "$package_to_install"
-        success "Package ${package_to_install} successfully installed."
+        if brew install "$package_to_install"; then
+            success "Package ${package_to_install} installation succeeded."
+        else
+            error "Package ${package_to_install} installation failed."
+            exit 1
+        fi
     fi
 }
 
@@ -95,15 +111,13 @@ function change_shell_to_fish() {
         if grep --fixed-strings --line-regexp --quiet "/usr/local/bin/fish" /etc/shells; then
             substep "Fish executable already exists in /etc/shells"
         else
-            substep "Switching from \"${user}\" to \"root\""
             sudo su << END
 echo /usr/local/bin/fish >> /etc/shells
 END
-            substep "Switched from \"root\" to \"${user}\""
             substep "Fish executable successfully added to /etc/shells"
         fi
-        substep "Switching shell to Fish"
-        if chsh -s /usr/local/bin/fish; then
+        substep "Switching shell to Fish for \"${user}\""
+        if sudo chsh -s /usr/local/bin/fish "$user"; then
             success "Fish shell successfully set for \"${user}\""
         else
             error "Please try setting the Fish shell again."
@@ -112,27 +126,37 @@ END
 }
 
 function configure_git() {
+    username="Sajjad Hosseini"
+    email="sajjad.hosseini@futurice.com"
+
     info "Configuring git..."
-    git config --global user.name "Sajjad Hosseini"
-    git config --global user.email "sajjad.hosseini@futurice.com"
-    success "git successfully configured."
+    if git config --global user.name "$username" && \
+       git config --global user.email "$email"; then
+        success "git configuration succeeded."
+    else
+        error "git configuration failed."
+    fi
 }
 
 function clone_dotfiles_repo() {
     info "Cloning dotfiles repository into ${DOTFILES_REPO} ..."
     if test -e $DOTFILES_REPO; then
-        success "${DOTFILES_REPO} already exists."
+        substep "${DOTFILES_REPO} already exists."
         pull_latest $DOTFILES_REPO
     else
         url=https://github.com/Sajjadhosn/dotfiles.git
-        git clone "$url" $DOTFILES_REPO
-        success "Clonned into ${DOTFILES_REPO}"
+        if git clone "$url" $DOTFILES_REPO; then
+            success "Cloned into ${DOTFILES_REPO}"
+        else
+            error "Cloning into ${DOTFILES_REPO} failed."
+            exit 1
+        fi
     fi
 }
 
 function pull_latest() {
     info "Pulling latest changes in ${1} repository..."
-    if git -C "$1" pull origin master; then
+    if git -C $1 pull origin master; then
         success "Pull successful in ${1} repository."
     else
         error "Please pull the latest changes in ${1} repository manually."
@@ -146,10 +170,21 @@ function setup_vim() {
         substep "Vundle already exists."
         pull_latest ~/.vim/bundle/Vundle.vim
     else
-        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+        url=https://github.com/VundleVim/Vundle.vim.git
+        if git clone "$url" ~/.vim/bundle/Vundle.vim; then
+            substep "Vundle installation succeeded."
+        else
+            error "Vundle installation failed."
+            exit 1
+        fi
     fi
     substep "Installing all plugins"
-    vim +PluginInstall +qall 2> /dev/null
+    if vim +PluginInstall +qall 2> /dev/null; then
+        substep "Plugin installation succeeded."
+    else
+        error "Plugin installation failed."
+        exit 1
+    fi
     success "vim successfully setup."
 }
 
@@ -160,60 +195,112 @@ function setup_tmux() {
         substep "tpm already exists."
         pull_latest ~/.tmux/plugins/tpm
     else
-        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+        url=https://github.com/tmux-plugins/tpm
+        if git clone "$url" ~/.tmux/plugins/tpm; then
+            substep "tpm installation succeeded."
+        else
+            error "tpm installation failed."
+            exit 1
+        fi
     fi
-    substep "Sourcing tmux configuration file"
-    tmux source-file ~/.tmux.conf
+
     substep "Installing all plugins"
-    ~/.tmux/plugins/tpm/bin/./install_plugins
+
+    # sourcing .tmux.conf is necessary for tpm
+    tmux source-file ~/.tmux.conf 2> /dev/null
+
+    if ~/.tmux/plugins/tpm/bin/./install_plugins; then
+        substep "Plugin installation succeeded."
+    else
+        error "Plugin installation failed."
+        exit 1
+    fi
     success "tmux successfully setup."
 }
 
 function configure_iterm2() {
     info "Configuring iTerm2..."
-    defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -int 1
-    defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${DOTFILES_REPO}/iTerm2"
+    if \
+        defaults write com.googlecode.iterm2 \
+            LoadPrefsFromCustomFolder -int 1 && \
+        defaults write com.googlecode.iterm2 \
+            PrefsCustomFolder -string "${DOTFILES_REPO}/iTerm2";
+    then
+        success "iTerm2 configuration succeeded."
+    else
+        error "iTerm2 configuration failed."
+        exit 1
+    fi
     substep "Opening iTerm2"
-    osascript -e 'tell application "iTerm" to activate'
-    success "iTerm2 successfully configured."
+    if osascript -e 'tell application "iTerm" to activate'; then
+        substep "iTerm2 activation successful"
+    else
+        error "Failed to activate iTerm2"
+        exit 1
+    fi
 }
 
 function setup_symlinks() {
     POWERLINE_ROOT_REPO=/usr/local/lib/python2.7/site-packages
+
     info "Setting up symlinks..."
 
     substep "Symlinking vim"
-    rm -f ~/.vimrc
-    ln -s "${DOTFILES_REPO}/vim/.vimrc" ~/.vimrc
+    if ln -Ffs ${DOTFILES_REPO}/vim/.vimrc ~/.vimrc;
+    then
+        substep "Symlinking vim done."
+    else
+        error "Symlinking vim failed."
+        exit 1
+    fi
 
     substep "Symlinking fish"
-    rm -rf ~/.config/fish/{completions,functions,config.fish}
-    rm -rf ~/.config/omf
-    ln -s "${DOTFILES_REPO}/fish/completions" ~/.config/fish/completions
-    ln -s "${DOTFILES_REPO}/fish/functions"   ~/.config/fish/functions
-    ln -s "${DOTFILES_REPO}/fish/config.fish" ~/.config/fish/config.fish
-    ln -s "${DOTFILES_REPO}/fish/oh_my_fish"  ~/.config/omf
+    if \
+        ln -Ffs ${DOTFILES_REPO}/fish/completions ~/.config/fish/completions && \
+        ln -Ffs ${DOTFILES_REPO}/fish/functions   ~/.config/fish/functions && \
+        ln -Ffs ${DOTFILES_REPO}/fish/config.fish ~/.config/fish/config.fish && \
+        ln -Ffs ${DOTFILES_REPO}/fish/oh_my_fish  ~/.config/omf;
+    then
+        substep "Symlinking fish done."
+    else
+        error "Symlinking fish failed."
+        exit 1
+    fi
 
     substep "Symlinking powerline"
-    rm -rf "${POWERLINE_ROOT_REPO}/powerline/config_files"
-    ln -s "${DOTFILES_REPO}/powerline" \
-          "${POWERLINE_ROOT_REPO}/powerline/config_files"
+    if ln -Ffs ${DOTFILES_REPO}/powerline ${POWERLINE_ROOT_REPO}/powerline/config_files;
+    then
+        substep "Symlinking powerline done."
+    else
+        error "Symlinking powerline failed."
+        exit 1
+    fi
 
     substep "Symlinking tmux"
-    rm -f ~/.tmux.conf
-    ln -s "${DOTFILES_REPO}/tmux/.tmux.conf" ~/.tmux.conf
+    if ln -Ffs ${DOTFILES_REPO}/tmux/.tmux.conf ~/.tmux.conf;
+    then
+        substep "Symlinking tmux done."
+    else
+        error "Symlinking tmux failed."
+        exit 1
+    fi
 
     success "Symlinks successfully setup."
 }
 
 function pip2_install() {
     package_to_install="$1"
+
     info "pip2 install ${package_to_install}"
     if pip2 --quiet show "$package_to_install"; then
         success "${package_to_install} already exists."
     else
-        pip2 install "$package_to_install"
-        success "Package ${package_to_install} successfully installed."
+        if pip2 install "$package_to_install"; then
+            success "Package ${package_to_install} installation succeeded."
+        else
+            error "Package ${package_to_install} installation failed."
+            exit 1
+        fi
     fi
 }
 
