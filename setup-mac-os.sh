@@ -244,48 +244,28 @@ function setup_symlinks() {
     POWERLINE_ROOT_REPO=/usr/local/lib/python2.7/site-packages
 
     info "Setting up symlinks..."
-
-    substep "Symlinking vim"
-    if ln -Ffs ${DOTFILES_REPO}/vim/.vimrc ~/.vimrc;
-    then
-        substep "Symlinking vim done."
-    else
-        error "Symlinking vim failed."
-        exit 1
-    fi
-
-    substep "Symlinking fish"
-    if \
-        ln -Ffs ${DOTFILES_REPO}/fish/completions ~/.config/fish/completions && \
-        ln -Ffs ${DOTFILES_REPO}/fish/functions   ~/.config/fish/functions && \
-        ln -Ffs ${DOTFILES_REPO}/fish/config.fish ~/.config/fish/config.fish && \
-        ln -Ffs ${DOTFILES_REPO}/fish/oh_my_fish  ~/.config/omf;
-    then
-        substep "Symlinking fish done."
-    else
-        error "Symlinking fish failed."
-        exit 1
-    fi
-
-    substep "Symlinking powerline"
-    if ln -Ffs ${DOTFILES_REPO}/powerline ${POWERLINE_ROOT_REPO}/powerline/config_files;
-    then
-        substep "Symlinking powerline done."
-    else
-        error "Symlinking powerline failed."
-        exit 1
-    fi
-
-    substep "Symlinking tmux"
-    if ln -Ffs ${DOTFILES_REPO}/tmux/.tmux.conf ~/.tmux.conf;
-    then
-        substep "Symlinking tmux done."
-    else
-        error "Symlinking tmux failed."
-        exit 1
-    fi
-
+    symlink "powerline" ${DOTFILES_REPO}/powerline ${POWERLINE_ROOT_REPO}/powerline/config_files
+    symlink "vim" ${DOTFILES_REPO}/vim/.vimrc ~/.vimrc
+    symlink "tmux" ${DOTFILES_REPO}/tmux/.tmux.conf ~/.tmux.conf
+    symlink "fish:completions" ${DOTFILES_REPO}/fish/completions ~/.config/fish/completions
+    symlink "fish:functions" ${DOTFILES_REPO}/fish/functions ~/.config/fish/functions
+    symlink "fish:config.fish" ${DOTFILES_REPO}/fish/config.fish ~/.config/fish/config.fish
+    symlink "fish:oh_my_fish" ${DOTFILES_REPO}/fish/oh_my_fish  ~/.config/omf
     success "Symlinks successfully setup."
+}
+
+function symlink() {
+    application="$1"
+    point_to=$2
+    destination=$3
+
+    info "Symlinking ${application}"
+    if rm -f $destination && ln -s $point_to $destination; then
+        success "Symlinking ${application} done."
+    else
+        error "Symlinking ${application} failed."
+        exit 1
+    fi
 }
 
 function pip2_install() {
