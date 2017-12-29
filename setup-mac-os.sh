@@ -260,7 +260,7 @@ function symlink() {
     destination=$3
 
     info "Symlinking ${application}"
-    if rm -f $destination && ln -s $point_to $destination; then
+    if rm -rf $destination && ln -s $point_to $destination; then
         success "Symlinking ${application} done."
     else
         error "Symlinking ${application} failed."
