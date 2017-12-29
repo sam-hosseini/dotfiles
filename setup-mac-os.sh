@@ -247,6 +247,9 @@ function setup_symlinks() {
     symlink "powerline" ${DOTFILES_REPO}/powerline ${POWERLINE_ROOT_REPO}/powerline/config_files
     symlink "vim" ${DOTFILES_REPO}/vim/.vimrc ~/.vimrc
     symlink "tmux" ${DOTFILES_REPO}/tmux/.tmux.conf ~/.tmux.conf
+
+    # create intermediate directories for fish symlinks to work
+    mkdir -p ~/.config/fish
     symlink "fish:completions" ${DOTFILES_REPO}/fish/completions ~/.config/fish/completions
     symlink "fish:functions" ${DOTFILES_REPO}/fish/functions ~/.config/fish/functions
     symlink "fish:config.fish" ${DOTFILES_REPO}/fish/config.fish ~/.config/fish/config.fish
