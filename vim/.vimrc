@@ -107,3 +107,9 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 " Switch between tabs with Shift-h and Shift-l
 nnoremap H gT
 nnoremap L gt
+
+" Show commands typed in vim, e.g. when pressing the <leader> key
+set showcmd
+
+" Use jj to exit INSERT mode
+inoremap jj <ESC>
