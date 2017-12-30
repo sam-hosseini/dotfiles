@@ -20,6 +20,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'djoshea/vim-autoread'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " END PLUGIN LIST "
 
@@ -113,3 +114,8 @@ set showcmd
 
 " Use jj to exit INSERT mode
 inoremap jj <ESC>
+
+" vim-tmux-navigator configurations
+" Disable tmux navigator when zooming the Vim pane
+let g:tmux_navigator_disable_when_zoomed = 1
+
