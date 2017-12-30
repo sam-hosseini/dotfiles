@@ -119,3 +119,5 @@ inoremap jj <ESC>
 " Disable tmux navigator when zooming the Vim pane
 let g:tmux_navigator_disable_when_zoomed = 1
 
+" Set 15 lines to the cursor when moving vertically using j/k
+set so=15
