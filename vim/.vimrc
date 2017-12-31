@@ -67,7 +67,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " Set Vim's updatetime delay
-set updatetime=1000
+set updatetime=500
 
 " Autosave configurations
 let g:auto_save = 0
