@@ -124,3 +124,16 @@ set so=15
 
 " Map semicolon to colon to avoid the extra shift to go to cmd mode
 nmap ; :
+
+" remap <leader> to space
+let mapleader = "\<Space>"
+
+" source .vimrc with <leader> and r
+noremap <leader>r :source %<cr>
+
+" quit files with <leader> and q
+noremap <leader>q :q<cr>
+
+" toggle paste mode
+set pastetoggle=<leader>p
+
