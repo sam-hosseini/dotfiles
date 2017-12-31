@@ -145,6 +145,20 @@ set pastetoggle=<leader>p
 " clear search pattern with <leader> and c
 noremap <leader>c :noh<CR><CR>:<backspace>
 
+" open a vertical and horizontal split with <leader> and | and - like in tmux
+noremap <leader>\| :vs<CR>
+noremap <leader>- :split<CR>
+
+" resize panes with jklh= and leader
+noremap <leader>= <C-W>=
+noremap <leader>j <C-W>+
+noremap <leader>k <C-W>-
+noremap <leader>l <C-W>>
+noremap <leader>h <C-W><
+
+" disable gitgutter key-mappings for <leader>h to be able to execute immediately
+let g:gitgutter_map_keys = 0
+
 " Modern, highlighted search results
 set hlsearch
 set incsearch
