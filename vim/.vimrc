@@ -151,10 +151,10 @@ noremap <leader>- :split<CR>
 
 " resize panes with jklh= and leader
 noremap <leader>= <C-W>=
-noremap <leader>j <C-W>+
-noremap <leader>k <C-W>-
-noremap <leader>l <C-W>>
-noremap <leader>h <C-W><
+noremap <leader>j <C-W>5+
+noremap <leader>k <C-W>5-
+noremap <leader>l <C-W>5>
+noremap <leader>h <C-W>5<
 
 " disable gitgutter key-mappings for <leader>h to be able to execute immediately
 let g:gitgutter_map_keys = 0
