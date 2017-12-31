@@ -138,6 +138,9 @@ noremap <leader>q :q<cr>
 " toggle paste mode
 set pastetoggle=<leader>p
 
+" clear search pattern with <leader> and c
+noremap <leader>c :noh<CR><CR>:<backspace>
+
 " Modern, highlighted search results
 set hlsearch
 set incsearch
