@@ -129,8 +129,12 @@ nmap ; :
 " remap <leader> to space
 let mapleader = "\<Space>"
 
-" source .vimrc with <leader> and r
-noremap <leader>r :source %<cr>
+" source .vimrc with <leader> and R
+noremap <leader>R :source %<cr>
+
+" refresh nerdtree root node with <leader> and r
+nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
+
 
 " quit files with <leader> and q
 noremap <leader>q :q<cr>
