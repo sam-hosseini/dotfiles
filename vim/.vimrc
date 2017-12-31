@@ -21,6 +21,7 @@ Plugin 'djoshea/vim-autoread'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/nerdcommenter'
 
 " END PLUGIN LIST "
 
