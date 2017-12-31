@@ -168,3 +168,6 @@ set nobackup
 set nowb
 set noswapfile
 
+set wildmode=list:longest,full " Bash-like tab completion
+set colorcolumn=80 " column so I don't go over the line limit
+
