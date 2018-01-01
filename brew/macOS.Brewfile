@@ -37,7 +37,7 @@ cask "iterm2"
 cask "spotify"
 cask "transmission"
 cask "vlc"
-cask "caskroom/fonts/font-fira-mono-for-powerline" # for iTerm2 powerline support
+cask "caskroom/fonts/font-fira-mono-for-powerline" # for iTerm2 powerline
 
 ##################### mas #####################
 mas "Amphetamine", id: 937984704
