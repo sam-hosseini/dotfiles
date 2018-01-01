@@ -30,6 +30,8 @@ main() {
     setup_tmux
     # Configuring iTerm2
     configure_iterm2
+    # Update /etc/hosts
+    update_hosts_file
 }
 
 DOTFILES_REPO=~/personal/dotfiles
@@ -112,10 +114,13 @@ function change_shell_to_fish() {
             "/usr/local/bin/fish" /etc/shells; then
             substep "Fish executable already exists in /etc/shells"
         else
-            sudo su << END
-echo /usr/local/bin/fish >> /etc/shells
-END
-            substep "Fish executable successfully added to /etc/shells"
+            if echo /usr/local/bin/fish | sudo tee -a /etc/shells > /dev/null;
+            then
+                substep "Fish executable successfully added to /etc/shells"
+            else
+                error "Failed to add Fish executable to /etc/shells"
+                exit 1
+            fi
         fi
         substep "Switching shell to Fish for \"${user}\""
         if sudo chsh -s /usr/local/bin/fish "$user"; then
@@ -279,6 +284,31 @@ function symlink() {
     else
         error "Symlinking ${application} failed."
         exit 1
+    fi
+}
+
+function update_hosts_file() {
+    info "Updating /etc/hosts"
+
+    if grep --quiet "someonewhocares" /etc/hosts; then
+        success "/etc/hosts already updated."
+    else
+        substep "Backing up /etc/hosts to /etc/hosts_old"
+        if sudo cp /etc/hosts /etc/hosts_old; then
+            substep "Backup succeeded."
+        else
+            error "Backup failed."
+            exit 1
+        fi
+        substep "Appending ${DOTFILES_REPO}/hosts/hosts content to /etc/hosts"
+        if test -e ${DOTFILES_REPO}/hosts/hosts; then
+            cat ${DOTFILES_REPO}/hosts/hosts | \
+                sudo tee -a /etc/hosts > /dev/null
+            success "/etc/hosts updated."
+        else
+            error "Failed to update /etc/hosts"
+            exit 1
+        fi
     fi
 }
 
