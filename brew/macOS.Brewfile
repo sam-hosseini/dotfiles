@@ -6,6 +6,7 @@ tap "caskroom/fonts"
 tap "caskroom/cask"
 
 ##################### brew #####################
+brew "ack"
 brew "cmake" # for YouCompleteMe vim plugin
 brew "extract_url" # for urlview tmux plugin
 brew "fish"
@@ -30,10 +31,15 @@ brew "youtube-dl"
 brew "z"
 
 ##################### cask #####################
+cask "alfred"
+cask "bartender"
+cask "docker"
 cask "dropbox"
 cask "firefox"
 cask "google-chrome"
 cask "iterm2"
+cask "postico"
+cask "private-internet-access"
 cask "spotify"
 cask "transmission"
 cask "vlc"
