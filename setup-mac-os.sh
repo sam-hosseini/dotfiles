@@ -108,7 +108,8 @@ function change_shell_to_fish() {
     else
         user=$(whoami)
         substep "Adding Fish executable to /etc/shells"
-        if grep --fixed-strings --line-regexp --quiet "/usr/local/bin/fish" /etc/shells; then
+        if grep --fixed-strings --line-regexp --quiet \
+            "/usr/local/bin/fish" /etc/shells; then
             substep "Fish executable already exists in /etc/shells"
         else
             sudo su << END
@@ -244,26 +245,36 @@ function setup_symlinks() {
     POWERLINE_ROOT_REPO=/usr/local/lib/python2.7/site-packages
 
     info "Setting up symlinks..."
-    symlink "powerline" ${DOTFILES_REPO}/powerline ${POWERLINE_ROOT_REPO}/powerline/config_files
     symlink "vim" ${DOTFILES_REPO}/vim/.vimrc ~/.vimrc
     symlink "tmux" ${DOTFILES_REPO}/tmux/.tmux.conf ~/.tmux.conf
-
-    # create intermediate directories for fish symlinks to work
-    mkdir -p ~/.config/fish
-    symlink "fish:completions" ${DOTFILES_REPO}/fish/completions ~/.config/fish/completions
-    symlink "fish:functions" ${DOTFILES_REPO}/fish/functions ~/.config/fish/functions
-    symlink "fish:config.fish" ${DOTFILES_REPO}/fish/config.fish ~/.config/fish/config.fish
+    symlink "powerline" \
+        ${DOTFILES_REPO}/powerline \
+        ${POWERLINE_ROOT_REPO}/powerline/config_files
+    symlink "spectacle" \
+        ${DOTFILES_REPO}/spectacle/Shortcuts.json \
+        ~/Library/Application\ Support/Spectacle/Shortcuts.json
+    symlink "fish:completions" ${DOTFILES_REPO}/fish/completions \
+        ~/.config/fish/completions
+    symlink "fish:functions" ${DOTFILES_REPO}/fish/functions \
+        ~/.config/fish/functions
+    symlink "fish:config.fish" ${DOTFILES_REPO}/fish/config.fish \
+        ~/.config/fish/config.fish
     symlink "fish:oh_my_fish" ${DOTFILES_REPO}/fish/oh_my_fish  ~/.config/omf
     success "Symlinks successfully setup."
 }
 
 function symlink() {
-    application="$1"
+    application=$1
     point_to=$2
     destination=$3
+    destination_dir=$(dirname "$destination")
 
     info "Symlinking ${application}"
-    if rm -rf $destination && ln -s $point_to $destination; then
+    if test ! -e "$destination_dir"; then
+        substep "Creating ${destination_dir}"
+        mkdir -p "$destination_dir"
+    fi
+    if rm -rf "$destination" && ln -s "$point_to" "$destination"; then
         success "Symlinking ${application} done."
     else
         error "Symlinking ${application} failed."
