@@ -1,36 +1,21 @@
 #!/usr/bin/env bash
 
-declare -a AFFECTED_APPS=(
-    "Amphetamine" \
-    "GIPHY CAPTURE" \
-    "Transmission" \
-    "Finder" \
-    "Dock" \
-    "Google Chrome" \
-)
-
 main() {
-    quit_all_affected_apps
     configure_plist_apps # Configure all apps whose configurations are plists
     configure_finder
-    configure_screen
     configure_dock
     configure_chrome
     configure_system
-    start_all_affected_apps
-}
-
-function quit_all_affected_apps() {
-    for app in "${AFFECTED_APPS[@]}"
-    do
-        killall "$app" > /dev/null 2>&1
-    done
 }
 
 function configure_plist_apps() {
+    quit "Amphetamine"
+    quit "GIPHY CAPTURE"
+    quit "Transmission"
     import_plist "com.if.Amphetamine" "Amphetamine.plist"
     import_plist "com.fasthatchapps.gifgrabberosx" "GIPHY_Capture.plist"
     import_plist "org.m0k.transmission" "Transmission.plist"
+    open "Amphetamine"
 }
 
 function configure_system() {
@@ -48,6 +33,7 @@ function configure_chrome() {
 }
 
 function configure_dock() {
+    quit "Dock"
     # Set the icon size of Dock items to 36 pixels
     defaults write com.apple.dock tilesize -int 36
     # Wipe all (default) app icons from the Dock
@@ -88,17 +74,16 @@ function configure_dock() {
     ## Bottom left screen corner → Start screen saver
     defaults write com.apple.dock wvous-bl-corner -int 5
     defaults write com.apple.dock wvous-bl-modifier -int 0
+    open "Dock"
 }
 
-function configure_screen() {
+function configure_finder() {
+    quit "Finder"
     # Save screenshots to Downloads folder
     defaults write com.apple.screencapture location -string "${HOME}/Downloads"
     # Require password immediately after sleep or screen saver begins
     defaults write com.apple.screensaver askForPassword -int 1
     defaults write com.apple.screensaver askForPasswordDelay -int 0
-}
-
-function configure_finder() {
     # allow quitting via ⌘ + q; doing so will also hide desktop icons
     defaults write com.apple.finder QuitMenuItem -bool true
     # disable window animations and Get Info animations
@@ -129,15 +114,19 @@ function configure_finder() {
     defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
     # Disable the warning before emptying the Trash
     defaults write com.apple.finder WarnOnEmptyTrash -bool false
+    quit "Finder"
 }
 
-function start_all_affected_apps() {
-    for app in "${AFFECTED_APPS[@]}"
-    do
-        osascript << EOM
+function quit() {
+    app=$1
+    killall "$app" > /dev/null 2>&1
+}
+
+function open() {
+    app=$1
+    osascript << EOM
 tell application "$app" to activate
 EOM
-    done
 }
 
 function import_plist() {
