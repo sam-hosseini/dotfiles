@@ -89,8 +89,8 @@ nmap <leader>r :NERDTreeFocus<CR>R
 " clear search pattern with <leader> and <space>
 nnoremap <leader><space> :noh<CR><CR>:<backspace>
 
-" open vertical or horizontal splits with <leader> and | or -
-nnoremap <leader>\| :vs<CR>
+" open vertical or horizontal splits with <leader> and \ or -
+nnoremap <leader>\ :vs<CR>
 nnoremap <leader>- :split<CR>
 
 " resize panes with <leader> and jklh=
