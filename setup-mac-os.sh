@@ -32,6 +32,8 @@ main() {
     configure_iterm2
     # Update /etc/hosts
     update_hosts_file
+    # Setting up macOS defaults
+    setup_macOS_defaults
 }
 
 DOTFILES_REPO=~/personal/dotfiles
@@ -309,6 +311,21 @@ function update_hosts_file() {
             error "Failed to update /etc/hosts"
             exit 1
         fi
+    fi
+}
+
+function setup_macOS_defaults() {
+    info "Updating macOS defaults..."
+
+    current_dir=$(pwd)
+    cd ${DOTFILES_REPO}/macOS
+    if bash defaults.sh; then
+        cd $current_dir
+        success "macOS defaults setup succeeded."
+    else
+        cd $current_dir
+        error "macOS defaults setup failed."
+        exit 1
     fi
 }
 
