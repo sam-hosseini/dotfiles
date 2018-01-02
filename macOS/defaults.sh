@@ -5,6 +5,7 @@ declare -a AFFECTED_APPS=(
     "GIPHY CAPTURE" \
     "Transmission" \
     "Finder" \
+    "Dock" \
 )
 
 main() {
@@ -12,6 +13,7 @@ main() {
     configure_plist_apps # Configure all apps whose configurations are plists
     configure_finder
     configure_screen
+    configure_dock
     start_all_affected_apps
 }
 
@@ -26,6 +28,49 @@ function configure_plist_apps() {
     import_plist "com.if.Amphetamine" "Amphetamine.plist"
     import_plist "com.fasthatchapps.gifgrabberosx" "GIPHY_Capture.plist"
     import_plist "org.m0k.transmission" "Transmission.plist"
+}
+
+function configure_dock() {
+    # Set the icon size of Dock items to 36 pixels
+    defaults write com.apple.dock tilesize -int 36
+    # Wipe all (default) app icons from the Dock
+    defaults write com.apple.dock persistent-apps -array
+    # Show only open applications in the Dock
+    defaults write com.apple.dock static-only -bool true
+    # Don’t animate opening applications from the Dock
+    defaults write com.apple.dock launchanim -bool false
+    # Disable Dashboard
+    defaults write com.apple.dashboard mcx-disabled -bool true
+    # Don’t show Dashboard as a Space
+    defaults write com.apple.dock dashboard-in-overlay -bool true
+    # Automatically hide and show the Dock
+    defaults write com.apple.dock autohide -bool true
+    # Remove the auto-hiding Dock delay
+    defaults write com.apple.dock autohide-delay -float 0
+    # Disable the Launchpad gesture (pinch with thumb and three fingers)
+    defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
+
+    ## Hot corners
+    ## Possible values:
+    ##  0: no-op
+    ##  2: Mission Control
+    ##  3: Show application windows
+    ##  4: Desktop
+    ##  5: Start screen saver
+    ##  6: Disable screen saver
+    ##  7: Dashboard
+    ## 10: Put display to sleep
+    ## 11: Launchpad
+    ## 12: Notification Center
+    ## Top left screen corner → Mission Control
+    defaults write com.apple.dock wvous-tl-corner -int 2
+    defaults write com.apple.dock wvous-tl-modifier -int 0
+    ## Top right screen corner → Desktop
+    defaults write com.apple.dock wvous-tr-corner -int 4
+    defaults write com.apple.dock wvous-tr-modifier -int 0
+    ## Bottom left screen corner → Start screen saver
+    defaults write com.apple.dock wvous-bl-corner -int 5
+    defaults write com.apple.dock wvous-bl-modifier -int 0
 }
 
 function configure_screen() {
