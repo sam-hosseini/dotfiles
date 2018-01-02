@@ -6,6 +6,7 @@ declare -a AFFECTED_APPS=(
     "Transmission" \
     "Finder" \
     "Dock" \
+    "Google Chrome" \
 )
 
 main() {
@@ -14,6 +15,8 @@ main() {
     configure_finder
     configure_screen
     configure_dock
+    configure_chrome
+    configure_system
     start_all_affected_apps
 }
 
@@ -28,6 +31,20 @@ function configure_plist_apps() {
     import_plist "com.if.Amphetamine" "Amphetamine.plist"
     import_plist "com.fasthatchapps.gifgrabberosx" "GIPHY_Capture.plist"
     import_plist "org.m0k.transmission" "Transmission.plist"
+}
+
+function configure_system() {
+    # Disable Gatekeeper entirely to get rid of \
+    # “Are you sure you want to open this application?” dialog
+    sudo spctl --master-disable
+}
+
+function configure_chrome() {
+    # Disable the all too sensitive backswipe on trackpads
+    defaults write com.google.Chrome \
+        AppleEnableSwipeNavigateWithScrolls -bool false
+    defaults write com.google.Chrome.canary \
+        AppleEnableSwipeNavigateWithScrolls -bool false
 }
 
 function configure_dock() {
