@@ -132,7 +132,7 @@ EOM
 function import_plist() {
     domain=$1
     filename=$2
-    defaults delete "$domain"
+    defaults delete "$domain" &> /dev/null
     defaults import "$domain" "$filename"
 }
 
