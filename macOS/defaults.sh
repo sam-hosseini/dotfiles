@@ -11,6 +11,7 @@ main() {
     quit_all_affected_apps
     configure_plist_apps # Configure all apps whose configurations are plists
     configure_finder
+    configure_screen
     start_all_affected_apps
 }
 
@@ -25,6 +26,14 @@ function configure_plist_apps() {
     import_plist "com.if.Amphetamine" "Amphetamine.plist"
     import_plist "com.fasthatchapps.gifgrabberosx" "GIPHY_Capture.plist"
     import_plist "org.m0k.transmission" "Transmission.plist"
+}
+
+function configure_screen() {
+    # Save screenshots to Downloads folder
+    defaults write com.apple.screencapture location -string "${HOME}/Downloads"
+    # Require password immediately after sleep or screen saver begins
+    defaults write com.apple.screensaver askForPassword -int 1
+    defaults write com.apple.screensaver askForPasswordDelay -int 0
 }
 
 function configure_finder() {
