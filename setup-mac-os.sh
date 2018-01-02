@@ -250,8 +250,8 @@ function setup_symlinks() {
     POWERLINE_ROOT_REPO=/usr/local/lib/python2.7/site-packages
 
     info "Setting up symlinks..."
-    symlink "vim" ${DOTFILES_REPO}/vim/.vimrc ~/.vimrc
-    symlink "tmux" ${DOTFILES_REPO}/tmux/.tmux.conf ~/.tmux.conf
+    symlink "vim" ${DOTFILES_REPO}/vim/vimrc ~/.vimrc
+    symlink "tmux" ${DOTFILES_REPO}/tmux/tmux.conf ~/.tmux.conf
     symlink "powerline" \
         ${DOTFILES_REPO}/powerline \
         ${POWERLINE_ROOT_REPO}/powerline/config_files
