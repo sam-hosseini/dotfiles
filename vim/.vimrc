@@ -1,12 +1,17 @@
-" Required Section By Vundle "
-set nocompatible
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle initialization
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible " use Vim settings, rather than Vi settings
+set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle
+set shell=/bin/bash " set shell to bash explicitly due to fish incompatibility
+let mapleader = "\<Space>" " remap <leader> to <space>
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 
-" BEGIN PLUGIN LIST "
-Plugin 'VundleVim/Vundle.vim' " Required
-Plugin 'tpope/vim-sensible'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins list
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'rafi/awesome-vim-colorschemes'
@@ -14,7 +19,6 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'airblade/vim-gitgutter'
-Plugin '907th/vim-auto-save'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'djoshea/vim-autoread'
@@ -22,152 +26,165 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdcommenter'
-
-" END PLUGIN LIST "
-
-" Required Section By Vundle "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle finalisation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()
 filetype plugin indent on
 
-" Put your non-Plugin stuff after this line "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Setting shell explicitly to bash
-set shell=/bin/bash
-
-" Turning tabs into 4 spaces "
-set tabstop=4 " use 4 spaces to represent tab
-set softtabstop=4
-set shiftwidth=4 " number of spaces to use for auto indent
-set expandtab " enter spaces when tab is pressed
-
-" Powerline configuration
+" ================ Powerline configuration ========================
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
-set laststatus=2 " Always display the statusline in all windows
-set showtabline=1 " Only show tabline when there's more than 1 tab
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
-" Disable matchparen plugin at startup
-au VimEnter * NoMatchParen
+" ================ vim-better-whitespace configuration =========================
+autocmd BufEnter * EnableStripWhitespaceOnSave
 
-" Set desired color scheme
-silent! colorscheme dracula
+" =========== vim-tmux-navigator configuration ====================
+let g:tmux_navigator_disable_when_zoomed = 1
 
-" Syntastic configurations
+" ================ YouCompleteMe configuration ====================
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+" ================ Syntastic configuration ========================
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Making Vim work with system clipboard
-set clipboard=unnamed
+" ================ GitGutter configuration ========================
+let g:gitgutter_map_keys = 0
 
-" Snippet engine configuration
+" ================ Snippet engine configuration ===================
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-" Set Vim's updatetime delay
-set updatetime=500
-
-" Autosave configurations
-let g:auto_save = 0
-
-" NERDTree configurations
-" always show hidden files
+" ================ NERDTree configuration =========================
+let NERDTreeQuitOnOpen = 1 " automatically close NerdTree when you open a file
+let NERDTreeMinimalUI = 1 " disable that old “Press ? for help”
 let NERDTreeShowHidden = 1
+let NERDTreeIgnore = ['\.swp$', '\.DS_Store$', '\.git$', '\.node_modules$']
+" map control-o, to toggle the tree
+map <C-o> :NERDTreeToggle<CR>
 " open NERDTree when vim starts up with no files specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" map control-o, to toggle the tree
-map <C-o> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" automatically close NerdTree when you open a file
-let NERDTreeQuitOnOpen = 1
-" disable that old “Press ? for help”
-let NERDTreeMinimalUI = 1
-" ignore files
-let NERDTreeIgnore = ['\.swp$', '\.DS_Store$', '\.git$', '\.node_modules$']
+autocmd bufenter * if (winnr("$") == 1 &&
+            \ exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Re-map enter to save the file
-nmap <CR> :write<CR>
-cabbrev w use enter to save the file
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Mappings (Always use non-recursive mappings, i.e. "nore")
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Show line number next to lines
-set number
+" ================ NORMAL MODE =========================
 
-" Preserving soft/hard links https://goo.gl/QDC1sU
-set backupcopy=yes
+" EXCEPTION of using recursive mapping to refresh root nerdtree node
+nmap <leader>r :NERDTreeFocus<CR>R
 
-" YouCompleteMe configurations
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
+" clear search pattern with <leader> and <space>
+nnoremap <leader><space> :noh<CR><CR>:<backspace>
 
-" vim-better-whitespace plugin configurations
-autocmd BufEnter * EnableStripWhitespaceOnSave
+" open vertical or horizontal splits with <leader> and | or -
+nnoremap <leader>\| :vs<CR>
+nnoremap <leader>- :split<CR>
 
-" Switch between tabs with Shift-h and Shift-l
+" resize panes with <leader> and jklh=
+nnoremap <leader>= <C-W>=
+nnoremap <leader>j <C-W>5+
+nnoremap <leader>k <C-W>5-
+nnoremap <leader>l <C-W>5>
+nnoremap <leader>h <C-W>5<
+
+" save the file with enter
+nnoremap <CR> :write<CR>
+
+" reload .vimrc with <leader> and R
+nnoremap <leader>R :source %<cr>:echo "vim reloaded!"<cr>
+
+" quit files with <leader> and q
+nnoremap <leader>q :q<cr>
+
+" switch between tabs with Shift-h and Shift-l
 nnoremap H gT
 nnoremap L gt
 
-" Show commands typed in vim, e.g. when pressing the <leader> key
-set showcmd
+" go to end of line with e
+nnoremap e $
 
-" Use jj to exit INSERT mode
-inoremap jj <ESC>
+" go to first non-blank charachter with 0
+nnoremap 0 ^
 
-" vim-tmux-navigator configurations
-" Disable tmux navigator when zooming the Vim pane
-let g:tmux_navigator_disable_when_zoomed = 1
-
-" Set 15 lines to the cursor when moving vertically using j/k
-set so=15
-
-" Map semicolon to colon to avoid the extra shift to go to cmd mode
-nmap ; :
-
-" remap <leader> to space
-let mapleader = "\<Space>"
-
-" source .vimrc with <leader> and R
-noremap <leader>R :source %<cr>
-
-" refresh nerdtree root node with <leader> and r
-nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
-
-
-" quit files with <leader> and q
-noremap <leader>q :q<cr>
-
-" toggle paste mode
+" toggle paste mode with <leader> and p
 set pastetoggle=<leader>p
 
-" clear search pattern with <leader> and c
-noremap <leader>c :noh<CR><CR>:<backspace>
+" map semicolon to colon to avoid the extra shift to go to cmd mode
+nnoremap ; :
 
-" open a vertical and horizontal split with <leader> and | and - like in tmux
-noremap <leader>\| :vs<CR>
-noremap <leader>- :split<CR>
+" ================ INSERT MODE =========================
 
-" resize panes with jklh= and leader
-noremap <leader>= <C-W>=
-noremap <leader>j <C-W>5+
-noremap <leader>k <C-W>5-
-noremap <leader>l <C-W>5>
-noremap <leader>h <C-W>5<
+" exit INSERT mode with jj
+inoremap jj <ESC>
 
-" disable gitgutter key-mappings for <leader>h to be able to execute immediately
-let g:gitgutter_map_keys = 0
+" ================ UNBINDINGS =========================
 
-" Modern, highlighted search results
-set hlsearch
-set incsearch
+" training for e usage instead of $
+nnoremap $ <Nop>
+" removing the stupid error of marker not set when accidentally hitting ';
+nnoremap ' <Nop>
 
-" Turn backup off
-set nobackup
-set nowb
-set noswapfile
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set number " show line numbers next to lines
+set backspace=indent,eol,start  " allow backspace in insert mode
+set showcmd " show commands typed in vim
+set nobackup " this has to be disabled for writebackup to work as intended
+set writebackup " write backup before overwriting a file, delete it afterwards
+set noswapfile " no no no no no no no no!
+set scrolloff=15 " set 15 lines to the cursor when moving vertically using j/k
+set hlsearch " highlight search patterns
+set incsearch " highlight search patterns as you type
+set ignorecase " ignore case when searching...
+set smartcase " ...unless we type a capital
+set nowrap " don't wrap lines
+set wildmode=list:longest,full " bash-like tab completion
+set wildmenu " visual autocomplete for command menu
+set colorcolumn=80 " column at 80-charachter
+set updatetime=300 " set Vim's updatetime delay
+set laststatus=2 " always display the statusline
+set showtabline=1 " only show tabline when there's more than 1 tab
+set noshowmode " hide default mode text (e.g. INSERT under the statusline)
+set clipboard=unnamed " making Vim work with system clipboard
+set backupcopy=yes " preserving soft/hard links https://goo.gl/QDC1sU
+set cursorline " highlight current line
+set visualbell " suppress audio/visual error bell
 
-set wildmode=list:longest,full " Bash-like tab completion
-set colorcolumn=80 " column so I don't go over the line limit
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Indentation configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tabstop=4 " number of VISUAL spaces for each tab respresentation
+set softtabstop=4 " number of spaces in tab when editing
+set shiftwidth=4 " number of spaces to use for auto indent
+set expandtab " tab becomes a shortcut to insert four spaces
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Misc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on " turn on syntax highlighting
+au VimEnter * NoMatchParen " disable matchparen plugin at startup
+silent! colorscheme dracula " set desired color scheme
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Autogroups
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup configgroup
+    " clears all the autocmd's for the group
+    autocmd!
+    autocmd FileType javascript setlocal ts=2 sts=2
+    autocmd BufEnter Makefile setlocal noexpandtab
+augroup END
