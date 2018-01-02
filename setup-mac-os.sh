@@ -164,7 +164,7 @@ function clone_dotfiles_repo() {
 
 function pull_latest() {
     info "Pulling latest changes in ${1} repository..."
-    if git -C $1 pull origin master; then
+    if git -C $1 pull origin master &> /dev/null; then
         success "Pull successful in ${1} repository."
     else
         error "Please pull the latest changes in ${1} repository manually."
