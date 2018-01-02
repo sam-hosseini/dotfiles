@@ -27,6 +27,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'wincent/command-t'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle finalisation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -84,11 +85,16 @@ autocmd bufenter * if (winnr("$") == 1 &&
 
 " ================ NORMAL MODE =========================
 
-" EXCEPTION of using recursive mapping to refresh root nerdtree node
-nmap <leader>r :NERDTreeFocus<CR>R
+" EXCEPTION of using recursive mapping to refresh command-t and nerdtree
+nmap <leader>r
+    \ :NERDTreeFocus<CR>R
+    \ :sleep 100m<CR>
+    \ :q<CR>
+    \ :CommandTFlush<CR>:<backspace>
+    \ :echo "File cache updated!"<CR>
 
 " clear search pattern with <leader> and <space>
-nnoremap <leader><space> :noh<CR><CR>:<backspace>
+nnoremap <leader><space> :noh<CR>:<backspace>
 
 " open vertical or horizontal splits with <leader> and \ or -
 nnoremap <leader>\ :vs<CR>
@@ -105,7 +111,7 @@ nnoremap <leader>h <C-W>5<
 nnoremap <CR> :write<CR>
 
 " reload .vimrc with <leader> and R
-nnoremap <leader>R :source %<cr>:echo "vim reloaded!"<cr>
+nnoremap <leader>R :source %<cr>:noh<CR>:echo "vim reloaded!"<cr>
 
 " quit files with <leader> and q
 nnoremap <leader>q :q<cr>
