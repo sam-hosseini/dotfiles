@@ -114,7 +114,6 @@ function configure_finder() {
     defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
     # Disable the warning before emptying the Trash
     defaults write com.apple.finder WarnOnEmptyTrash -bool false
-    quit "Finder"
 }
 
 function quit() {
