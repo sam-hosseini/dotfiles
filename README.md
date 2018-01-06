@@ -1,12 +1,14 @@
 # Dotfiles 🔧
-![](https://github.com/Sajjadhosn/dotfiles/blob/master/assets/demo.gif)
-* Setup a fresh macOS with a one-liner 🔥
+[![my macOS empire](https://i.imgur.com/3ep7B1T.png)](https://vimeo.com/sajjadhosn/my-macos-empire "Watch a sample executation of my macOS bootstrapping script")
+
+* On a fresh macOS:
+	* Setup for a software development environment entirely with a one-liner 🔥
     ```
     curl --silent https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/setup-mac-os.sh | bash
     ```
 
-* Install Oh-My-Fish using custom installer that can be run repeatedly 🐟
-    ```
-    curl --silent https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/installers/oh_my_fish_installer | fish
-    ```
+	* Open a Fish shell and execute `compile_vim_plugins` and `install_oh_my_fish` functions.
+	* Enter licesne information of purchased applications.
+	* Process Dropbox\'s Dotfiles folder.
 
+* Execute `bootstrap` function freely which in turn executes the bootstrapping script.
