@@ -68,6 +68,8 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSStatusItem Preferred Position Item-0</key>
+	<real>1055</real>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -94,7 +96,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>290 245 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>183 142 570 452 0 0 1440 877 </string>
+	<string>0 0 1440 877 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -783,6 +785,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>F119FC94-30EF-41C6-8368-63A29E8F79BB</string>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>536021723.59496403</real>
 	<key>OpenArrangementAtStartup</key>
@@ -841,11 +845,11 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>~/personal/dotfiles/iTerm2</string>
+	<string>/Users/shos/personal/dotfiles/iTerm2</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
-	<false/>
+	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
@@ -853,7 +857,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-26T23:00:52Z</date>
+	<date>2018-01-08T10:02:08Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
