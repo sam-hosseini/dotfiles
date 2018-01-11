@@ -257,7 +257,10 @@ function setup_symlinks() {
     symlink "powerline" \
         ${DOTFILES_REPO}/powerline \
         ${POWERLINE_ROOT_REPO}/powerline/config_files
-    symlink "spectacle" \
+    #symlink "spectacle" \
+    # the above line should be commented out and used instead of the "cp" below
+    # when Spectacle fixes the sorting issue of Shortcuts.json file
+    cp \
         ${DOTFILES_REPO}/spectacle/Shortcuts.json \
         ~/Library/Application\ Support/Spectacle/Shortcuts.json
     symlink "fish:completions" ${DOTFILES_REPO}/fish/completions \
