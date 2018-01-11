@@ -69,7 +69,7 @@
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
 	<key>NSStatusItem Preferred Position Item-0</key>
-	<real>1055</real>
+	<real>21055</real>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -99,7 +99,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>290 206 796 473 0 0 1440 877 </string>
+	<string>211 243 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1440 877 0 0 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_F5D16553-D10D-43D9-B41B-5EA43A34C0AB</key>
@@ -859,6 +859,8 @@
 	<string>/Users/shos/personal/dotfiles/iTerm2</string>
 	<key>Print In Black And White</key>
 	<true/>
+	<key>RunJobsInServers</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
