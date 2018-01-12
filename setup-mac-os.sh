@@ -34,6 +34,8 @@ main() {
     update_hosts_file
     # Setting up macOS defaults
     setup_macOS_defaults
+    # Updating login items
+    update_login_items
 }
 
 DOTFILES_REPO=~/personal/dotfiles
@@ -330,6 +332,37 @@ function setup_macOS_defaults() {
         error "macOS defaults setup failed."
         exit 1
     fi
+}
+
+function update_login_items() {
+    info "Updating login items..."
+    login_item /Applications/Alfred\ 3.app
+    login_item /Applications/Amphetamine.app
+    login_item /Applications/Bartender\ 3.app
+    login_item /Applications/Docker.app
+    login_item /Applications/Dropbox.app
+    login_item /Applications/iTerm.app
+    login_item /Applications/Private\ Internet\ Access.app
+    login_item /Applications/HighSierraMediaKeyEnabler.app
+    success "Login items successfully updated."
+}
+
+function login_item() {
+    path=$1
+    hidden=${2:-false}
+    name=$(basename "$path")
+
+    # "¬" charachter tells osascript that the line continues
+    if osascript &> /dev/null << EOM
+tell application "System Events" to make login item with properties ¬
+{name: "$name", path: "$path", hidden: "$hidden"}
+EOM
+then
+    success "Login item ${name} successfully added."
+else
+    error "Adding login item ${name} failed."
+    exit 1
+fi
 }
 
 function pip2_install() {
