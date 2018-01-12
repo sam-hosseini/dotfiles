@@ -281,7 +281,6 @@ function symlink() {
     destination=$3
     destination_dir=$(dirname "$destination")
 
-    info "Symlinking ${application}"
     if test ! -e "$destination_dir"; then
         substep "Creating ${destination_dir}"
         mkdir -p "$destination_dir"
