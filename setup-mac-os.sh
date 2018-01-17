@@ -343,6 +343,7 @@ function update_login_items() {
     login_item /Applications/iTerm.app
     login_item /Applications/Private\ Internet\ Access.app
     login_item /Applications/HighSierraMediaKeyEnabler.app
+    login_item /Applications/Spectacle.app
     success "Login items successfully updated."
 }
 
