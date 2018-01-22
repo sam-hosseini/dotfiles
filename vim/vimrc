@@ -161,14 +161,12 @@ set smartcase " ...unless we type a capital
 set nowrap " don't wrap lines
 set wildmode=list:longest,full " bash-like tab completion
 set wildmenu " visual autocomplete for command menu
-set colorcolumn=80 " column at 80-charachter
 set updatetime=300 " set Vim's updatetime delay
 set laststatus=2 " always display the statusline
 set showtabline=1 " only show tabline when there's more than 1 tab
 set noshowmode " hide default mode text (e.g. INSERT under the statusline)
 set clipboard=unnamed " making Vim work with system clipboard
 set backupcopy=yes " preserving soft/hard links https://goo.gl/QDC1sU
-set cursorline " highlight current line
 set visualbell " suppress audio/visual error bell
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
