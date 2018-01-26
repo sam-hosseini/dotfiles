@@ -2,6 +2,9 @@
 set fish_greeting
 
 ####### Environment Variables #######
+# Disable brew auto update
+set --global --export HOMEBREW_NO_AUTO_UPDATE true
+
 # Ensure homebrew programs will be used before system-provided programs
 set --global --export fish_user_paths /usr/local/bin $fish_user_paths
 
