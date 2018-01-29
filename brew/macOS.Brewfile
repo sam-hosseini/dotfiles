@@ -16,6 +16,7 @@ brew "python3"
 brew "httpie"
 brew "hub"
 brew "mas"
+brew "p7zip"
 brew "pipenv"
 brew "postgresql", restart_service: :changed
 brew "reattach-to-user-namespace" # for tmux commands to work
