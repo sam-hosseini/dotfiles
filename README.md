@@ -1,4 +1,4 @@
-# Dotfiles 🔧
+# [My macOS Empire](https://medium.com/@Sadhosn/build-a-macos-empire-a0c83879ac24) 👑
 [![my macOS empire](https://i.imgur.com/3ep7B1T.png)](https://vimeo.com/sajjadhosn/my-macos-empire "Watch a sample executation of my macOS bootstrapping script")
 
 * On a fresh macOS:
