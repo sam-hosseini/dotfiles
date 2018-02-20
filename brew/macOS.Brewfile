@@ -12,6 +12,7 @@ brew "extract_url" # for urlview tmux plugin
 brew "fish"
 brew "gifsicle" # for gif_compress fish function
 brew "git"
+brew "heroku"
 brew "python3"
 brew "httpie"
 brew "hub"
@@ -20,6 +21,7 @@ brew "p7zip"
 brew "pipenv"
 brew "postgresql", restart_service: :changed
 brew "reattach-to-user-namespace" # for tmux commands to work
+brew "redis", restart_service: true
 brew "tldr"
 brew "tmux"
 brew "trash"
