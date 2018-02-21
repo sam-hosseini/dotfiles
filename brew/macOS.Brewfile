@@ -8,6 +8,7 @@ tap "caskroom/cask"
 ##################### brew #####################
 brew "ack"
 brew "cmake" # for YouCompleteMe vim plugin
+brew "coreutils" # for awesome commands like timeout
 brew "extract_url" # for urlview tmux plugin
 brew "fish"
 brew "gifsicle" # for gif_compress fish function
