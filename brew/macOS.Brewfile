@@ -1,4 +1,5 @@
 ##################### taps #####################
+tap "heroku/brew"
 tap "homebrew/core"
 tap "homebrew/bundle"
 tap "homebrew/services"
@@ -17,10 +18,11 @@ brew "heroku"
 brew "python3"
 brew "httpie"
 brew "hub"
+brew "mariadb", restart_service: true
 brew "mas"
 brew "p7zip"
 brew "pipenv"
-brew "postgresql", restart_service: :changed
+brew "postgresql", restart_service: true
 brew "reattach-to-user-namespace" # for tmux commands to work
 brew "redis", restart_service: true
 brew "tldr"
@@ -50,6 +52,7 @@ cask "postico"
 cask "postman"
 cask "private-internet-access"
 cask "remote-mouse"
+cask "sequel-pro"
 cask "spectacle"
 cask "spotify"
 cask "sublime-text"
@@ -58,6 +61,7 @@ cask "the-unarchiver"
 cask "transmission"
 cask "tunnelblick"
 cask "vlc"
+cask "zoom"
 cask "caskroom/fonts/font-fira-mono-for-powerline" # for iTerm2 powerline
 
 ##################### mas #####################
