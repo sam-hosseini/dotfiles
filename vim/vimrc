@@ -118,7 +118,7 @@ nnoremap <leader>h <C-W>5<
 nnoremap <CR> :write<CR>
 
 " reload .vimrc with <leader> and R
-nnoremap <leader>R :source %<cr>:noh<CR>:echo "vim reloaded!"<cr>
+nnoremap <leader>R :source ~/.vimrc<cr>:noh<CR>:echo "vim reloaded!"<cr>
 
 " quit files with <leader> and q
 nnoremap <leader>q :q<cr>
