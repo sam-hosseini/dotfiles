@@ -84,6 +84,7 @@ autocmd bufenter * if (winnr("$") == 1 &&
 
 " ================ Neoformat configuration =========================
 autocmd BufWritePre *.js Neoformat
+autocmd BufWritePre *.ts Neoformat
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings (Always use non-recursive mappings, i.e. "nore")
