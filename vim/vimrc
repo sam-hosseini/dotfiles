@@ -84,8 +84,8 @@ autocmd bufenter * if (winnr("$") == 1 &&
             \ exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " ================ Neoformat configuration =========================
-autocmd BufWritePre *.js Neoformat
-autocmd BufWritePre *.ts Neoformat
+autocmd BufWritePre *.js,*.jsx Neoformat
+autocmd BufWritePre *.ts,*.tsx Neoformat
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings (Always use non-recursive mappings, i.e. "nore")
