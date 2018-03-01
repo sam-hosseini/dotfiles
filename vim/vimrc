@@ -31,6 +31,7 @@ Plugin 'wincent/command-t'
 Plugin 'sbdchd/neoformat'
 Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'mxw/vim-jsx'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle finalisation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
