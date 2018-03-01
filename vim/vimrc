@@ -30,6 +30,7 @@ Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'wincent/command-t'
 Plugin 'sbdchd/neoformat'
 Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle finalisation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
