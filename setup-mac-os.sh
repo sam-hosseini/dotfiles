@@ -21,7 +21,7 @@ main() {
     # Configuring git config file
     configure_git
     # Installing powerline-status so that setup_symlinks can setup the symlinks
-    pip2_install powerline-status
+    pip3_install powerline-status
     # Setting up symlinks so that setup_vim can install all plugins
     setup_symlinks
     # Setting up Vim
@@ -366,14 +366,14 @@ else
 fi
 }
 
-function pip2_install() {
+function pip3_install() {
     package_to_install="$1"
 
-    info "pip2 install ${package_to_install}"
-    if pip2 --quiet show "$package_to_install"; then
+    info "pip3 install ${package_to_install}"
+    if pip3 --quiet show "$package_to_install"; then
         success "${package_to_install} already exists."
     else
-        if pip2 install "$package_to_install"; then
+        if pip3 install "$package_to_install"; then
             success "Package ${package_to_install} installation succeeded."
         else
             error "Package ${package_to_install} installation failed."
