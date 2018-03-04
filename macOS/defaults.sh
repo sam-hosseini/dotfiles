@@ -82,7 +82,6 @@ function configure_dock() {
 }
 
 function configure_finder() {
-    quit "Finder"
     # Save screenshots to Downloads folder
     defaults write com.apple.screencapture location -string "${HOME}/Downloads"
     # Require password immediately after sleep or screen saver begins
