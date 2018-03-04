@@ -18,13 +18,13 @@ brew "heroku"
 brew "python3"
 brew "httpie"
 brew "hub"
-brew "mariadb", restart_service: true
+brew "mariadb", restart_service: :changed
 brew "mas"
 brew "p7zip"
 brew "pipenv"
-brew "postgresql", restart_service: true
+brew "postgresql", restart_service: :changed
 brew "reattach-to-user-namespace" # for tmux commands to work
-brew "redis", restart_service: true
+brew "redis", restart_service: :changed
 brew "tldr"
 brew "tmux"
 brew "trash"
