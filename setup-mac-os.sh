@@ -21,8 +21,9 @@ main() {
     # Configuring git config file
     configure_git
     # Installing powerline-status so that setup_symlinks can setup the symlinks
-    # and requests because some of my python scripts need it to make http calls
-    pip3_install powerline-status; pip3_install requests
+    # and requests and dotenv as the basis for a regular python script
+    pip_packages=(powerline-status requests python-dotenv)
+    pip3_install "${pip_packages[@]}"
     # Setting up symlinks so that setup_vim can install all plugins
     setup_symlinks
     # Setting up Vim
@@ -368,19 +369,22 @@ fi
 }
 
 function pip3_install() {
-    package_to_install="$1"
+    packages_to_install=("$@")
 
-    info "pip3 install ${package_to_install}"
-    if pip3 --quiet show "$package_to_install"; then
-        success "${package_to_install} already exists."
-    else
-        if pip3 install "$package_to_install"; then
-            success "Package ${package_to_install} installation succeeded."
+    for package_to_install in "${packages_to_install[@]}"
+    do
+        info "pip3 install ${package_to_install}"
+        if pip3 --quiet show "$package_to_install"; then
+            success "${package_to_install} already exists."
         else
-            error "Package ${package_to_install} installation failed."
-            exit 1
+            if pip3 install "$package_to_install"; then
+                success "Package ${package_to_install} installation succeeded."
+            else
+                error "Package ${package_to_install} installation failed."
+                exit 1
+            fi
         fi
-    fi
+    done
 }
 
 function coloredEcho() {
