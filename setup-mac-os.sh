@@ -22,7 +22,7 @@ main() {
     configure_git
     # Installing powerline-status so that setup_symlinks can setup the symlinks
     # and requests and dotenv as the basis for a regular python script
-    pip_packages=(powerline-status requests python-dotenv)
+    pip_packages=(powerline-status requests python-dotenv flake8)
     pip3_install "${pip_packages[@]}"
     # Setting up symlinks so that setup_vim can install all plugins
     setup_symlinks
