@@ -21,7 +21,8 @@ main() {
     # Configuring git config file
     configure_git
     # Installing powerline-status so that setup_symlinks can setup the symlinks
-    pip3_install powerline-status
+    # and requests because some of my python scripts need it to make http calls
+    pip3_install powerline-status; pip3_install requests
     # Setting up symlinks so that setup_vim can install all plugins
     setup_symlinks
     # Setting up Vim
