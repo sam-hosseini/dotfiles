@@ -347,6 +347,7 @@ function update_login_items() {
     login_item /Applications/HighSierraMediaKeyEnabler.app
     login_item /Applications/Spectacle.app
     login_item /Applications/Remote\ Mouse.app
+    login_item /Applications/1Password\ 6.app
     success "Login items successfully updated."
 }
 
