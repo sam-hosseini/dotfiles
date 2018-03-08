@@ -38,6 +38,7 @@ brew "youtube-dl"
 brew "z"
 
 ##################### cask #####################
+cask "1password"
 cask "alfred"
 cask "bartender"
 cask "docker"
