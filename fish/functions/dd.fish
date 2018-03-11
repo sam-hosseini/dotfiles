@@ -1,3 +1,3 @@
 function dd
-    docker-compose up $argv
+    clear; docker-compose up $argv
 end
