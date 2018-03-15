@@ -1,4 +1,6 @@
-
+# this is for docker-compose taking forever to load
+# https://github.com/docker/compose/issues/3419#issuecomment-221793401
+127.0.0.1 localunixsocket
 
 
 
