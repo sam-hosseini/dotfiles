@@ -64,7 +64,7 @@ cask "transmission"
 cask "tunnelblick"
 cask "viscosity"
 cask "vlc"
-cask "zoom"
+cask "zoomus"
 cask "caskroom/fonts/font-fira-mono-for-powerline" # for iTerm2 powerline
 
 ##################### mas #####################
