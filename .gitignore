@@ -1,6 +1,6 @@
 brew/Brewfile
 macOS/.env
-macOS/today_picture.jpg
+macOS/todays_picture.jpg
 
 # Created by https://www.gitignore.io/api/git,vim,macos,linux,emacs
 
