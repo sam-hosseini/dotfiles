@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import sys
 import time
 import argparse
 
@@ -29,8 +30,13 @@ def get_today_picture_url(token, other_picture):
     # there are two pictures per day anyway
     picture_number = 1 if other_picture else 0
     res = requests.get(url, headers=headers).json()
-    first_picture = res.get('backgrounds')[picture_number].get('filename')
-    return first_picture
+
+    if res.get('success') is False:
+        print('Momentum API has failed...')
+        sys.exit(0)
+
+    picture = res.get('backgrounds')[picture_number].get('filename')
+    return picture
 
 
 def write_todays_picture(response_object, directory_path):
