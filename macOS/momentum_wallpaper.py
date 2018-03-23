@@ -30,13 +30,18 @@ def get_today_picture_url(token):
     return first_picture
 
 
+def write_todays_picture(response_object, directory_path):
+    destination = os.path.join(directory_path, 'todays_picture.jpg')
+    with open(destination, 'wb') as f:
+        f.write(response_object.content)
+
+
 def download_picture(url):
     current_dir = os.path.dirname(os.path.realpath(__file__))
-    destination = os.path.join(current_dir, 'today_picture.jpg')
+    dropbox_dir = os.path.join(os.path.expanduser('~'), 'Dropbox', 'Pictures')
     res = requests.get(url)
-    with open(destination, 'wb') as f:
-        f.write(res.content)
-    return destination
+    write_todays_picture(res, current_dir)
+    write_todays_picture(res, dropbox_dir)
 
 
 def main():
