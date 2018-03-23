@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import time
+import argparse
 
 import requests
 import dotenv
@@ -17,7 +18,7 @@ def get_momentum_token():
     return res.get('token')
 
 
-def get_today_picture_url(token):
+def get_today_picture_url(token, other_picture):
     today = time.strftime("%Y-%m-%d")
     url = ('https://api.momentumdash.com/'
            'feed/bulk?syncTypes=backgrounds&localDate={today}'.
@@ -25,8 +26,10 @@ def get_today_picture_url(token):
     headers = {
         'Authorization': 'Bearer {}'.format(token),
     }
+    # there are two pictures per day anyway
+    picture_number = 1 if other_picture else 0
     res = requests.get(url, headers=headers).json()
-    first_picture = res.get('backgrounds')[0].get('filename')
+    first_picture = res.get('backgrounds')[picture_number].get('filename')
     return first_picture
 
 
@@ -45,8 +48,13 @@ def download_picture(url):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '--other-picture', action='store_true', required=False)
+    args = parser.parse_args()
+
     token = get_momentum_token()
-    today_picture_url = get_today_picture_url(token)
+    today_picture_url = get_today_picture_url(token, args.other_picture)
     download_picture(today_picture_url)
 
 
