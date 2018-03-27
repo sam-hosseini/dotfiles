@@ -2,6 +2,7 @@
 import os
 import sys
 import time
+import uuid
 import argparse
 
 import requests
@@ -39,8 +40,13 @@ def get_today_picture_url(token, other_picture):
     return picture
 
 
-def write_todays_picture(response_object, directory_path):
-    destination = os.path.join(directory_path, 'todays_picture.jpg')
+def write_todays_picture(
+        response_object, directory_path, randomize_filename=False):
+    filename = 'todays_picture.jpg'
+    if randomize_filename:
+        filename = 'todays_picture_{}.jpg'.format(uuid.uuid4())
+
+    destination = os.path.join(directory_path, filename)
     with open(destination, 'wb') as f:
         f.write(response_object.content)
 
@@ -50,7 +56,9 @@ def download_picture(url):
     dropbox_dir = os.path.join(os.path.expanduser('~'), 'Dropbox', 'Pictures')
     res = requests.get(url)
     write_todays_picture(res, current_dir)
-    write_todays_picture(res, dropbox_dir)
+    # randomizing the filename so that Dropbox would trigger hooks
+    # that ifttt applets can collect and download the picture to my phone
+    write_todays_picture(res, dropbox_dir, randomize_filename=True)
 
 
 def main():
