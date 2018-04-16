@@ -24,6 +24,10 @@ main() {
     # and requests and dotenv as the basis for a regular python script
     pip_packages=(powerline-status requests python-dotenv flake8)
     pip3_install "${pip_packages[@]}"
+    # Installing typescript so that YouCompleteMe can support it
+    # and prettier so that Neoformat can auto-format files
+    yarn_packages=(prettier typescript)
+    yarn_install "${yarn_packages[@]}"
     # Setting up symlinks so that setup_vim can install all plugins
     setup_symlinks
     # Setting up Vim
@@ -367,6 +371,25 @@ else
     error "Adding login item ${name} failed."
     exit 1
 fi
+}
+
+function yarn_install() {
+    packages_to_install=("$@")
+
+    for package_to_install in "${packages_to_install[@]}"
+    do
+        info "yarn global add ${package_to_install}"
+        if yarn global list | grep "$package_to_install" &> /dev/null; then
+            success "${package_to_install} already exists."
+        else
+            if yarn global add "$package_to_install"; then
+                success "Package ${package_to_install} installation succeeded."
+            else
+                error "Package ${package_to_install} installation failed."
+                exit 1
+            fi
+        fi
+    done
 }
 
 function pip3_install() {
