@@ -104,7 +104,7 @@ nmap <leader>r
     \ :echo "File cache updated!"<CR>
 
 " map control-i to GoTo subcommand of YouCompleteMe
-nnoremap <C-i> :YcmCompleter GoTo<CR>
+nnoremap <C-i> :YcmCompleter GoToDefinition<CR>
 
 " map <leader>o to toggle the tree
 nnoremap <leader>o :NERDTreeToggle<CR>
