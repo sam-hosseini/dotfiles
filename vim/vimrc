@@ -85,6 +85,7 @@ autocmd bufenter * if (winnr("$") == 1 &&
             \ exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " ================ Neoformat configuration =========================
+" using prettier for formatting these files
 autocmd BufWritePre *.js,*.jsx Neoformat
 autocmd BufWritePre *.ts,*.tsx Neoformat
 
