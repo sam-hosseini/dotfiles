@@ -11,10 +11,11 @@ brew "ack"
 brew "cmake" # for YouCompleteMe vim plugin
 brew "coreutils" # for awesome commands like timeout
 brew "extract_url" # for urlview tmux plugin
+brew "ffmpeg" # for being able to manipulate videos for example
 brew "fish"
 brew "gifsicle" # for gif_compress fish function
 brew "git"
-brew "heroku"
+brew "heroku/brew/heroku"
 brew "python3"
 brew "httpie"
 brew "hub"
