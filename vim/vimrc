@@ -209,7 +209,6 @@ set expandtab " tab becomes a shortcut to insert four spaces
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on " turn on syntax highlighting
-au VimEnter * NoMatchParen " disable matchparen plugin at startup
 silent! colorscheme dracula " set desired color scheme
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
