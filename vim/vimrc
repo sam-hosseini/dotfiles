@@ -110,6 +110,14 @@ nnoremap <C-i>
     \ :NERDTreeFind <bar> :NERDTreeToggle<CR>
     \ :<backspace>
 
+" map control-o to go back to the previous cursor AND instruct NERDTree to
+" find it in the tree as well, not just plain going back to the previous
+" cursor
+nnoremap <C-o>
+    \ <C-o> <bar>
+    \ :NERDTreeFind <bar> :NERDTreeToggle<CR>
+    \ :<backspace>
+
 " map <leader>o to toggle the tree
 nnoremap <leader>o :NERDTreeToggle<CR>
 
