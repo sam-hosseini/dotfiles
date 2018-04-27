@@ -103,8 +103,12 @@ nmap <leader>r
     \ :CommandTFlush<CR>:<backspace>
     \ :echo "File cache updated!"<CR>
 
-" map control-i to GoTo subcommand of YouCompleteMe
-nnoremap <C-i> :YcmCompleter GoToDefinition<CR>
+" map control-i to GoTo subcommand of YouCompleteMe and instruct NERDTree to
+" find it in the tree as well
+nnoremap <C-i>
+    \ :YcmCompleter GoToDefinition<CR>
+    \ :NERDTreeFind <bar> :NERDTreeToggle<CR>
+    \ :<backspace>
 
 " map <leader>o to toggle the tree
 nnoremap <leader>o :NERDTreeToggle<CR>
