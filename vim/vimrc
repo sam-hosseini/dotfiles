@@ -103,20 +103,8 @@ nmap <leader>r
     \ :CommandTFlush<CR>:<backspace>
     \ :echo "File cache updated!"<CR>
 
-" map control-i to GoTo subcommand of YouCompleteMe and instruct NERDTree to
-" find it in the tree as well
-nnoremap <C-i>
-    \ :YcmCompleter GoToDefinition<CR>
-    \ :NERDTreeFind <bar> :NERDTreeToggle<CR>
-    \ :<backspace>
-
-" map control-o to go back to the previous cursor AND instruct NERDTree to
-" find it in the tree as well, not just plain going back to the previous
-" cursor
-nnoremap <C-o>
-    \ <C-o> <bar>
-    \ :NERDTreeFind <bar> :NERDTreeToggle<CR>
-    \ :<backspace>
+" map control-i to GoTo subcommand of YouCompleteMe
+nnoremap <C-i> :YcmCompleter GoToDefinition<CR> :<backspace>
 
 function CustomNerdToggle()
     if &filetype == 'nerdtree'
