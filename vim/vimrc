@@ -118,8 +118,15 @@ nnoremap <C-o>
     \ :NERDTreeFind <bar> :NERDTreeToggle<CR>
     \ :<backspace>
 
-" map <leader>o to toggle the tree
-nnoremap <leader>o :NERDTreeToggle<CR>
+function CustomNerdToggle()
+    if &filetype == 'nerdtree'
+        :NERDTreeToggle
+    else
+        :NERDTreeFind
+    endif
+endfunction
+" map <leader>o to toggle the tree AND reveal the open file in the tree
+nnoremap <leader>o :call CustomNerdToggle() <CR> :<backspace>
 
 " clear search pattern with <leader> and <space>
 nnoremap <leader><space> :noh<CR>:<backspace>
