@@ -160,6 +160,11 @@ nnoremap ; :
 " exit INSERT mode with jj
 inoremap jj <ESC>
 
+" ================ VISUAL MODE =========================
+
+" map semicolon to colon to avoid the extra shift to go to cmd mode
+vnoremap ; :
+
 " ================ UNBINDINGS =========================
 
 " training for e usage instead of $
