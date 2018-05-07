@@ -22,7 +22,7 @@ main() {
     configure_git
     # Installing powerline-status so that setup_symlinks can setup the symlinks
     # and requests and dotenv as the basis for a regular python script
-    pip_packages=(powerline-status requests python-dotenv flake8)
+    pip_packages=(powerline-status requests python-dotenv flake8 docker-compose)
     pip3_install "${pip_packages[@]}"
     # Installing typescript so that YouCompleteMe can support it
     # and prettier so that Neoformat can auto-format files
