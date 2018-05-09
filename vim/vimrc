@@ -179,35 +179,35 @@ nnoremap ' <Nop>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set number " show line numbers next to lines
 set backspace=indent,eol,start  " allow backspace in insert mode
-set showcmd " show commands typed in vim
-set nobackup " this has to be disabled for writebackup to work as intended
-set writebackup " write backup before overwriting a file, delete it afterwards
-set noswapfile " no no no no no no no no!
-set scrolloff=15 " set 15 lines to the cursor when moving vertically using j/k
-set hlsearch " highlight search patterns
-set incsearch " highlight search patterns as you type
-set ignorecase " ignore case when searching...
-set smartcase " ...unless we type a capital
-set nowrap " don't wrap lines
-set wildmode=list:longest,full " bash-like tab completion
-set wildmenu " visual autocomplete for command menu
-set updatetime=300 " set Vim's updatetime delay
-set laststatus=2 " always display the statusline
-set showtabline=1 " only show tabline when there's more than 1 tab
-set noshowmode " hide default mode text (e.g. INSERT under the statusline)
-set clipboard=unnamed " making Vim work with system clipboard
 set backupcopy=yes " preserving soft/hard links https://goo.gl/QDC1sU
+set clipboard=unnamed " making Vim work with system clipboard
+set hlsearch " highlight search patterns
+set ignorecase " ignore case when searching...
+set incsearch " highlight search patterns as you type
+set laststatus=2 " always display the statusline
+set nobackup " this has to be disabled for writebackup to work as intended
+set noshowmode " hide default mode text (e.g. INSERT under the statusline)
+set noswapfile " no no no no no no no no!
+set nowrap " don't wrap lines
+set number " show line numbers next to lines
+set scrolloff=15 " set 15 lines to the cursor when moving vertically using j/k
+set showcmd " show commands typed in vim
+set showtabline=1 " only show tabline when there's more than 1 tab
+set smartcase " ...unless we type a capital
+set updatetime=300 " set Vim's updatetime delay
 set visualbell " suppress audio/visual error bell
+set wildmenu " visual autocomplete for command menu
+set wildmode=list:longest,full " bash-like tab completion
+set writebackup " write backup before overwriting a file, delete it afterwards
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Indentation configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tabstop=4 " number of VISUAL spaces for each tab respresentation
-set softtabstop=4 " number of spaces in tab when editing
-set shiftwidth=4 " number of spaces to use for auto indent
 set expandtab " tab becomes a shortcut to insert four spaces
+set shiftwidth=4 " number of spaces to use for auto indent
+set softtabstop=4 " number of spaces in tab when editing
+set tabstop=4 " number of VISUAL spaces for each tab respresentation
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
