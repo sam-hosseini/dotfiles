@@ -12,13 +12,13 @@ Plugin 'VundleVim/Vundle.vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'rafi/awesome-vim-colorschemes'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'airblade/vim-gitgutter'
+Plugin 'Valloric/YouCompleteMe' " Code-completion engine
+Plugin 'jiangmiao/auto-pairs' " Insert brackets, parens or quotes in pair
+Plugin 'rafi/awesome-vim-colorschemes' " Collection of color schemes
+Plugin 'vim-syntastic/syntastic' " Syntax checking
+Plugin 'SirVer/ultisnips' " Snippet solution
+Plugin 'honza/vim-snippets' " Needed for snippet solution
+Plugin 'airblade/vim-gitgutter' " Showing git diff in the 'gutter' (sign column)
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'djoshea/vim-autoread'
