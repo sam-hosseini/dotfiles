@@ -19,6 +19,7 @@ Plugin 'vim-syntastic/syntastic' " Syntax checking
 Plugin 'SirVer/ultisnips' " Snippet solution
 Plugin 'honza/vim-snippets' " Needed for snippet solution
 Plugin 'airblade/vim-gitgutter' " Showing git diff in the 'gutter' (sign column)
+Plugin 'wincent/terminus' " Enhanced terminal integration
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'djoshea/vim-autoread'
@@ -43,6 +44,10 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" ================ Terminus configuration ========================
+let g:TerminusMouse = 0
+let g:TerminusAssumeITerm = 1
 
 " ================ Powerline configuration ========================
 python3 from powerline.vim import setup as powerline_setup
