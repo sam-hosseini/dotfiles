@@ -27,13 +27,13 @@ Plugin 'ntpeters/vim-better-whitespace' " Whitespace highlighting and cleaning
 Plugin 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
 Plugin 'scrooloose/nerdcommenter' " Comment functions
 Plugin 'Vimjas/vim-python-pep8-indent' " A nicer Python indentation style
-Plugin 'wincent/command-t'
-Plugin 'sbdchd/neoformat'
-Plugin 'pangloss/vim-javascript'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'ianks/vim-tsx'
-Plugin 'dag/vim-fish'
+Plugin 'wincent/command-t' " Fuzzy file search
+Plugin 'sbdchd/neoformat' " Code formatter
+Plugin 'pangloss/vim-javascript' " Javascript indentation and syntax support
+Plugin 'leafgarland/typescript-vim' " Typescript syntax support, indentation based on pangloss/vim-javascript
+Plugin 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
+Plugin 'ianks/vim-tsx' " Syntax highlighting and indenting for TSX
+Plugin 'dag/vim-fish' " Syntax highlighting and indenting for Fish scripts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle finalisation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
