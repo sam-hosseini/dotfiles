@@ -20,9 +20,8 @@ Plugin 'SirVer/ultisnips' " Snippet solution
 Plugin 'honza/vim-snippets' " Needed for snippet solution
 Plugin 'airblade/vim-gitgutter' " Showing git diff in the 'gutter' (sign column)
 Plugin 'wincent/terminus' " Enhanced terminal integration
-Plugin 'scrooloose/nerdtree'
-Plugin 'Yggdroot/indentLine'
-Plugin 'djoshea/vim-autoread'
+Plugin 'scrooloose/nerdtree' " File tree explorer
+Plugin 'Yggdroot/indentLine' " Display indention levels with thin vertical lines
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
