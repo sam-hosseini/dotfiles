@@ -22,11 +22,11 @@ Plugin 'airblade/vim-gitgutter' " Showing git diff in the 'gutter' (sign column)
 Plugin 'wincent/terminus' " Enhanced terminal integration
 Plugin 'scrooloose/nerdtree' " File tree explorer
 Plugin 'Yggdroot/indentLine' " Display indention levels with thin vertical lines
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'terryma/vim-multiple-cursors' " Sublime Text style multiple selections
+Plugin 'ntpeters/vim-better-whitespace' " Whitespace highlighting and cleaning
+Plugin 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
+Plugin 'scrooloose/nerdcommenter' " Comment functions
+Plugin 'Vimjas/vim-python-pep8-indent' " A nicer Python indentation style
 Plugin 'wincent/command-t'
 Plugin 'sbdchd/neoformat'
 Plugin 'pangloss/vim-javascript'
