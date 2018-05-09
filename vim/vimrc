@@ -44,6 +44,10 @@ filetype plugin indent on
 " => Plugins configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" ================ vim-snippets configuration ========================
+" Adding html snippets to tsx and jsx file types
+autocmd FileType typescript,javascript UltiSnipsAddFiletypes html
+
 " ================ Terminus configuration ========================
 let g:TerminusMouse = 0
 let g:TerminusAssumeITerm = 1
