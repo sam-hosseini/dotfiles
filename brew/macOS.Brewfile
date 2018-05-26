@@ -1,10 +1,10 @@
 ##################### taps #####################
 tap "heroku/brew"
 tap "homebrew/core"
+tap "homebrew/cask"
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 tap "homebrew/services"
-tap "caskroom/fonts"
-tap "caskroom/cask"
 
 ##################### brew #####################
 brew "ack"
@@ -67,7 +67,7 @@ cask "tunnelblick"
 cask "viscosity"
 cask "vlc"
 cask "zoomus"
-cask "caskroom/fonts/font-fira-mono-for-powerline" # for iTerm2 powerline
+cask "homebrew/cask-fonts/font-fira-mono-for-powerline" # for iTerm2 powerline
 
 ##################### mas #####################
 mas "Amphetamine", id: 937984704
