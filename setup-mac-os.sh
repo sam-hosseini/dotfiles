@@ -347,10 +347,9 @@ function update_login_items() {
     login_item /Applications/Docker.app
     login_item /Applications/Dropbox.app
     login_item /Applications/iTerm.app
-    login_item /Applications/Private\ Internet\ Access.app
     login_item /Applications/HighSierraMediaKeyEnabler.app
     login_item /Applications/Spectacle.app
-    login_item /Applications/Remote\ Mouse.app
+    login_item /Applications/NordVPN.app
     login_item /Applications/1Password\ 6.app
     success "Login items successfully updated."
 }
