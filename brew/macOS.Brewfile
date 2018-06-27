@@ -21,6 +21,7 @@ brew "hub"
 brew "m-cli"
 brew "mariadb", restart_service: :changed
 brew "mas"
+brew "node"
 brew "p7zip"
 brew "pipenv"
 brew "postgresql", restart_service: :changed
