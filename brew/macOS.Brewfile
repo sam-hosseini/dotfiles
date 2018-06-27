@@ -15,7 +15,6 @@ brew "ffmpeg" # for being able to manipulate videos for example
 brew "fish"
 brew "gifsicle" # for gif_compress fish function
 brew "git"
-brew "heroku/brew/heroku"
 brew "python3"
 brew "httpie"
 brew "hub"
@@ -37,6 +36,7 @@ brew "wifi-password"
 brew "yarn"
 brew "youtube-dl"
 brew "z"
+brew "heroku/brew/heroku"
 
 ##################### cask #####################
 cask "1password"
