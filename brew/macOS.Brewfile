@@ -1,9 +1,9 @@
 ##################### taps #####################
 tap "heroku/brew"
-tap "homebrew/core"
-tap "homebrew/cask"
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/core"
 tap "homebrew/services"
 
 ##################### brew #####################
