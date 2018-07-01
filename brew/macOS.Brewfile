@@ -16,6 +16,7 @@ brew "fish"
 brew "gifsicle" # for gif_compress fish function
 brew "git"
 brew "python"
+brew "python@2"
 brew "httpie"
 brew "hub"
 brew "m-cli"
