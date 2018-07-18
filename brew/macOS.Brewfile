@@ -47,6 +47,7 @@ cask "bartender"
 cask "docker"
 cask "dropbox"
 cask "firefox"
+cask "font-fira-mono-for-powerline" # for iTerm2 powerline
 cask "gimp"
 cask "google-chrome"
 # can be removed if media keys started working like they should again
@@ -68,7 +69,6 @@ cask "tunnelblick"
 cask "viscosity"
 cask "vlc"
 cask "zoomus"
-cask "homebrew/cask-fonts/font-fira-mono-for-powerline" # for iTerm2 powerline
 
 ##################### mas #####################
 mas "Amphetamine", id: 937984704
