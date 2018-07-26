@@ -173,6 +173,9 @@ inoremap jj <ESC>
 " map semicolon to colon to avoid the extra shift to go to cmd mode
 vnoremap ; :
 
+" map s to sort selected lines
+vnoremap s :sort<CR>
+
 " ================ UNBINDINGS =========================
 
 " training for e usage instead of $
