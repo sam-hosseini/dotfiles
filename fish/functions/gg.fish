@@ -1,4 +1,4 @@
 function gg
-    clear; brew cask upgrade --greedy
+    brew cask upgrade $argv
 end
 
