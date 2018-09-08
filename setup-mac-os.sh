@@ -350,7 +350,7 @@ function update_login_items() {
     login_item /Applications/HighSierraMediaKeyEnabler.app
     login_item /Applications/Spectacle.app
     login_item /Applications/NordVPN.app
-    login_item /Applications/1Password\ 6.app
+    login_item /Applications/1Password\ 7.app
     success "Login items successfully updated."
 }
 
