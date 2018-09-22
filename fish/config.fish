@@ -2,9 +2,8 @@
 set fish_greeting
 
 ####### Environment Variables #######
-# Homebrew options
+# Disable brew auto update
 set --global --export HOMEBREW_NO_AUTO_UPDATE true
-set --global --export HOMEBREW_CASK_OPTS --no-quarantine
 
 # Ensure homebrew programs will be used before system-provided programs
 set --global --export fish_user_paths /usr/local/bin $fish_user_paths
