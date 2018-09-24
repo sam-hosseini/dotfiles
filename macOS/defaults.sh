@@ -72,10 +72,10 @@ function configure_dock() {
     ## Top left screen corner → Mission Control
     defaults write com.apple.dock wvous-tl-corner -int 2
     defaults write com.apple.dock wvous-tl-modifier -int 0
-    ## Top right screen corner → Desktop
+    ## Top right screen corner → Nothing
     defaults write com.apple.dock wvous-tr-corner -int 0
     defaults write com.apple.dock wvous-tr-modifier -int 0
-    ## Bottom left screen corner → Start screen saver
+    ## Bottom left screen corner → Nothing
     defaults write com.apple.dock wvous-bl-corner -int 0
     defaults write com.apple.dock wvous-bl-modifier -int 0
     open "Dock"
