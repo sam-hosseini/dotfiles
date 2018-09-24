@@ -50,8 +50,6 @@ cask "firefox"
 cask "font-fira-mono-for-powerline" # for iTerm2 powerline
 cask "gimp"
 cask "google-chrome"
-# can be removed if media keys started working like they should again
-cask "highsierramediakeyenabler"
 cask "iterm2"
 cask "microsoft-office"
 cask "nordvpn"
@@ -66,9 +64,7 @@ cask "teamviewer"
 cask "the-unarchiver"
 cask "transmission"
 cask "tunnelblick"
-cask "viscosity"
 cask "vlc"
-cask "zoomus"
 
 ##################### mas #####################
 mas "Amphetamine", id: 937984704
