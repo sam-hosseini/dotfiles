@@ -6,6 +6,8 @@
 	<true/>
 	<key>AboutToPasteTabsWithCancel_selection</key>
 	<integer>2</integer>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -60,6 +62,12 @@
 	<false/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<integer>1</integer>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 1</string>
+	<key>NSNavLastRootDirectory</key>
+	<string>~/Downloads</string>
+	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -69,7 +77,7 @@
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
 	<key>NSStatusItem Preferred Position Item-0</key>
-	<real>21055</real>
+	<real>20344</real>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -77,7 +85,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAc7AAAAAAANIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -98,10 +106,24 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>315 259 782 351 0 0 1440 878 </string>
+	<key>NSWindow Frame Preferences</key>
+	<string>269 194 606 456 0 0 1440 877 </string>
+	<key>NSWindow Frame ProfilesPanel</key>
+	<string>205 998 735 382 0 0 2560 1418 </string>
+	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
+	<string>892 716 616 174 0 0 2560 1418 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>410 375 620 392 0 0 1440 878 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>630 543 606 469 0 0 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>211 243 796 473 0 0 1440 877 </string>
+	<string>371 64 796 486 0 0 1440 878 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 877 0 0 1440 877 </string>
+	<string>0 0 1440 878 0 0 1440 878 </string>
 	<key>NeverWarnAboutShortLivedSessions_F5D16553-D10D-43D9-B41B-5EA43A34C0AB</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_F5D16553-D10D-43D9-B41B-5EA43A34C0AB_selection</key>
@@ -790,14 +812,26 @@
 			<string>/Users/shos</string>
 		</dict>
 	</array>
-	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
+	<integer>1</integer>
+	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
+	<integer>1</integer>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>F119FC94-30EF-41C6-8368-63A29E8F79BB</string>
+	<string>8F255647-76CB-48AB-A5B3-9764D203ED6B</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>536021723.59496403</real>
+	<real>494854096.66793799</real>
+	<key>NoSyncTurnOffBracketedPasteOnHostChange</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -861,16 +895,18 @@
 	<true/>
 	<key>RunJobsInServers</key>
 	<false/>
+	<key>SUAutomaticallyUpdate</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=81</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=86</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-01-10T22:56:23Z</date>
+	<date>2018-09-24T10:24:25Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -883,6 +919,8 @@
 	<true/>
 	<key>TabViewType</key>
 	<integer>1</integer>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1473257728</real>
 	<key>UseBorder</key>
 	<false/>
 	<key>WindowNumber</key>
@@ -896,7 +934,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.2.0</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>5</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
