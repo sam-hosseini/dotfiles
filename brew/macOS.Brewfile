@@ -67,6 +67,5 @@ cask "tunnelblick"
 cask "vlc"
 
 ##################### mas #####################
-mas "Amphetamine", id: 937984704
 mas "GIPHY CAPTURE", id: 668208984
 

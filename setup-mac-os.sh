@@ -342,7 +342,6 @@ function setup_macOS_defaults() {
 function update_login_items() {
     info "Updating login items..."
     login_item /Applications/Alfred\ 3.app
-    login_item /Applications/Amphetamine.app
     login_item /Applications/Bartender\ 3.app
     login_item /Applications/Docker.app
     login_item /Applications/Dropbox.app
