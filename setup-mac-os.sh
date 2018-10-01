@@ -5,12 +5,6 @@ main() {
     ask_for_sudo
     # Installing Homebrew, the basis of anything and everything
     install_homebrew
-    # Installing mas using brew as the requirement for login_to_app_store
-    brew_install mas
-    # Ensuring the user is logged in the App Store so that
-    # install_packages_with_brewfile can install App Store applications
-    # using mas cli application
-    login_to_app_store
     # Cloning Dotfiles repository for install_packages_with_brewfile
     # to have access to Brewfile
     clone_dotfiles_repo
@@ -59,20 +53,6 @@ function ask_for_sudo() {
     fi
 }
 
-function login_to_app_store() {
-    info "Logging into app store..."
-    if mas account >/dev/null; then
-        success "Already logged in."
-    else
-        open -a "/Applications/App Store.app"
-        until (mas account > /dev/null);
-        do
-            sleep 3
-        done
-        success "Login to app store successful."
-    fi
-}
-
 function install_homebrew() {
     info "Installing Homebrew..."
     if hash brew 2>/dev/null; then
@@ -95,21 +75,6 @@ function install_packages_with_brewfile() {
     else
         error "Brewfile installation failed."
         exit 1
-    fi
-}
-
-function brew_install() {
-    package_to_install="$1"
-    info "brew install ${package_to_install}"
-    if hash "$package_to_install" 2>/dev/null; then
-        success "${package_to_install} already exists."
-    else
-        if brew install "$package_to_install"; then
-            success "Package ${package_to_install} installation succeeded."
-        else
-            error "Package ${package_to_install} installation failed."
-            exit 1
-        fi
     fi
 }
 

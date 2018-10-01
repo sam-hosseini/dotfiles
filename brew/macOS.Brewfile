@@ -21,7 +21,6 @@ brew "httpie"
 brew "hub"
 brew "m-cli"
 brew "mariadb", restart_service: :changed
-brew "mas"
 brew "node"
 brew "p7zip"
 brew "pipenv"
@@ -65,6 +64,4 @@ cask "the-unarchiver"
 cask "transmission"
 cask "tunnelblick"
 cask "vlc"
-
-##################### mas #####################
 
