@@ -11,10 +11,8 @@ main() {
 }
 
 function configure_plist_apps() {
-    quit "GIPHY CAPTURE"
     quit "Transmission"
     quit "The Unarchiver"
-    import_plist "com.fasthatchapps.gifgrabberosx" "GIPHY_Capture.plist"
     import_plist "org.m0k.transmission" "Transmission.plist"
     import_plist "cx.c3.theunarchiver" "The_Unarchiver.plist"
 }

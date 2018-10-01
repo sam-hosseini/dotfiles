@@ -67,5 +67,4 @@ cask "tunnelblick"
 cask "vlc"
 
 ##################### mas #####################
-mas "GIPHY CAPTURE", id: 668208984
 
