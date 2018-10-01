@@ -306,15 +306,14 @@ function setup_macOS_defaults() {
 
 function update_login_items() {
     info "Updating login items..."
+    login_item /Applications/1Password\ 7.app
     login_item /Applications/Alfred\ 3.app
     login_item /Applications/Bartender\ 3.app
     login_item /Applications/Docker.app
     login_item /Applications/Dropbox.app
-    login_item /Applications/iTerm.app
-    login_item /Applications/HighSierraMediaKeyEnabler.app
-    login_item /Applications/Spectacle.app
     login_item /Applications/NordVPN.app
-    login_item /Applications/1Password\ 7.app
+    login_item /Applications/Spectacle.app
+    login_item /Applications/iTerm.app
     success "Login items successfully updated."
 }
 
