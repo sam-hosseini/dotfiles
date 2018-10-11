@@ -49,6 +49,7 @@ cask "firefox"
 cask "font-fira-mono-for-powerline" # for iTerm2 powerline
 cask "gimp"
 cask "google-chrome"
+cask "google-cloud-sdk"
 cask "iterm2"
 cask "microsoft-office"
 cask "nordvpn"
