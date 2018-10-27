@@ -266,26 +266,31 @@ function symlink() {
 
 function update_hosts_file() {
     info "Updating /etc/hosts"
+    own_hosts_file_path=${DOTFILES_REPO}/hosts/own_hosts_file
+    downloaded_hosts_file_path=/etc/downloaded_hosts_file
 
-    if grep --quiet "someonewhocares" /etc/hosts; then
-        success "/etc/hosts already updated."
+    if sudo cp "${own_hosts_file_path}" /etc/hosts; then
+        substep "Copying ${own_hosts_file_path} to /etc/hosts succeeded."
     else
-        substep "Backing up /etc/hosts to /etc/hosts_old"
-        if sudo cp /etc/hosts /etc/hosts_old; then
-            substep "Backup succeeded."
-        else
-            error "Backup failed."
-            exit 1
-        fi
-        substep "Appending ${DOTFILES_REPO}/hosts/hosts content to /etc/hosts"
-        if test -e ${DOTFILES_REPO}/hosts/hosts; then
-            cat ${DOTFILES_REPO}/hosts/hosts | \
-                sudo tee -a /etc/hosts > /dev/null
+        error "Copying ${own_hosts_file_path} to /etc/hosts failed."
+        exit 1
+    fi
+
+    if sudo wget --quiet --output-document="${downloaded_hosts_file_path}" \
+        https://someonewhocares.org/hosts/hosts; then
+        substep "hosts file downloaded successfully."
+
+        if cat "${downloaded_hosts_file_path}" | \
+            sudo tee -a /etc/hosts > /dev/null; then
             success "/etc/hosts updated."
         else
             error "Failed to update /etc/hosts"
             exit 1
         fi
+
+    else
+        error "Failed to download hosts file"
+        exit 1
     fi
 }
 
