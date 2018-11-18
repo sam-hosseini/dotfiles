@@ -14,14 +14,10 @@ main() {
     change_shell_to_fish
     # Configuring git config file
     configure_git
-    # Installing powerline-status so that setup_symlinks can setup the symlinks
-    # and requests and dotenv as the basis for a regular python script
-    pip_packages=(powerline-status requests python-dotenv flake8)
-    pip3_install "${pip_packages[@]}"
-    # Installing typescript so that YouCompleteMe can support it
-    # and prettier so that Neoformat can auto-format files
-    yarn_packages=(prettier typescript)
-    yarn_install "${yarn_packages[@]}"
+    # Installing pip packages so that setup_symlinks can setup the symlinks
+    install_pip_packages
+    # Installing yarn packages
+    install_yarn_packages
     # Setting up symlinks so that setup_vim can install all plugins
     setup_symlinks
     # Setting up Vim
@@ -41,28 +37,28 @@ main() {
 DOTFILES_REPO=~/personal/dotfiles
 
 function ask_for_sudo() {
-    info "Prompting for sudo password..."
+    info "Prompting for sudo password"
     if sudo --validate; then
         # Keep-alive
         while true; do sudo --non-interactive true; \
             sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-        success "Sudo credentials updated."
+        success "Sudo credentials updated"
     else
-        error "Obtaining sudo credentials failed."
+        error "Obtaining sudo credentials failed"
         exit 1
     fi
 }
 
 function install_homebrew() {
-    info "Installing Homebrew..."
+    info "Installing Homebrew"
     if hash brew 2>/dev/null; then
-        success "Homebrew already exists."
+        success "Homebrew already exists"
     else
 url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/installers/homebrew_installer
         if /usr/bin/ruby -e "$(curl -fsSL ${url})"; then
-            success "Homebrew installation succeeded."
+            success "Homebrew installation succeeded"
         else
-            error "Homebrew installation failed."
+            error "Homebrew installation failed"
             exit 1
         fi
     fi
@@ -70,23 +66,23 @@ url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/installers/home
 
 function install_packages_with_brewfile() {
     BREW_FILE_PATH="${DOTFILES_REPO}/brew/macOS.Brewfile"
-    info "Installing packages within ${BREW_FILE_PATH} ..."
+    info "Installing packages within ${BREW_FILE_PATH}"
     if brew bundle check --file="$BREW_FILE_PATH" &> /dev/null; then
-        success "Brewfile's dependencies are satisfied already."
+        success "Brewfile's dependencies are satisfied already"
     else
         if brew bundle --file="$BREW_FILE_PATH"; then
-            success "Brewfile installation succeeded."
+            success "Brewfile installation succeeded"
         else
-            error "Brewfile installation failed."
+            error "Brewfile installation failed"
             exit 1
         fi
     fi
 }
 
 function change_shell_to_fish() {
-    info "Fish shell setup..."
+    info "Fish shell setup"
     if grep --quiet fish <<< "$SHELL"; then
-        success "Fish shell already exists."
+        success "Fish shell already exists"
     else
         user=$(whoami)
         substep "Adding Fish executable to /etc/shells"
@@ -106,7 +102,7 @@ function change_shell_to_fish() {
         if sudo chsh -s /usr/local/bin/fish "$user"; then
             success "Fish shell successfully set for \"${user}\""
         else
-            error "Please try setting the Fish shell again."
+            error "Please try setting the Fish shell again"
         fi
     fi
 }
@@ -115,71 +111,121 @@ function configure_git() {
     username="Sajjad Hosseini"
     email="sajjad.hosseini@futurice.com"
 
-    info "Configuring git..."
+    info "Configuring git"
     if git config --global user.name "$username" && \
        git config --global user.email "$email"; then
-        success "git configuration succeeded."
+        success "git configuration succeeded"
     else
-        error "git configuration failed."
+        error "git configuration failed"
     fi
 }
 
+function install_pip_packages() {
+    pip_packages=(powerline-status requests python-dotenv flake8)
+    info "Installing pip packages \"${pip_packages[*]}\""
+
+    pip3_list_outcome=$(pip3 list)
+    for package_to_install in "${pip_packages[@]}"
+    do
+        if echo "$pip3_list_outcome" | \
+            grep --ignore-case "$package_to_install" &> /dev/null; then
+            substep "${package_to_install} already exists"
+        else
+            if pip3 install "$package_to_install"; then
+                substep "Package ${package_to_install} installation succeeded"
+            else
+                error "Package ${package_to_install} installation failed"
+                exit 1
+            fi
+        fi
+    done
+
+    success "pip packages successfully installed"
+}
+
+function install_yarn_packages() {
+    # Installing typescript for YouCompleteMe and prettier for Neoformat to auto-format files
+    yarn_packages=(prettier typescript)
+    info "Installing yarn packages \"${yarn_packages[*]}\""
+
+    yarn_list_outcome=$(yarn global list)
+    for package_to_install in "${yarn_packages[@]}"
+    do
+        if echo "$yarn_list_outcome" | \
+            grep --ignore-case "$package_to_install" &> /dev/null; then
+            substep "${package_to_install} already exists"
+        else
+            if yarn global add "$package_to_install"; then
+                substep "Package ${package_to_install} installation succeeded"
+            else
+                error "Package ${package_to_install} installation failed"
+                exit 1
+            fi
+        fi
+    done
+
+    success "yarn packages successfully installed"
+}
+
 function clone_dotfiles_repo() {
-    info "Cloning dotfiles repository into ${DOTFILES_REPO} ..."
+    info "Cloning dotfiles repository into ${DOTFILES_REPO}"
     if test -e $DOTFILES_REPO; then
-        substep "${DOTFILES_REPO} already exists."
+        substep "${DOTFILES_REPO} already exists"
         pull_latest $DOTFILES_REPO
+        success "Pull successful in ${DOTFILES_REPO} repository"
     else
         url=https://github.com/Sajjadhosn/dotfiles.git
         if git clone "$url" $DOTFILES_REPO; then
             success "Cloned into ${DOTFILES_REPO}"
         else
-            error "Cloning into ${DOTFILES_REPO} failed."
+            error "Cloning into ${DOTFILES_REPO} failed"
             exit 1
         fi
     fi
 }
 
 function pull_latest() {
-    info "Pulling latest changes in ${1} repository..."
+    substep "Pulling latest changes in ${1} repository"
     if git -C $1 pull origin master &> /dev/null; then
-        success "Pull successful in ${1} repository."
+        return
     else
-        error "Please pull the latest changes in ${1} repository manually."
+        error "Please pull the latest changes in ${1} repository manually"
     fi
 }
 
 function setup_vim() {
-    info "Setting up vim..."
+    info "Setting up vim"
     substep "Installing Vundle"
     if test -e ~/.vim/bundle/Vundle.vim; then
-        substep "Vundle already exists."
+        substep "Vundle already exists"
         pull_latest ~/.vim/bundle/Vundle.vim
+        substep "Pull successful in Vundle's repository"
     else
         url=https://github.com/VundleVim/Vundle.vim.git
         if git clone "$url" ~/.vim/bundle/Vundle.vim; then
-            substep "Vundle installation succeeded."
+            substep "Vundle installation succeeded"
         else
-            error "Vundle installation failed."
+            error "Vundle installation failed"
             exit 1
         fi
     fi
     substep "Installing all plugins"
     if vim +PluginInstall +qall 2> /dev/null; then
-        substep "Plugin installation succeeded."
+        substep "Plugin installation succeeded"
     else
-        error "Plugin installation failed."
+        error "Plugin installation failed"
         exit 1
     fi
-    success "vim successfully setup."
+    success "vim successfully setup"
 }
 
 function setup_tmux() {
-    info "Setting up tmux..."
+    info "Setting up tmux"
     substep "Installing tpm"
     if test -e ~/.tmux/plugins/tpm; then
-        substep "tpm already exists."
+        substep "tpm already exists"
         pull_latest ~/.tmux/plugins/tpm
+        substep "Pull successful in tpm's repository"
     else
         url=https://github.com/tmux-plugins/tpm
         if git clone "$url" ~/.tmux/plugins/tpm; then
@@ -195,33 +241,26 @@ function setup_tmux() {
     # sourcing .tmux.conf is necessary for tpm
     tmux source-file ~/.tmux.conf 2> /dev/null
 
-    if ~/.tmux/plugins/tpm/bin/./install_plugins; then
-        substep "Plugin installation succeeded."
+    if ~/.tmux/plugins/tpm/bin/./install_plugins &> /dev/null; then
+        substep "Plugin installation succeeded"
     else
-        error "Plugin installation failed."
+        error "Plugin installation failed"
         exit 1
     fi
-    success "tmux successfully setup."
+    success "tmux successfully setup"
 }
 
 function configure_iterm2() {
-    info "Configuring iTerm2..."
+    info "Configuring iTerm2"
     if \
         defaults write com.googlecode.iterm2 \
             LoadPrefsFromCustomFolder -int 1 && \
         defaults write com.googlecode.iterm2 \
             PrefsCustomFolder -string "${DOTFILES_REPO}/iTerm2";
     then
-        success "iTerm2 configuration succeeded."
+        success "iTerm2 configuration succeeded"
     else
-        error "iTerm2 configuration failed."
-        exit 1
-    fi
-    substep "Opening iTerm2"
-    if osascript -e 'tell application "iTerm" to activate'; then
-        substep "iTerm2 activation successful"
-    else
-        error "Failed to activate iTerm2"
+        error "iTerm2 configuration failed"
         exit 1
     fi
 }
@@ -229,7 +268,7 @@ function configure_iterm2() {
 function setup_symlinks() {
     POWERLINE_ROOT_REPO=/usr/local/lib/python3.7/site-packages
 
-    info "Setting up symlinks..."
+    info "Setting up symlinks"
     symlink "vim" ${DOTFILES_REPO}/vim/vimrc ~/.vimrc
     symlink "tmux" ${DOTFILES_REPO}/tmux/tmux.conf ~/.tmux.conf
     symlink "powerline" \
@@ -248,7 +287,7 @@ function setup_symlinks() {
     symlink "fish:config.fish" ${DOTFILES_REPO}/fish/config.fish \
         ~/.config/fish/config.fish
     symlink "fish:oh_my_fish" ${DOTFILES_REPO}/fish/oh_my_fish  ~/.config/omf
-    success "Symlinks successfully setup."
+    success "Symlinks successfully setup"
 }
 
 function symlink() {
@@ -262,9 +301,9 @@ function symlink() {
         mkdir -p "$destination_dir"
     fi
     if rm -rf "$destination" && ln -s "$point_to" "$destination"; then
-        success "Symlinking ${application} done."
+        substep "Symlinking ${application} done"
     else
-        error "Symlinking ${application} failed."
+        error "Symlinking ${application} failed"
         exit 1
     fi
 }
@@ -275,19 +314,19 @@ function update_hosts_file() {
     downloaded_hosts_file_path=/etc/downloaded_hosts_file
 
     if sudo cp "${own_hosts_file_path}" /etc/hosts; then
-        substep "Copying ${own_hosts_file_path} to /etc/hosts succeeded."
+        substep "Copying ${own_hosts_file_path} to /etc/hosts succeeded"
     else
-        error "Copying ${own_hosts_file_path} to /etc/hosts failed."
+        error "Copying ${own_hosts_file_path} to /etc/hosts failed"
         exit 1
     fi
 
     if sudo wget --quiet --output-document="${downloaded_hosts_file_path}" \
         https://someonewhocares.org/hosts/hosts; then
-        substep "hosts file downloaded successfully."
+        substep "hosts file downloaded successfully"
 
         if cat "${downloaded_hosts_file_path}" | \
             sudo tee -a /etc/hosts > /dev/null; then
-            success "/etc/hosts updated."
+            success "/etc/hosts updated"
         else
             error "Failed to update /etc/hosts"
             exit 1
@@ -300,22 +339,22 @@ function update_hosts_file() {
 }
 
 function setup_macOS_defaults() {
-    info "Updating macOS defaults..."
+    info "Updating macOS defaults"
 
     current_dir=$(pwd)
     cd ${DOTFILES_REPO}/macOS
     if bash defaults.sh; then
         cd $current_dir
-        success "macOS defaults setup succeeded."
+        success "macOS defaults setup succeeded"
     else
         cd $current_dir
-        error "macOS defaults setup failed."
+        error "macOS defaults setup failed"
         exit 1
     fi
 }
 
 function update_login_items() {
-    info "Updating login items..."
+    info "Updating login items"
     login_item /Applications/1Password\ 7.app
     login_item /Applications/Alfred\ 3.app
     login_item /Applications/Bartender\ 3.app
@@ -324,7 +363,7 @@ function update_login_items() {
     login_item /Applications/NordVPN.app
     login_item /Applications/Spectacle.app
     login_item /Applications/iTerm.app
-    success "Login items successfully updated."
+    success "Login items successfully updated"
 }
 
 function login_item() {
@@ -338,49 +377,11 @@ tell application "System Events" to make login item with properties ¬
 {name: "$name", path: "$path", hidden: "$hidden"}
 EOM
 then
-    success "Login item ${name} successfully added."
+    substep "Login item ${name} successfully added"
 else
-    error "Adding login item ${name} failed."
+    error "Adding login item ${name} failed"
     exit 1
 fi
-}
-
-function yarn_install() {
-    packages_to_install=("$@")
-
-    for package_to_install in "${packages_to_install[@]}"
-    do
-        info "yarn global add ${package_to_install}"
-        if yarn global list | grep "$package_to_install" &> /dev/null; then
-            success "${package_to_install} already exists."
-        else
-            if yarn global add "$package_to_install"; then
-                success "Package ${package_to_install} installation succeeded."
-            else
-                error "Package ${package_to_install} installation failed."
-                exit 1
-            fi
-        fi
-    done
-}
-
-function pip3_install() {
-    packages_to_install=("$@")
-
-    for package_to_install in "${packages_to_install[@]}"
-    do
-        info "pip3 install ${package_to_install}"
-        if pip3 --quiet show "$package_to_install"; then
-            success "${package_to_install} already exists."
-        else
-            if pip3 install "$package_to_install"; then
-                success "Package ${package_to_install} installation succeeded."
-            else
-                error "Package ${package_to_install} installation failed."
-                exit 1
-            fi
-        fi
-    done
 }
 
 function coloredEcho() {
