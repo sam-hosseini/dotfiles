@@ -227,7 +227,7 @@ function configure_iterm2() {
 }
 
 function setup_symlinks() {
-    POWERLINE_ROOT_REPO=/usr/local/lib/python2.7/site-packages
+    POWERLINE_ROOT_REPO=/usr/local/lib/python3.7/site-packages
 
     info "Setting up symlinks..."
     symlink "vim" ${DOTFILES_REPO}/vim/vimrc ~/.vimrc
