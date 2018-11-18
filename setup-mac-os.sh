@@ -69,12 +69,17 @@ url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/installers/home
 }
 
 function install_packages_with_brewfile() {
-    info "Installing packages within ${DOTFILES_REPO}/brew/macOS.Brewfile ..."
-    if brew bundle --file=$DOTFILES_REPO/brew/macOS.Brewfile; then
-        success "Brewfile installation succeeded."
+    BREW_FILE_PATH="${DOTFILES_REPO}/brew/macOS.Brewfile"
+    info "Installing packages within ${BREW_FILE_PATH} ..."
+    if brew bundle check --file="$BREW_FILE_PATH" &> /dev/null; then
+        success "Brewfile's dependencies are satisfied already."
     else
-        error "Brewfile installation failed."
-        exit 1
+        if brew bundle --file="$BREW_FILE_PATH"; then
+            success "Brewfile installation succeeded."
+        else
+            error "Brewfile installation failed."
+            exit 1
+        fi
     fi
 }
 
