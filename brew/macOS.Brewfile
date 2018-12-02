@@ -10,6 +10,7 @@ tap "homebrew/services"
 brew "ack"
 brew "cmake" # for YouCompleteMe vim plugin
 brew "coreutils" # for awesome commands like timeout
+brew "diff-so-fancy"
 brew "extract_url" # for urlview tmux plugin
 brew "ffmpeg" # for being able to manipulate videos for example
 brew "fish"
