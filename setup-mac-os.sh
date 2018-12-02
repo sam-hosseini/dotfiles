@@ -12,8 +12,6 @@ main() {
     install_packages_with_brewfile
     # Changing default shell to Fish
     change_shell_to_fish
-    # Configuring git config file
-    configure_git
     # Installing pip packages so that setup_symlinks can setup the symlinks
     install_pip_packages
     # Installing yarn packages
@@ -104,19 +102,6 @@ function change_shell_to_fish() {
         else
             error "Please try setting the Fish shell again"
         fi
-    fi
-}
-
-function configure_git() {
-    username="Sajjad Hosseini"
-    email="sajjad.hosseini@futurice.com"
-
-    info "Configuring git"
-    if git config --global user.name "$username" && \
-       git config --global user.email "$email"; then
-        success "git configuration succeeded"
-    else
-        error "git configuration failed"
     fi
 }
 
@@ -270,6 +255,7 @@ function setup_symlinks() {
 
     info "Setting up symlinks"
     symlink "vim" ${DOTFILES_REPO}/vim/vimrc ~/.vimrc
+    symlink "git" ${DOTFILES_REPO}/git/gitconfig ~/.gitconfig
     symlink "tmux" ${DOTFILES_REPO}/tmux/tmux.conf ~/.tmux.conf
     symlink "powerline" \
         ${DOTFILES_REPO}/powerline \
