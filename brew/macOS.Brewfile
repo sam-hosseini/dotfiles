@@ -15,8 +15,7 @@ brew "ffmpeg" # for being able to manipulate videos for example
 brew "fish"
 brew "gifsicle" # for gif_compress fish function
 brew "git"
-brew "python"
-brew "python@2"
+brew "htop"
 brew "httpie"
 brew "hub"
 brew "m-cli"
@@ -25,6 +24,8 @@ brew "node"
 brew "p7zip"
 brew "pipenv"
 brew "postgresql", restart_service: :changed
+brew "python"
+brew "python@2"
 brew "reattach-to-user-namespace" # for tmux commands to work
 brew "redis", restart_service: :changed
 brew "tldr"
@@ -66,4 +67,3 @@ cask "the-unarchiver"
 cask "transmission"
 cask "tunnelblick"
 cask "vlc"
-
