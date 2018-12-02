@@ -15,9 +15,9 @@ brew "ffmpeg" # for being able to manipulate videos for example
 brew "fish"
 brew "gifsicle" # for gif_compress fish function
 brew "git"
+brew "git-open"
 brew "htop"
 brew "httpie"
-brew "hub"
 brew "m-cli"
 brew "mariadb", restart_service: :changed
 brew "node"
