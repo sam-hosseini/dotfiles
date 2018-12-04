@@ -1,4 +1,5 @@
 ##################### taps #####################
+tap "PotatoLabs/homebrew-git-redate"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -17,6 +18,7 @@ brew "fish"
 brew "gifsicle" # for gif_compress fish function
 brew "git"
 brew "git-open"
+brew "git-redate"
 brew "htop"
 brew "httpie"
 brew "m-cli"
