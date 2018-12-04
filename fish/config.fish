@@ -13,7 +13,8 @@ set --global --export fish_user_paths /usr/local/bin $fish_user_paths # Homebrew
 ############################################################################
 # Secret Environment Variables
 ############################################################################
-source ~/Dropbox/Dotfiles/fish/secret_env_vars.fish
+set --local secret_env_vars_path ~/Dropbox/Dotfiles/fish/secret_env_vars.fish
+test -e $secret_env_vars_path; and source $secret_env_vars_path
 
 ############################################################################
 # Configuration for Powerline
