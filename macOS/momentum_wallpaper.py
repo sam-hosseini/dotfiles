@@ -5,14 +5,12 @@ import time
 import uuid
 
 import requests
-import dotenv
 
 
 def get_momentum_token():
-    dotenv.load_dotenv(dotenv.find_dotenv())
     payload = {
-        'username': os.getenv('momentum_username'),
-        'password': os.getenv('momentum_password'),
+        'username': os.getenv('MOMENTUM_USERNAME'),
+        'password': os.getenv('MOMENTUM_PASSWORD'),
     }
     url = 'https://api.momentumdash.com/user/authenticate'
     res = requests.post(url, json=payload).json()
