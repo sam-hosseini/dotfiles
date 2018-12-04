@@ -3,7 +3,8 @@
 ############################################################################
 set --global --export HOMEBREW_NO_AUTO_UPDATE true
 set --global --export EDITOR vim
-set --global --export PYTHONDONTWRITEBYTECODE 1
+set --global --export PYTHONDONTWRITEBYTECODE true
+set --global --export PYTHONUNBUFFERED true
 set --global --export fish_greeting ''
 set --global --export LC_ALL en_US.UTF-8 # Set locale
 set --global --export LANG en_US.UTF-8   # Set locale
