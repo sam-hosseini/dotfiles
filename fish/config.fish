@@ -10,6 +10,10 @@ set --global --export LC_ALL en_US.UTF-8 # Set locale
 set --global --export LANG en_US.UTF-8   # Set locale
 set --global --export fish_user_paths /usr/local/bin $fish_user_paths # Homebrew programs will be used before system-provided programs
 
+############################################################################
+# Secret Environment Variables
+############################################################################
+source ~/Dropbox/Dotfiles/fish/secret_env_vars.fish
 
 ############################################################################
 # Configuration for Powerline
