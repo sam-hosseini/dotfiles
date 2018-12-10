@@ -17,6 +17,9 @@ fe80::1%lo0	localhost
 #
 #
 # What is below is from https://someonewhocares.org/
+# To ignore certain keyword patterns based on the result of ack command-line
+# application, add the keyword to ignored_keywords file using '|' as a separator.
+# The keywords will be removed from the someonewhocares downloaded file.
 #
 #
 #
