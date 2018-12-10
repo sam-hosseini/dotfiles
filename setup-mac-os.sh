@@ -298,7 +298,9 @@ function symlink() {
 function update_hosts_file() {
     info "Updating /etc/hosts"
     own_hosts_file_path=${DOTFILES_REPO}/hosts/own_hosts_file
+    ignored_keywords_path=${DOTFILES_REPO}/hosts/ignored_keywords
     downloaded_hosts_file_path=/etc/downloaded_hosts_file
+    downloaded_updated_hosts_file_path=/etc/downloaded_updated_hosts_file
 
     if sudo cp "${own_hosts_file_path}" /etc/hosts; then
         substep "Copying ${own_hosts_file_path} to /etc/hosts succeeded"
@@ -311,7 +313,15 @@ function update_hosts_file() {
         https://someonewhocares.org/hosts/hosts; then
         substep "hosts file downloaded successfully"
 
-        if cat "${downloaded_hosts_file_path}" | \
+        if ack --invert-match "$(cat ${ignored_keywords_path})" "${downloaded_hosts_file_path}" | \
+            sudo tee "${downloaded_updated_hosts_file_path}" > /dev/null; then
+            substep "Ignored patterns successfully removed from downloaded hosts file"
+        else
+            error "Failed to remove ignored patterns from downloaded hosts file"
+            exit 1
+        fi
+
+        if cat "${downloaded_updated_hosts_file_path}" | \
             sudo tee -a /etc/hosts > /dev/null; then
             success "/etc/hosts updated"
         else
