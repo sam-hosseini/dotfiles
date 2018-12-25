@@ -131,7 +131,8 @@ function install_pip_packages() {
 function install_yarn_packages() {
     # Installing typescript for YouCompleteMe and prettier for Neoformat to auto-format files
     # json for auto-formatting of json responses in terminal
-    yarn_packages=(prettier typescript json)
+    # vmd for previewing markdown files
+    yarn_packages=(prettier typescript json vmd)
     info "Installing yarn packages \"${yarn_packages[*]}\""
 
     yarn_list_outcome=$(yarn global list)
