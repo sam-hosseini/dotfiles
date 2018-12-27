@@ -48,7 +48,7 @@ def write_todays_picture(
 
 def download_picture(url):
     current_dir = os.path.dirname(os.path.realpath(__file__))
-    dropbox_dir = os.path.join(os.path.expanduser('~'), 'Dropbox', 'Pictures')
+    dropbox_dir = os.path.join(os.path.expanduser('~'), 'Dropbox', 'Uploads')
     res = requests.get(url)
     write_todays_picture(res, current_dir)
     # randomizing the filename so that Dropbox would trigger hooks
