@@ -359,6 +359,7 @@ function update_login_items() {
     login_item /Applications/Docker.app
     login_item /Applications/Dropbox.app
     login_item /Applications/NordVPN.app
+    login_item /Applications/Numi.app
     login_item /Applications/Spectacle.app
     login_item /Applications/iTerm.app
     success "Login items successfully updated"
