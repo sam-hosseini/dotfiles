@@ -39,7 +39,7 @@ function ask_for_sudo() {
     if sudo --validate; then
         # Keep-alive
         while true; do sudo --non-interactive true; \
-            sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+            sleep 10; kill -0 "$$" || exit; done 2>/dev/null &
         success "Sudo credentials updated"
     else
         error "Obtaining sudo credentials failed"
