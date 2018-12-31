@@ -187,7 +187,7 @@ nnoremap ' <Nop>
 " => General configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set backspace=indent,eol,start  " allow backspace in insert mode
-set backupcopy=yes " preserving soft/hard links https://goo.gl/QDC1sU
+set backupcopy=yes " preserving soft/hard links bit.ly/2Rmkhma
 set clipboard=unnamed " making Vim work with system clipboard
 set hlsearch " highlight search patterns
 set ignorecase " ignore case when searching...

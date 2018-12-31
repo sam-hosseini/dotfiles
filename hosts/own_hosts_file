@@ -7,7 +7,7 @@
 fe80::1%lo0	localhost
 
 ############################################################################
-# This is for docker-compose taking forever to load https://goo.gl/xAUMKp
+# This is for docker-compose taking forever to load bit.ly/2GKR3co
 ############################################################################
 127.0.0.1 localunixsocket
 
