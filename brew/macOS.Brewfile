@@ -51,7 +51,6 @@ cask "bartender"
 cask "brave-browser"
 cask "docker"
 cask "dropbox"
-cask "evernote"
 cask "firefox"
 cask "font-fira-mono-for-powerline" # for iTerm2 powerline
 cask "gimp"
