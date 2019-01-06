@@ -353,34 +353,13 @@ function setup_macOS_defaults() {
 
 function update_login_items() {
     info "Updating login items"
-    login_item /Applications/1Password\ 7.app
-    login_item /Applications/Alfred\ 3.app
-    login_item /Applications/Bartender\ 3.app
-    login_item /Applications/Docker.app
-    login_item /Applications/Dropbox.app
-    login_item /Applications/NordVPN.app
-    login_item /Applications/Numi.app
-    login_item /Applications/Spectacle.app
-    login_item /Applications/iTerm.app
-    success "Login items successfully updated"
-}
 
-function login_item() {
-    path=$1
-    hidden=${2:-false}
-    name=$(basename "$path")
-
-    # "¬" charachter tells osascript that the line continues
-    if osascript &> /dev/null << EOM
-tell application "System Events" to make login item with properties ¬
-{name: "$name", path: "$path", hidden: "$hidden"}
-EOM
-then
-    substep "Login item ${name} successfully added"
-else
-    error "Adding login item ${name} failed"
-    exit 1
-fi
+    if osascript ${DOTFILES_REPO}/macOS/login_items.applescript &> /dev/null; then
+        success "Login items successfully updated"
+    else
+        error "Login items update failed"
+        exit 1
+    fi
 }
 
 function coloredEcho() {
