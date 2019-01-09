@@ -24,3 +24,9 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+
+############################################################################
+# Other settings
+############################################################################
+[core]
+	autocrlf = input  # bit.ly/2RLLxed
