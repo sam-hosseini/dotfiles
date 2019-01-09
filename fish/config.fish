@@ -1,4 +1,10 @@
 ############################################################################
+# Secret Environment Variables
+############################################################################
+set --local secret_env_vars_path ~/Dropbox/Dotfiles/fish/secret_env_vars.fish
+test -e $secret_env_vars_path; and source $secret_env_vars_path
+
+############################################################################
 # Environment Variables
 ############################################################################
 set --global --export HOMEBREW_NO_AUTO_UPDATE true
@@ -9,12 +15,6 @@ set --global --export fish_greeting ''
 set --global --export LC_ALL en_US.UTF-8 # Set locale
 set --global --export LANG en_US.UTF-8   # Set locale
 set --global --export fish_user_paths /usr/local/bin $fish_user_paths # Homebrew programs will be used before system-provided programs
-
-############################################################################
-# Secret Environment Variables
-############################################################################
-set --local secret_env_vars_path ~/Dropbox/Dotfiles/fish/secret_env_vars.fish
-test -e $secret_env_vars_path; and source $secret_env_vars_path
 
 ############################################################################
 # Configuration for Powerline
