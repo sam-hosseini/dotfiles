@@ -22,7 +22,6 @@ brew "git-redate"
 brew "htop"
 brew "httpie"
 brew "jq"
-brew "m-cli"
 brew "mariadb", restart_service: :changed
 brew "node"
 brew "p7zip"
