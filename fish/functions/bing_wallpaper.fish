@@ -1,6 +1,9 @@
 function bing_wallpaper
 
-    set --local WALLPAPER ~/personal/dotfiles/macOS/todays_picture.jpg
+    set --local RANDOM_NUMER (random)
+    set --local WALLPAPER_IMAGES ~/personal/dotfiles/macOS/todays_picture_*.jpg
+    set --local WALLPAPER ~/personal/dotfiles/macOS/todays_picture_$RANDOM_NUMER.jpg
+
     set --local DROPBOX_IMAGES ~/Dropbox/Uploads/todays_picture_*.jpg
     set --local DROPBOX_PATH ~/Dropbox/Uploads/todays_picture_(random).jpg
 
@@ -12,6 +15,7 @@ function bing_wallpaper
     ############################################################################
     # Downloading Bing's picture of today and setting it as wallpaper
     ############################################################################
+    rm -f $WALLPAPER_IMAGES
     wget --quiet --output-document=$WALLPAPER $IMAGE_URL
     osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$WALLPAPER\""
     killall Dock
