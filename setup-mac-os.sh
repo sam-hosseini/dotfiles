@@ -106,7 +106,7 @@ function change_shell_to_fish() {
 }
 
 function install_pip_packages() {
-    pip_packages=(powerline-status requests flake8)
+    pip_packages=(powerline-status requests flake8 twine)
     info "Installing pip packages \"${pip_packages[*]}\""
 
     pip3_list_outcome=$(pip3 list)
