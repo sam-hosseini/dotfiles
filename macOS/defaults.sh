@@ -4,7 +4,6 @@ main() {
     configure_plist_apps # Configure all apps whose configurations are plists
     configure_finder
     configure_dock
-    configure_chrome
     configure_system
     configure_numi
 }
@@ -39,14 +38,6 @@ function configure_system() {
     # Disable macOS startup chime sound
     sudo defaults write com.apple.loginwindow LoginHook $LOGIN_HOOK_PATH
     sudo defaults write com.apple.loginwindow LogoutHook $LOGOUT_HOOK_PATH
-}
-
-function configure_chrome() {
-    # Disable the all too sensitive backswipe on trackpads
-    defaults write com.google.Chrome \
-        AppleEnableSwipeNavigateWithScrolls -bool false
-    defaults write com.google.Chrome.canary \
-        AppleEnableSwipeNavigateWithScrolls -bool false
 }
 
 function configure_dock() {
