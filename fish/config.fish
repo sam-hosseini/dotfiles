@@ -18,7 +18,18 @@ set --global --export PYTHONUNBUFFERED true
 set --global --export fish_greeting ''
 set --global --export LC_ALL en_US.UTF-8 # Set locale
 set --global --export LANG en_US.UTF-8   # Set locale
-set --global --export fish_user_paths /usr/local/bin $fish_user_paths # Homebrew programs will be used before system-provided programs
+
+############################################################################
+# PATH setup
+############################################################################
+# /usr/local/bin is where brew symlinks most executables it installs
+# /usr/local/opt/ruby/bin is where the symlinked brew Ruby executable lives
+# By putting these paths before $fish_user_paths, they will take precedence
+# over system provided programs
+set --global --export fish_user_paths \
+    /usr/local/bin \
+    /usr/local/opt/ruby/bin \
+    $fish_user_paths
 
 ############################################################################
 # Configuration for Powerline
