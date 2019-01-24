@@ -263,6 +263,9 @@ function setup_symlinks() {
     symlink "tmux" ${DOTFILES_REPO}/tmux/tmux.conf ~/.tmux.conf
     symlink "vim" ${DOTFILES_REPO}/vim/vimrc ~/.vimrc
 
+    # Disable shell login message
+    symlink "hushlogin" /dev/null ~/.hushlogin
+
     # Until this bit.ly/2RNZh8X is merged, symlinking cannot be done
     mkdir -p "$APPLICATION_SUPPORT"/Spectacle
     cp ${DOTFILES_REPO}/spectacle/Shortcuts.json "${APPLICATION_SUPPORT}"/Spectacle/Shortcuts.json
