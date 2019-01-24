@@ -1,3 +1,3 @@
-function tl
+function t
     tmux ls
 end
