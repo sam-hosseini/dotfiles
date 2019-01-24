@@ -18,11 +18,17 @@ function configure_plist_apps() {
 }
 
 function configure_system() {
+    LOGIN_HOOK_PATH=~/personal/dotfiles/macOS/login_hook_script.sh
+    LOGOUT_HOOK_PATH=~/personal/dotfiles/macOS/logout_hook_script.sh
+
     # Disable Gatekeeper entirely to get rid of \
     # “Are you sure you want to open this application?” dialog
     sudo spctl --master-disable
     # Disable natural scrolling
     defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+    # Disable macOS startup chime sound
+    sudo defaults write com.apple.loginwindow LoginHook $LOGIN_HOOK_PATH
+    sudo defaults write com.apple.loginwindow LogoutHook $LOGOUT_HOOK_PATH
 }
 
 function configure_chrome() {
