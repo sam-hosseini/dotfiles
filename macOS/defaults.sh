@@ -7,8 +7,6 @@ main() {
     configure_chrome
     configure_system
     configure_numi
-    # to ensure the focus gets back to the terminal after the execution completes
-    move_focus_back_to_iterm2
 }
 
 function configure_plist_apps() {
@@ -146,6 +144,9 @@ function open() {
     app=$1
     osascript << EOM
 tell application "$app" to activate
+tell application "System Events" to tell process "iTerm2"
+set frontmost to true
+end tell
 EOM
 }
 
@@ -154,14 +155,6 @@ function import_plist() {
     filename=$2
     defaults delete "$domain" &> /dev/null
     defaults import "$domain" "$filename"
-}
-
-function move_focus_back_to_iterm2() {
-    osascript << EOM
-tell application "System Events" to tell process "iTerm2"
-set frontmost to true
-end tell
-EOM
 }
 
 main "$@"
