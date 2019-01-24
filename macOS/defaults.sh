@@ -2,10 +2,10 @@
 
 main() {
     configure_plist_apps # Configure all apps whose configurations are plists
-    configure_finder
-    configure_dock
-    configure_system
     configure_numi
+    configure_system
+    configure_dock
+    configure_finder
 }
 
 function configure_plist_apps() {
