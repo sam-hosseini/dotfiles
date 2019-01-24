@@ -253,28 +253,24 @@ function configure_iterm2() {
 }
 
 function setup_symlinks() {
+    APPLICATION_SUPPORT=~/Library/Application\ Support
     POWERLINE_ROOT_REPO=/usr/local/lib/python3.7/site-packages
 
     info "Setting up symlinks"
-    symlink "vim" ${DOTFILES_REPO}/vim/vimrc ~/.vimrc
     symlink "git" ${DOTFILES_REPO}/git/gitconfig ~/.gitconfig
+    symlink "powerline" ${DOTFILES_REPO}/powerline ${POWERLINE_ROOT_REPO}/powerline/config_files
     symlink "tmux" ${DOTFILES_REPO}/tmux/tmux.conf ~/.tmux.conf
-    symlink "powerline" \
-        ${DOTFILES_REPO}/powerline \
-        ${POWERLINE_ROOT_REPO}/powerline/config_files
-    #symlink "spectacle" \
-    # the above line should be commented out and used instead of the "cp" below
-    # when Spectacle fixes the sorting issue of Shortcuts.json file
-    cp \
-        ${DOTFILES_REPO}/spectacle/Shortcuts.json \
-        ~/Library/Application\ Support/Spectacle/Shortcuts.json
-    symlink "fish:completions" ${DOTFILES_REPO}/fish/completions \
-        ~/.config/fish/completions
-    symlink "fish:functions" ${DOTFILES_REPO}/fish/functions \
-        ~/.config/fish/functions
-    symlink "fish:config.fish" ${DOTFILES_REPO}/fish/config.fish \
-        ~/.config/fish/config.fish
-    symlink "fish:oh_my_fish" ${DOTFILES_REPO}/fish/oh_my_fish  ~/.config/omf
+    symlink "vim" ${DOTFILES_REPO}/vim/vimrc ~/.vimrc
+
+    # Until this bit.ly/2RNZh8X is merged, symlinking cannot be done
+    mkdir -p "$APPLICATION_SUPPORT"/Spectacle
+    cp ${DOTFILES_REPO}/spectacle/Shortcuts.json "${APPLICATION_SUPPORT}"/Spectacle/Shortcuts.json
+
+    symlink "fish:completions" ${DOTFILES_REPO}/fish/completions ~/.config/fish/completions
+    symlink "fish:functions"   ${DOTFILES_REPO}/fish/functions   ~/.config/fish/functions
+    symlink "fish:config.fish" ${DOTFILES_REPO}/fish/config.fish ~/.config/fish/config.fish
+    symlink "fish:oh_my_fish"  ${DOTFILES_REPO}/fish/oh_my_fish  ~/.config/omf
+
     success "Symlinks successfully setup"
 }
 
