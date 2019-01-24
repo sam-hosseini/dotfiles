@@ -37,8 +37,9 @@ function configure_dock() {
     quit "Dock"
     # Set the icon size of Dock items to 36 pixels
     defaults write com.apple.dock tilesize -int 36
-    # Wipe all (default) app icons from the Dock
+    # Remove all (default) app icons from the Dock
     defaults write com.apple.dock persistent-apps -array
+    defaults delete com.apple.dock persistent-others
     # Show only open applications in the Dock
     defaults write com.apple.dock static-only -bool true
     # Don’t animate opening applications from the Dock
