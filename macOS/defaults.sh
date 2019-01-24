@@ -35,6 +35,8 @@ function configure_chrome() {
 
 function configure_dock() {
     quit "Dock"
+    # Don’t show recent applications in Dock
+    defaults write com.apple.dock show-recents -bool false
     # Set the icon size of Dock items to 36 pixels
     defaults write com.apple.dock tilesize -int 36
     # Remove all (default) app icons from the Dock
