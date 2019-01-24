@@ -48,7 +48,7 @@ function configure_dock() {
     defaults write com.apple.dock tilesize -int 36
     # Remove all (default) app icons from the Dock
     defaults write com.apple.dock persistent-apps -array
-    defaults delete com.apple.dock persistent-others
+    defaults write com.apple.dock recent-apps -array
     # Show only open applications in the Dock
     defaults write com.apple.dock static-only -bool true
     # Don’t animate opening applications from the Dock
