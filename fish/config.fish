@@ -1,4 +1,9 @@
 ############################################################################
+# Fish theme - influences only the colors of what you type
+############################################################################
+source ~/personal/dotfiles/fish/fish_theme.fish
+
+############################################################################
 # Secret Environment Variables
 ############################################################################
 set --local secret_env_vars_path ~/Dropbox/Dotfiles/fish/secret_env_vars.fish
