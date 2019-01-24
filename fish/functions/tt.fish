@@ -1,3 +1,3 @@
 function tt
-    caffeinate -d &; tmux new-session -s base -n base
+    caffeinate -d &; tmuxp load ~/personal/dotfiles/tmux/tmux_startup_windows.yaml
 end
