@@ -21,6 +21,8 @@ function configure_system() {
     # Disable Gatekeeper entirely to get rid of \
     # “Are you sure you want to open this application?” dialog
     sudo spctl --master-disable
+    # Disable natural scrolling
+    defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 }
 
 function configure_chrome() {
