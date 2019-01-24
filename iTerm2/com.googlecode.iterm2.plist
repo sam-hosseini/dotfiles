@@ -77,7 +77,7 @@
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
 	<key>NSStatusItem Preferred Position Item-0</key>
-	<real>20375</real>
+	<real>5313</real>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -101,17 +101,8 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>736 748 400 129 0 0 1440 877 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>718 100 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>0 224 796 486 0 0 1440 877 </string>
+	<string>277 258 796 486 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1440 877 0 0 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_F5D16553-D10D-43D9-B41B-5EA43A34C0AB</key>
@@ -735,7 +726,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>Hotkey Window</string>
+			<string>hotkey_profile</string>
 			<key>Non Ascii Font</key>
 			<string>FiraMonoForPowerline-Regular 12</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -818,16 +809,14 @@
 			<string>/Users/shos</string>
 		</dict>
 	</array>
-	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>F119FC94-30EF-41C6-8368-63A29E8F79BB</string>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
+	<string>BF55B78A-2058-4D49-B58B-2859E0E6902B</string>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>536021723.59496403</real>
+	<real>570039778.40085804</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -889,20 +878,18 @@
 	<string>/Users/shos/personal/dotfiles/iTerm2</string>
 	<key>Print In Black And White</key>
 	<true/>
+	<key>PromptOnQuit</key>
+	<false/>
 	<key>RunJobsInServers</key>
 	<false/>
-	<key>SUAutomaticallyUpdate</key>
-	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=81</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=83</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
-	<key>SULastCheckTime</key>
-	<date>2018-10-04T14:44:21Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -932,7 +919,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.1</string>
+	<string>3.2.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>5</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
