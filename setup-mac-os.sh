@@ -40,9 +40,9 @@ function ask_for_sudo() {
         # Keep-alive
         while true; do sudo --non-interactive true; \
             sleep 10; kill -0 "$$" || exit; done 2>/dev/null &
-        success "Sudo credentials updated"
+        success "Sudo password updated"
     else
-        error "Obtaining sudo credentials failed"
+        error "Sudo password update failed"
         exit 1
     fi
 }
@@ -66,7 +66,7 @@ function install_packages_with_brewfile() {
     BREW_FILE_PATH="${DOTFILES_REPO}/brew/macOS.Brewfile"
     info "Installing packages within ${BREW_FILE_PATH}"
     if brew bundle check --file="$BREW_FILE_PATH" &> /dev/null; then
-        success "Brewfile's dependencies are satisfied already"
+        success "Brewfile's dependencies are already satisfied "
     else
         if brew bundle --file="$BREW_FILE_PATH"; then
             success "Brewfile installation succeeded"
@@ -100,7 +100,7 @@ function change_shell_to_fish() {
         if sudo chsh -s /usr/local/bin/fish "$user"; then
             success "Fish shell successfully set for \"${user}\""
         else
-            error "Please try setting the Fish shell again"
+            error "Please try setting Fish shell again"
         fi
     fi
 }
@@ -114,12 +114,12 @@ function install_pip_packages() {
     do
         if echo "$pip3_list_outcome" | \
             grep --ignore-case "$package_to_install" &> /dev/null; then
-            substep "${package_to_install} already exists"
+            substep "\"${package_to_install}\" already exists"
         else
             if pip3 install "$package_to_install"; then
-                substep "Package ${package_to_install} installation succeeded"
+                substep "Package \"${package_to_install}\" installation succeeded"
             else
-                error "Package ${package_to_install} installation failed"
+                error "Package \"${package_to_install}\" installation failed"
                 exit 1
             fi
         fi
@@ -140,12 +140,12 @@ function install_yarn_packages() {
     do
         if echo "$yarn_list_outcome" | \
             grep --ignore-case "$package_to_install" &> /dev/null; then
-            substep "${package_to_install} already exists"
+            substep "\"${package_to_install}\" already exists"
         else
             if yarn global add "$package_to_install"; then
-                substep "Package ${package_to_install} installation succeeded"
+                substep "Package \"${package_to_install}\" installation succeeded"
             else
-                error "Package ${package_to_install} installation failed"
+                error "Package \"${package_to_install}\" installation failed"
                 exit 1
             fi
         fi
@@ -163,9 +163,9 @@ function clone_dotfiles_repo() {
     else
         url=https://github.com/Sajjadhosn/dotfiles.git
         if git clone "$url" $DOTFILES_REPO; then
-            success "Cloned into ${DOTFILES_REPO}"
+            success "Dotfiles repository cloned into ${DOTFILES_REPO}"
         else
-            error "Cloning into ${DOTFILES_REPO} failed"
+            error "Dotfiles repository cloning failed"
             exit 1
         fi
     fi
@@ -176,7 +176,7 @@ function pull_latest() {
     if git -C $1 pull origin master &> /dev/null; then
         return
     else
-        error "Please pull the latest changes in ${1} repository manually"
+        error "Please pull latest changes in ${1} repository manually"
     fi
 }
 
@@ -198,9 +198,9 @@ function setup_vim() {
     fi
     substep "Installing all plugins"
     if vim +PluginInstall +qall 2> /dev/null; then
-        substep "Plugin installation succeeded"
+        substep "Plugins installations succeeded"
     else
-        error "Plugin installation failed"
+        error "Plugins installations failed"
         exit 1
     fi
     success "vim successfully setup"
@@ -216,9 +216,9 @@ function setup_tmux() {
     else
         url=https://github.com/tmux-plugins/tpm
         if git clone "$url" ~/.tmux/plugins/tpm; then
-            substep "tpm installation succeeded."
+            substep "tpm installation succeeded"
         else
-            error "tpm installation failed."
+            error "tpm installation failed"
             exit 1
         fi
     fi
@@ -229,9 +229,9 @@ function setup_tmux() {
     tmux source-file ~/.tmux.conf 2> /dev/null
 
     if ~/.tmux/plugins/tpm/bin/./install_plugins &> /dev/null; then
-        substep "Plugin installation succeeded"
+        substep "Plugins installations succeeded"
     else
-        error "Plugin installation failed"
+        error "Plugins installations failed"
         exit 1
     fi
     success "tmux successfully setup"
@@ -286,9 +286,9 @@ function symlink() {
         mkdir -p "$destination_dir"
     fi
     if rm -rf "$destination" && ln -s "$point_to" "$destination"; then
-        substep "Symlinking ${application} done"
+        substep "Symlinking for \"${application}\" done"
     else
-        error "Symlinking ${application} failed"
+        error "Symlinking for \"${application}\" failed"
         exit 1
     fi
 }
@@ -340,10 +340,10 @@ function setup_macOS_defaults() {
     cd ${DOTFILES_REPO}/macOS
     if bash defaults.sh; then
         cd $current_dir
-        success "macOS defaults setup succeeded"
+        success "macOS defaults updated successfully"
     else
         cd $current_dir
-        error "macOS defaults setup failed"
+        error "macOS defaults update failed"
         exit 1
     fi
 }
@@ -352,7 +352,7 @@ function update_login_items() {
     info "Updating login items"
 
     if osascript ${DOTFILES_REPO}/macOS/login_items.applescript &> /dev/null; then
-        success "Login items successfully updated"
+        success "Login items updated successfully "
     else
         error "Login items update failed"
         exit 1
