@@ -6,6 +6,7 @@ main() {
     configure_dock
     configure_chrome
     configure_system
+    configure_numi
     # to ensure the focus gets back to the terminal after the execution completes
     move_focus_back_to_iterm2
 }
@@ -15,6 +16,17 @@ function configure_plist_apps() {
     quit "The Unarchiver"
     import_plist "org.m0k.transmission" "Transmission.plist"
     import_plist "cx.c3.theunarchiver" "The_Unarchiver.plist"
+}
+
+function configure_numi() {
+    quit "Numi"
+    # Enable show in menu bar
+    defaults write com.dmitrynikolaev.numi menuBarMode -int 1
+    # Enable alfred integration
+    defaults write com.dmitrynikolaev.numi alfredIntegration -int 1
+    # To disable welcome tours
+    defaults write com.dmitrynikolaev.numi hasLaunchedBefore -int 1
+    open "Numi"
 }
 
 function configure_system() {
