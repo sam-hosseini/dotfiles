@@ -10,6 +10,8 @@ main() {
     clone_dotfiles_repo
     # Installing all packages in Dotfiles repository's Brewfile
     install_packages_with_brewfile
+    # Remove quarantine from casks downloaded by brew
+    remove_quarantine
     # Changing default shell to Fish
     change_shell_to_fish
     # Installing pip packages so that setup_symlinks can setup the symlinks
@@ -75,6 +77,13 @@ function install_packages_with_brewfile() {
             exit 1
         fi
     fi
+}
+
+function remove_quarantine() {
+    APPLICATIONS_PATH=/Applications
+    info "Removing quarantine attributes from applications in ${APPLICATIONS_PATH}"
+    sudo xattr -c /Applications/*.app &> /dev/null;
+    success "Quarantine attributes from applications in ${APPLICATIONS_PATH} successfully removed"
 }
 
 function change_shell_to_fish() {
