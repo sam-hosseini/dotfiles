@@ -16,7 +16,6 @@ brew "ack"
 brew "cmake" # for YouCompleteMe vim plugin
 brew "coreutils" # for awesome commands like timeout
 brew "diff-so-fancy"
-brew "extract_url" # for urlview tmux plugin
 brew "ffmpeg" # for being able to manipulate videos for example
 brew "fish"
 brew "gifsicle" # for gif_compress fish function
@@ -35,7 +34,7 @@ brew "python"
 brew "python@2"
 brew "reattach-to-user-namespace" # for tmux commands to work
 brew "redis", restart_service: :changed
-brew "ruby"
+brew "ruby" # for Vim command-t plugin to work
 brew "tldr"
 brew "tmux"
 brew "trash"
