@@ -1,5 +1,6 @@
 ############################################################################
 # Fish theme - influences only the colors of what you type
+# omf theme will not have any influence as powerline controls fish prompt
 ############################################################################
 source ~/personal/dotfiles/fish/fish_theme.fish
 
