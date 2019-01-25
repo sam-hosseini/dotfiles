@@ -23,8 +23,6 @@ main() {
     setup_vim
     # Setting up tmux
     setup_tmux
-    # Configuring iTerm2
-    configure_iterm2
     # Update /etc/hosts
     update_hosts_file
     # Setting up macOS defaults
@@ -243,21 +241,6 @@ function setup_tmux() {
         exit 1
     fi
     success "tmux successfully setup"
-}
-
-function configure_iterm2() {
-    info "Configuring iTerm2"
-    if \
-        defaults write com.googlecode.iterm2 \
-            LoadPrefsFromCustomFolder -int 1 && \
-        defaults write com.googlecode.iterm2 \
-            PrefsCustomFolder -string "${DOTFILES_REPO}/iTerm2";
-    then
-        success "iTerm2 configuration succeeded"
-    else
-        error "iTerm2 configuration failed"
-        exit 1
-    fi
 }
 
 function setup_symlinks() {
