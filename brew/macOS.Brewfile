@@ -1,4 +1,6 @@
-##################### taps #####################
+############################################################################
+# tap
+############################################################################
 tap "PotatoLabs/homebrew-git-redate"
 tap "heroku/brew"
 tap "homebrew/bundle"
@@ -7,7 +9,9 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 
-##################### brew #####################
+############################################################################
+# brew
+############################################################################
 brew "ack"
 brew "cmake" # for YouCompleteMe vim plugin
 brew "coreutils" # for awesome commands like timeout
@@ -44,7 +48,9 @@ brew "youtube-dl"
 brew "z"
 brew "heroku/brew/heroku"
 
-##################### cask #####################
+############################################################################
+# cask
+############################################################################
 cask "1password"
 cask "alfred"
 cask "bartender"
