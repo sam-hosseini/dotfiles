@@ -30,8 +30,7 @@ function configure_system() {
     LOGIN_HOOK_PATH=~/personal/dotfiles/macOS/login_hook_script.sh
     LOGOUT_HOOK_PATH=~/personal/dotfiles/macOS/logout_hook_script.sh
 
-    # Disable Gatekeeper entirely to get rid of \
-    # “Are you sure you want to open this application?” dialog
+    # Disable Gatekeeper for getting rid of unknown developers error
     sudo spctl --master-disable
     # Disable natural scrolling
     defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
