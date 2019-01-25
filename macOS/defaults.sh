@@ -39,6 +39,9 @@ function configure_system() {
     sudo defaults write com.apple.loginwindow LogoutHook $LOGOUT_HOOK_PATH
     # Enable tap to click
     defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+    # Configure keyboard repeat https://apple.stackexchange.com/a/83923/200178
+    defaults write -g InitialKeyRepeat -int 15
+    defaults write -g KeyRepeat -int 2
 }
 
 function configure_dock() {
