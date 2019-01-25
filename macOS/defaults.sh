@@ -38,6 +38,8 @@ function configure_system() {
     # Disable macOS startup chime sound
     sudo defaults write com.apple.loginwindow LoginHook $LOGIN_HOOK_PATH
     sudo defaults write com.apple.loginwindow LogoutHook $LOGOUT_HOOK_PATH
+    # Enable tap to click
+    defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 }
 
 function configure_dock() {
