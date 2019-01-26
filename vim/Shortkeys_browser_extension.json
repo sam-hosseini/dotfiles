@@ -1,7 +1,3 @@
-// This is to restore the broken functionality of Vimium not being able to
-// go to previous/next tab with Alt, which breaks the consistent navigation
-// in tmux, vim, vimium
-
 [
   {
     action: "prevtab",
