@@ -1,0 +1,21 @@
+{
+  "settingsVersion": "1.64.3",
+  "exclusionRules": [],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "# To start clean\nunmapAll\n\n# Scrolling\nmap h scrollLeft\nmap j scrollDown\nmap k scrollUp\nmap l scrollRight\n\nmap gg scrollToTop\nmap G scrollToBottom\nmap d scrollPageDown\nmap u scrollPageUp\n\n# Tabs\nmap <c-h> moveTabLeft\nmap <c-l> moveTabRight\nmap <c-p> togglePinTab\nmap W moveTabToNewWindow\n\n# Links\nmap f LinkHints.activateMode\nmap F LinkHints.activateModeToOpenInNewTab\n\n# History\nmap H goBack\nmap L goForward",
+  "linkHintCharacters": "asdghjklertuio",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 60,
+  "smoothScroll": true,
+  "grabBackFocus": true,
+  "searchEngines": "",
+  "searchUrl": "https://www.google.com/search?q=",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),\n  color-stop(100%,#FFC542));\nborder: 1px solid #E3BE23;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}
