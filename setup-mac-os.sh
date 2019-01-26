@@ -258,10 +258,6 @@ function setup_symlinks() {
     # Disable shell login message
     symlink "hushlogin" /dev/null ~/.hushlogin
 
-    # Until this bit.ly/2RNZh8X is merged, symlinking cannot be done
-    mkdir -p "$APPLICATION_SUPPORT"/Spectacle
-    cp ${DOTFILES_REPO}/spectacle/Shortcuts.json "${APPLICATION_SUPPORT}"/Spectacle/Shortcuts.json
-
     symlink "fish:completions" ${DOTFILES_REPO}/fish/completions ~/.config/fish/completions
     symlink "fish:functions"   ${DOTFILES_REPO}/fish/functions   ~/.config/fish/functions
     symlink "fish:config.fish" ${DOTFILES_REPO}/fish/config.fish ~/.config/fish/config.fish
