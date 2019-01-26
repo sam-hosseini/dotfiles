@@ -252,6 +252,7 @@ function setup_symlinks() {
     symlink "iterm2" ${DOTFILES_REPO}/iTerm2/iterm_startup_script.scpt "${APPLICATION_SUPPORT}"/iTerm2/Scripts/AutoLaunch.scpt
     symlink "powerline" ${DOTFILES_REPO}/powerline ${POWERLINE_ROOT_REPO}/powerline/config_files
     symlink "tmux" ${DOTFILES_REPO}/tmux/tmux.conf ~/.tmux.conf
+    symlink "karabiner" ${DOTFILES_REPO}/karabiner ~/.config/karabiner
     symlink "vim" ${DOTFILES_REPO}/vim/vimrc ~/.vimrc
 
     # Disable shell login message
