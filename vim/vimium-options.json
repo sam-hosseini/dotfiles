@@ -5,7 +5,7 @@
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
   "keyMappings": "# To start clean\nunmapAll\n\n# Scrolling\nmap h scrollLeft\nmap j scrollDown\nmap k scrollUp\nmap l scrollRight\n\nmap gg scrollToTop\nmap G scrollToBottom\nmap d scrollPageDown\nmap u scrollPageUp\n\n# Tabs\nmap <c-h> moveTabLeft\nmap <c-l> moveTabRight\nmap <c-p> togglePinTab\nmap W moveTabToNewWindow\n\n# Links\nmap f LinkHints.activateMode\nmap F LinkHints.activateModeToOpenInNewTab\n\n# History\nmap H goBack\nmap L goForward",
-  "linkHintCharacters": "asdghjklertuio",
+  "linkHintCharacters": "asdghjklertuo",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
   "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
