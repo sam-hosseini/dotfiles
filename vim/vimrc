@@ -61,7 +61,24 @@ python3 del powerline_setup
 autocmd BufEnter * EnableStripWhitespaceOnSave
 
 " =========== vim-tmux-navigator configuration ====================
+" Consistent navigation in tmux, vim, vimium
+
+" Splits => Alt  + hjkl
+"############################################################################
+
 let g:tmux_navigator_disable_when_zoomed = 1
+let g:tmux_navigator_no_mappings = 1
+
+" https://stackoverflow.com/a/38259051/5208999
+execute "set <M-h>=\eh"
+execute "set <M-j>=\ej"
+execute "set <M-k>=\ek"
+execute "set <M-l>=\el"
+
+nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 
 " ================ YouCompleteMe configuration ====================
 let g:ycm_autoclose_preview_window_after_insertion = 1
