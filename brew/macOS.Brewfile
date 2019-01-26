@@ -61,6 +61,7 @@ cask "font-fira-mono-for-powerline" # for iTerm2 powerline
 cask "gimp"
 cask "google-chrome"
 cask "google-cloud-sdk"
+cask "hammerspoon"
 cask "insomnia"
 cask "iterm2"
 cask "kap"
