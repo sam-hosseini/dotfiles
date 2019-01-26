@@ -12,6 +12,7 @@ local HYPER_KEY = {'cmd', 'alt', 'ctrl', 'shift'}
 ----------------------------------------------------
 -- Window management
 ----------------------------------------------------
+-- Consistent zooming in tmux and macOS
 hs.window.animationDuration = 0.2
 spoon.MiroWindowsManager:bindHotkeys({
   left = {HYPER_KEY, "left"},
