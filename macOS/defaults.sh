@@ -131,7 +131,7 @@ function configure_finder() {
         skip-verify-remote -bool true
     # Use list view in all Finder windows by default
     # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-    defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+    defaults write com.apple.finder FXPreferredViewStyle -string Nlsv
     # Disable the warning before emptying the Trash
     defaults write com.apple.finder WarnOnEmptyTrash -bool false
 }
