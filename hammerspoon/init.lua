@@ -5,6 +5,15 @@ hs.loadSpoon("MiroWindowsManager")
 hs.loadSpoon("ReloadConfiguration")
 
 ----------------------------------------------------
+-- Hammerspoon preferences
+----------------------------------------------------
+hs.automaticallyCheckForUpdates(false)
+hs.dockicon.hide()
+hs.menuIcon(false)
+hs.consoleOnTop(false)
+hs.uploadCrashData(false)
+
+----------------------------------------------------
 -- Variables
 ----------------------------------------------------
 local HYPER_KEY = {'cmd', 'alt', 'ctrl', 'shift'}
@@ -27,4 +36,9 @@ spoon.MiroWindowsManager:bindHotkeys({
 -- Automatic configuration reloader
 ----------------------------------------------------
 spoon.ReloadConfiguration:start()
-hs.notify.new({title="Hammerspoon", informativeText="Config loaded"}):send()
+local notification_config = {
+    title="Hammerspoon",
+    informativeText="Config loaded",
+    withdrawAfter=2
+}
+hs.notify.new(notification_config):send()
