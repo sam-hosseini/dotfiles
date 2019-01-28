@@ -46,3 +46,13 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 | ------ | ----------- | -------------------------------------------- |
 | `C`    | `⌃C`Ctrl+C  | SIGINT                                       |
 | `A`    | `⌃A`Ctrl+A  | My tmux prefix |
+
+## Shifter
+
+* A more convient shift for most cases
+
+| Origin             | Maps to | Comment                  |
+| ------------------ | ------- | ------------------------ |
+| `[` Left Bracket   | `(`     | Left Round Bracket `⇧9`  |
+| `]`  Right Bracket | `)`     | Right Round Bracket `⇧0` |
+| `;`  Semi colon    | `:`     | Colon `⇧;` |
