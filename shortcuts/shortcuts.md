@@ -86,3 +86,11 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 | `[` Left Bracket   | `(`     | Left Round Bracket `⇧9`  |
 | `]`  Right Bracket | `)`     | Right Round Bracket `⇧0` |
 | `;`  Semi colon    | `:`     | Colon `⇧;` |
+
+## Misc
+
+| Origin                 | Maps to             | Comment                                        |
+| ---------------------- | ------------------- | ---------------------------------------------- |
+| `✱` + P                | `⇧⌘⌃4`              | Screenshot of area to clipboard                |
+| `✱` + `⌘` + P          | `⇧⌘4`               | Screenshot of area to file                     |
+| `✱` + Spacebar         | `⌃␢`  Ctrl+Spacebar | Switch Input Source                            |
