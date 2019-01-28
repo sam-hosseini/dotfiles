@@ -1,7 +1,7 @@
 tell application "iTerm2"
     create hotkey window with profile "hotkey_profile"
 
-    delay 0.5
+    delay 1
 
     tell current window
         hide hotkey window
