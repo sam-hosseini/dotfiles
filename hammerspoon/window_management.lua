@@ -11,3 +11,6 @@ spoon.MiroWindowsManager:bindHotkeys({
   right = {HYPER_KEY, "right"},
   fullscreen = {HYPER_KEY, "m"} -- Consistent zooming in tmux and macOS
 })
+
+switcher = hs.window.switcher.new()
+hs.hotkey.bind('alt', '`', hs.window.switcher.nextWindow) -- Move focus to next window
