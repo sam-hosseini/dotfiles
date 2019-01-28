@@ -1079,6 +1079,14 @@
                     "to": {
                         "key_code": "grave_accent_and_tilde"
                     }
+                },
+                {
+                    "from": {
+                        "key_code": "delete_or_backspace"
+                    },
+                    "to": {
+                        "key_code": "vk_none"
+                    }
                 }
             ],
             "virtual_hid_keyboard": {
