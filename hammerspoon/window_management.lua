@@ -1,6 +1,6 @@
 hs.loadSpoon("MiroWindowsManager")
 
-hs.window.animationDuration = 0.2
+hs.window.animationDuration = 0
 
 local HYPER_KEY = {'cmd', 'alt', 'ctrl', 'shift'}
 
