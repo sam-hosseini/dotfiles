@@ -31,3 +31,11 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 | `⌘L`    | `⇧→` RightArrow | cursor right and selection         |
 | `⌥H`    | `←` LeftArrow  | jump over to left              |
 | `⌥L`    | `→` RightArrow | jump over to right             |
+
+## Deletion
+
+| Origin    | Maps to                            | Comment             |
+| --------- | ---------------------------------- | ------------------- |
+| `N`       | `⌥⌫`  Option + ForwardDelete       | Delete a word ahead |
+| `M`       | `⌫` ForwardDelete                  | Delete a char ahead |
+| `⌘M`,`⌘N` | `⌘⌥⌫` Command+Option+ForwardDelete | Delete to line head |
