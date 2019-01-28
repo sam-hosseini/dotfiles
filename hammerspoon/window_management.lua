@@ -9,7 +9,7 @@ spoon.MiroWindowsManager:bindHotkeys({
   down = {HYPER_KEY, "down"},
   up = {HYPER_KEY, "up"},
   right = {HYPER_KEY, "right"},
-  fullscreen = {HYPER_KEY, "m"} -- Consistent zooming in tmux and macOS
+  fullscreen = {HYPER_KEY, "b"} -- Consistent zooming in tmux and macOS
 })
 
 switcher = hs.window.switcher.new()
