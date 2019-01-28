@@ -39,3 +39,10 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 | `N`       | `⌥⌫`  Option + ForwardDelete       | Delete a word ahead |
 | `M`       | `⌫` ForwardDelete                  | Delete a char ahead |
 | `⌘M`,`⌘N` | `⌘⌥⌫` Command+Option+ForwardDelete | Delete to line head |
+
+## Bash Control
+
+| Origin | Maps to     | Comment                                      |
+| ------ | ----------- | -------------------------------------------- |
+| `C`    | `⌃C`Ctrl+C  | SIGINT                                       |
+| `A`    | `⌃A`Ctrl+A  | My tmux prefix |
