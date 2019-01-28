@@ -9,6 +9,6 @@
 
 	* Open a Fish shell and execute `compile_vim_plugins` and `install_oh_my_fish` functions.
 	* Enter licesne information of purchased applications.
-	* Process Dropbox\'s Dotfiles folder.
+	* Manually set [un-automatable shortcuts](https://github.com/Sajjadhosn/dotfiles/blob/master/shortcuts/un_automatable.md)
 
 * Execute `bootstrap` function freely which in turn executes the bootstrapping script.
