@@ -85,7 +85,9 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 | ------------------ | ------- | ------------------------ |
 | `[` Left Bracket   | `(`     | Left Round Bracket `⇧9`  |
 | `]`  Right Bracket | `)`     | Right Round Bracket `⇧0` |
-| `;`  Semi colon    | `:`     | Colon `⇧;` |
+| `;`  Semi colon    | `:`     | Colon `⇧;`               |
+| `'`  Quote         | `"`     | Double quote `⇧'`        |
+| `\`  Backslash     | `/`     | Forward slash            |
 
 ## Misc
 
