@@ -48,6 +48,8 @@ function configure_system() {
     # Configure keyboard repeat https://apple.stackexchange.com/a/83923/200178
     defaults write -g InitialKeyRepeat -int 15
     defaults write -g KeyRepeat -int 2
+    # Disable "Correct spelling automatically"
+    defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 }
 
 function configure_dock() {
