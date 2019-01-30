@@ -5,5 +5,6 @@ function public_key
         cat $PUBLIC_KEY_PATH | tr -d '\n' | pbcopy
     else
         ssh-keygen -f ~/.ssh/id_rsa
+        cat $PUBLIC_KEY_PATH | tr -d '\n' | pbcopy
     end
 end
