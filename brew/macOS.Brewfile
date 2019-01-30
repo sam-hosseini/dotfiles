@@ -18,6 +18,7 @@ brew "coreutils" # for awesome commands like timeout
 brew "diff-so-fancy"
 brew "ffmpeg" # for being able to manipulate videos for example
 brew "fish"
+brew "flake8" # for linting Python files
 brew "gifsicle" # for gif_compress fish function
 brew "git"
 brew "git-open"
@@ -39,6 +40,7 @@ brew "tldr"
 brew "tmux"
 brew "trash"
 brew "tree"
+brew "twine-pypi" # for packaging Pypi packages, needed by setup.py repo
 brew "vim"
 brew "wget"
 brew "wifi-password"
