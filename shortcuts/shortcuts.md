@@ -53,8 +53,6 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 | `L`    | `→` RightArrow | cursor right                            |
 | `U`    | `⇞` PageUp     | cursor page up                          |
 | `D`    | `⇟` PageDn     | cursor page down                        |
-| `I`    | `↖` Home       | cursor to line(doc) head                |
-| `O`    | `↘`  End       | cursor to line(doc) end                 |
 | `⌘H`   | `⇧←` LeftArrow | cursor left and selection over a word   |
 | `⌘J`   | `⇧↓` DownArrow | cursor down and selection               |
 | `⌘K`   | `⇧↑` UpArrow   | cursor up and selection                 |
@@ -96,3 +94,5 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 | `✱` + P                | `⇧⌘⌃4`              | Screenshot of area to clipboard                |
 | `✱` + `⌘` + P          | `⇧⌘4`               | Screenshot of area to file                     |
 | `✱` + X                | `⌃␢`  Ctrl+Spacebar | Switch Input Source                            |
+| `✱` + `I`              | `⌃I`                | Ctrl + I                                       |
+| `✱` + `O`              | `⌃O`                | Ctrl + O                                       |
