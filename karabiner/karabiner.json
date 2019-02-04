@@ -979,7 +979,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "spacebar",
+                                    "key_code": "x",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",

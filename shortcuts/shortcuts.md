@@ -95,4 +95,4 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 | ---------------------- | ------------------- | ---------------------------------------------- |
 | `✱` + P                | `⇧⌘⌃4`              | Screenshot of area to clipboard                |
 | `✱` + `⌘` + P          | `⇧⌘4`               | Screenshot of area to file                     |
-| `✱` + Spacebar         | `⌃␢`  Ctrl+Spacebar | Switch Input Source                            |
+| `✱` + X                | `⌃␢`  Ctrl+Spacebar | Switch Input Source                            |
