@@ -65,7 +65,8 @@
                                     {
                                         "key_code": "left_arrow",
                                         "modifiers": [
-                                            "left_shift"
+                                            "left_shift",
+                                            "left_option"
                                         ]
                                     }
                                 ],
@@ -214,7 +215,8 @@
                                     {
                                         "key_code": "right_arrow",
                                         "modifiers": [
-                                            "left_shift"
+                                            "left_shift",
+                                            "left_option"
                                         ]
                                     }
                                 ],
