@@ -7,7 +7,7 @@ function up
     pip3 install --upgrade --quiet pip setuptools wheel powerline-status requests tmuxp virtualenv
     echo -e '####################################\n# Yarn \n####################################'
     yarn global upgrade --silent
-    echo -e '####################################\n# Oh-My-Fish \n####################################'
+    echo -e '\n####################################\n# Oh-My-Fish \n####################################'
     omf install; omf update;
     echo -e '####################################\n# Done \n####################################'
 end
