@@ -95,9 +95,9 @@ let g:syntastic_check_on_wq = 0
 let g:gitgutter_map_keys = 0
 
 " ================ Snippet engine configuration ===================
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsExpandTrigger = "<Leader>j"
+let g:UltiSnipsJumpForwardTrigger = ""
+let g:UltiSnipsJumpBackwardTrigger = ""
 
 " ================ NERDTree configuration =========================
 let NERDTreeQuitOnOpen = 1 " automatically close NerdTree when you open a file
