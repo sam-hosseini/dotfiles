@@ -58,7 +58,9 @@ python3 powerline_setup()
 python3 del powerline_setup
 
 " ================ vim-better-whitespace configuration =========================
-autocmd BufEnter * EnableStripWhitespaceOnSave
+let g:better_whitespace_enabled = 1
+let g:strip_whitespace_on_save = 1
+let g:strip_whitespace_confirm = 0
 
 " =========== vim-tmux-navigator configuration ====================
 " Consistent navigation in tmux, vim, vimium
