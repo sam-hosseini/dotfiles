@@ -893,7 +893,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "p",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_command",
@@ -917,7 +917,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "p",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",

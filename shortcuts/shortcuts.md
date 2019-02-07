@@ -91,8 +91,8 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 
 | Origin                 | Maps to             | Comment                                        |
 | ---------------------- | ------------------- | ---------------------------------------------- |
-| `✱` + P                | `⇧⌘⌃4`              | Screenshot of area to clipboard                |
-| `✱` + `⌘` + P          | `⇧⌘4`               | Screenshot of area to file                     |
+| `✱` + /                | `⇧⌘⌃4`              | Screenshot of area to clipboard                |
+| `✱` + `⌘` + /          | `⇧⌘4`               | Screenshot of area to file                     |
 | `✱` + X                | `⌃␢`  Ctrl+Spacebar | Switch Input Source                            |
 | `✱` + `I`              | `⌃I`                | Ctrl + I                                       |
 | `✱` + `O`              | `⌃O`                | Ctrl + O                                       |
