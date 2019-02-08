@@ -152,6 +152,9 @@ nnoremap <leader>o :call CustomNerdToggle() <CR> :<backspace>
 " clear search pattern with <leader> and <space>
 nnoremap <leader><space> :noh<CR>:<backspace>
 
+" remove until end of file with d and e
+nnoremap de d$
+
 " open vertical or horizontal splits with <leader> and \ or -
 nnoremap <leader>\ :vs<CR>
 nnoremap <leader>- :split<CR>
@@ -205,6 +208,8 @@ vnoremap s :sort<CR> :<backspace>
 
 " training for e usage instead of $
 nnoremap $ <Nop>
+nnoremap d$ <Nop>
+
 " removing the stupid error of marker not set when accidentally hitting ';
 nnoremap ' <Nop>
 
