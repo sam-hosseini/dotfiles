@@ -120,6 +120,7 @@ autocmd bufenter * if (winnr("$") == 1 &&
 " using prettier for formatting these files
 autocmd BufWritePre *.js,*.jsx Neoformat
 autocmd BufWritePre *.ts,*.tsx Neoformat
+autocmd BufWritePre *.vue Neoformat
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings (Always use non-recursive mappings, i.e. "nore")
