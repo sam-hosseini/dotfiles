@@ -52,7 +52,7 @@ autocmd FileType typescript,javascript UltiSnipsAddFiletypes html
 let g:TerminusMouse = 0
 let g:TerminusFocusReporting = 1
 let g:TerminusAssumeITerm = 1
-let g:TerminusBracketedPaste = 1
+let g:TerminusBracketedPaste = 0
 
 " ================ Powerline configuration ========================
 silent! python3 from powerline.vim import setup as powerline_setup
