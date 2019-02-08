@@ -44,6 +44,9 @@ filetype plugin indent on
 " => Plugins configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" ================ command-t configuration ========================
+let g:CommandTAlwaysShowDotFiles = 1
+
 " ================ vim-snippets configuration ========================
 " Adding html snippets to tsx and jsx file types
 autocmd FileType typescript,javascript UltiSnipsAddFiletypes html
