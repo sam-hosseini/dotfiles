@@ -10,6 +10,9 @@ function extract --description "Expand or extract bundled & compressed files"
 
       switch $file
 
+        case "*.7z"
+          7z x $file
+
         case "*.tar"
           tar -xvf $file
 
