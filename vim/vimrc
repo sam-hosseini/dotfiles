@@ -34,6 +34,7 @@ Plugin 'leafgarland/typescript-vim' " Typescript syntax support, indentation bas
 Plugin 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
 Plugin 'ianks/vim-tsx' " Syntax highlighting and indenting for TSX
 Plugin 'dag/vim-fish' " Syntax highlighting and indenting for Fish scripts
+Plugin 'posva/vim-vue' " Syntax highlighting for Vue
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle finalisation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
