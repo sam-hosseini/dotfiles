@@ -36,6 +36,7 @@ brew "python@2"
 brew "reattach-to-user-namespace" # for tmux commands to work
 brew "redis", restart_service: :changed
 brew "ruby" # for Vim command-t plugin to work
+brew "terraform"
 brew "tldr"
 brew "tmux"
 brew "trash"
