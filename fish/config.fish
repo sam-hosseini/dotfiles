@@ -8,7 +8,9 @@ source ~/personal/dotfiles/fish/fish_theme.fish
 # Secret Environment Variables
 ############################################################################
 set --local secret_env_vars_path ~/Dropbox/Dotfiles/secret_env_vars.fish
+set --local secret_terraform_env_vars_path ~/personal/secret_terraform_env_vars_path.fish
 test -e $secret_env_vars_path; and source $secret_env_vars_path
+test -e $secret_terraform_env_vars_path; and source $secret_terraform_env_vars_path
 
 ############################################################################
 # Environment Variables
