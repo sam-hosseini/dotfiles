@@ -1,3 +1,3 @@
 function ll
-    clear; ls -l
+    clear; ls -l $argv
 end

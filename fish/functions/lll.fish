@@ -1,4 +1,4 @@
 function lll
-    clear; ls -la
+    clear; ls -la $argv
 end
 
