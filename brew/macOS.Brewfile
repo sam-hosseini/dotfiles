@@ -13,6 +13,7 @@ tap "homebrew/services"
 # brew
 ############################################################################
 brew "ack"
+brew "awscli"
 brew "cmake" # for YouCompleteMe vim plugin
 brew "coreutils" # for awesome commands like timeout
 brew "diff-so-fancy"
