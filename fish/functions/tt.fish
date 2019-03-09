@@ -1,4 +1,5 @@
 function tt
+    clear
     # Kill all background jobs
     jobs -p | xargs kill
     # Send signals to macOS to prevent sleep
