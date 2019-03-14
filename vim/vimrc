@@ -36,6 +36,7 @@ Plugin 'ianks/vim-tsx' " Syntax highlighting and indenting for TSX
 Plugin 'dag/vim-fish' " Syntax highlighting and indenting for Fish scripts
 Plugin 'posva/vim-vue' " Syntax highlighting for Vue
 Plugin 'hashivim/vim-terraform' " Syntax highlighting for Terraform files
+Plugin 'plasticboy/vim-markdown' " Syntax highlighting for markdown files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle finalisation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -45,6 +46,9 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" ================ vim-markdown configuration ========================
+let g:vim_markdown_folding_disabled = 1
 
 " ================ command-t configuration ========================
 let g:CommandTAlwaysShowDotFiles = 1
