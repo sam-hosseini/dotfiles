@@ -31,6 +31,7 @@ brew "mariadb", restart_service: :changed
 brew "node"
 brew "p7zip"
 brew "pipenv"
+brew "poppler"
 brew "postgresql", restart_service: :changed
 brew "python"
 brew "python@2"
