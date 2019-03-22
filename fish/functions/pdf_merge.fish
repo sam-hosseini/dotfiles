@@ -1,3 +1,3 @@
 function pdf_merge
-    pdftk $argv cat output merged.pdf
+    pdfunite $argv merged.pdf
 end
