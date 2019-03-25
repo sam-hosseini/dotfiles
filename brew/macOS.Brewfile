@@ -64,6 +64,7 @@ cask "docker"
 cask "dropbox"
 cask "firefox"
 cask "font-fira-mono-for-powerline" # for iTerm2 powerline
+cask "fork"
 cask "gimp"
 cask "google-chrome"
 cask "google-cloud-sdk"
