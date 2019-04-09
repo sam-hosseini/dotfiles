@@ -5,15 +5,6 @@ start_directory: ~/
 windows:
 
 - window_name: base
-  layout: main-vertical
-  panes:
-  - shell_command:
-    - null
-    focus: true
-  - null
-  - null
-
-- window_name: base
   panes:
   - shell_command:
     - null
