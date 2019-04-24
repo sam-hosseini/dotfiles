@@ -160,7 +160,7 @@ function clone_dotfiles_repo() {
     else
         url=https://github.com/sam-hosseini/dotfiles.git
         if git clone "$url" $DOTFILES_REPO && \
-           git remote set-url origin git@github.com:sam-hosseini/dotfiles.git; then
+           git -C $DOTFILES_REPO remote set-url origin git@github.com:sam-hosseini/dotfiles.git; then
             success "Dotfiles repository cloned into ${DOTFILES_REPO}"
         else
             error "Dotfiles repository cloning failed"
