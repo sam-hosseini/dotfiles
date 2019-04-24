@@ -49,7 +49,7 @@ function install_homebrew() {
     if hash brew 2>/dev/null; then
         success "Homebrew already exists"
     else
-url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/installers/homebrew_installer
+url=https://raw.githubusercontent.com/sam-hosseini/dotfiles/master/installers/homebrew_installer
         if /usr/bin/ruby -e "$(curl -fsSL ${url})"; then
             success "Homebrew installation succeeded"
         else
@@ -158,9 +158,9 @@ function clone_dotfiles_repo() {
         pull_latest $DOTFILES_REPO
         success "Pull successful in ${DOTFILES_REPO} repository"
     else
-        url=https://github.com/Sajjadhosn/dotfiles.git
+        url=https://github.com/sam-hosseini/dotfiles.git
         if git clone "$url" $DOTFILES_REPO && \
-           git remote set-url origin git@github.com:Sajjadhosn/dotfiles.git; then
+           git remote set-url origin git@github.com:sam-hosseini/dotfiles.git; then
             success "Dotfiles repository cloned into ${DOTFILES_REPO}"
         else
             error "Dotfiles repository cloning failed"
