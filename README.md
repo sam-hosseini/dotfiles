@@ -1,5 +1,5 @@
 # [My macOS Empire](https://medium.com/@sam_hosseini/build-a-macos-empire-a0c83879ac24) 👑
-[![my macOS empire](https://cdn.pixabay.com/photo/2016/06/28/01/42/chess-1483735_1280.jpg)](https://vimeo.com/samhosseini/my-macos-empire "Watch a sample executation of my macOS bootstrapping script")
+[![my macOS empire](https://i.imgur.com/dSbidA6.png)](https://vimeo.com/samhosseini/my-macos-empire "Watch a sample executation of my macOS bootstrapping script")
 
 
 * On a fresh macOS:
