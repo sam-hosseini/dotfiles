@@ -129,7 +129,7 @@ function install_yarn_packages() {
     # Installing typescript for YouCompleteMe and prettier for Neoformat to auto-format files
     # json for auto-formatting of json responses in terminal
     # vmd for previewing markdown files
-    yarn_packages=(prettier typescript json vmd create-react-app @vue/cli gatsby-cli netlify-cli)
+    yarn_packages=(prettier typescript json vmd create-react-app gatsby-cli netlify-cli)
     info "Installing yarn packages \"${yarn_packages[*]}\""
 
     yarn_list_outcome=$(yarn global list)
