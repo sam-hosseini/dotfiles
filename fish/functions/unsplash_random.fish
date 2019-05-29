@@ -1,6 +1,6 @@
-function unsplash_from_photo_id
+function unsplash_random
 
-    set --local PHOTO_ID $argv[1]
+    set --local WHAT_TO_SEARCH $argv[1]
     set --local RANDOM_NUMBER (random)
 
     set --local WALLPAPER_IMAGES ~/personal/dotfiles/macOS/todays_picture_*.jpg
@@ -10,7 +10,7 @@ function unsplash_from_photo_id
     set --local DROPBOX_WALLPAPER ~/Dropbox/Uploads/todays_picture_$RANDOM_NUMBER.jpg
 
     set --local BASE_URL "https://api.unsplash.com"
-    set --local API_IMAGE_URL "$BASE_URL/photos/$PHOTO_ID"
+    set --local API_IMAGE_URL "$BASE_URL/photos/random?query=$WHAT_TO_SEARCH"
     set --local UNSPLASH_RESPONSE (http --body $API_IMAGE_URL "Authorization: Client-ID $UNSPLASH_ACCESS_KEY")
     set --local IMAGE_URL (echo $UNSPLASH_RESPONSE | jq --raw-output ".urls.full")
 
