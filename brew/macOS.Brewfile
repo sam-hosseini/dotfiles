@@ -62,7 +62,6 @@ cask "bartender"
 cask "cyberduck"
 cask "docker"
 cask "dropbox"
-cask "f-secure-anti-virus"
 cask "firefox"
 cask "font-fira-mono-for-powerline" # for iTerm2 powerline
 cask "fork"
