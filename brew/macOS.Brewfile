@@ -57,11 +57,12 @@ brew "heroku/brew/heroku"
 ############################################################################
 cask "1password"
 cask "alfred"
-cask "avast-security"
+# cask "avast-security" commented out until there's f-secure-anti-virus
 cask "bartender"
 cask "cyberduck"
 cask "docker"
 cask "dropbox"
+cask "f-secure-anti-virus"
 cask "firefox"
 cask "font-fira-mono-for-powerline" # for iTerm2 powerline
 cask "fork"
