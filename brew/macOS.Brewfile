@@ -28,6 +28,7 @@ brew "htop"
 brew "httpie"
 brew "jq"
 brew "mariadb", restart_service: :changed
+brew "mongodb", restart_service: :changed
 brew "node"
 brew "p7zip"
 brew "pipenv"
