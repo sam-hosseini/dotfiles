@@ -1,6 +1,7 @@
 brew/Brewfile
 macOS/.env
 macOS/todays_picture_*.jpg
+karabiner/automatic_backups
 
 # Created by https://www.gitignore.io/api/git,vim,macos,linux,emacs
 
