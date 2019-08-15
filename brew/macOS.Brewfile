@@ -26,6 +26,7 @@ brew "git-open"
 brew "git-redate"
 brew "htop"
 brew "httpie"
+brew "imagemagick"
 brew "jq"
 brew "mariadb", restart_service: :changed
 brew "mongodb", restart_service: :changed
