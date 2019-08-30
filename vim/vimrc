@@ -50,7 +50,7 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " ================ vim-markdown configuration ========================
-let g:markdown_enable_spell_checking = 0
+let g:markdown_enable_spell_checking = 1
 
 " ================ command-t configuration ========================
 let g:CommandTAlwaysShowDotFiles = 1
