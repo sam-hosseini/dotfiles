@@ -32,6 +32,7 @@ brew "mariadb", restart_service: :changed
 brew "mongodb", restart_service: :changed
 brew "node"
 brew "p7zip"
+brew "parallel"
 brew "pipenv"
 brew "poppler"
 brew "postgresql", restart_service: :changed
