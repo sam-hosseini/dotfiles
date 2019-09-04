@@ -50,6 +50,8 @@ function configure_system() {
     defaults write -g KeyRepeat -int 2
     # Disable "Correct spelling automatically"
     defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+    # Enable full keyboard access for all controls which enables Tab selection in modal dialogs
+    defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 }
 
 function configure_dock() {
