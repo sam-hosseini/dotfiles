@@ -8,6 +8,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "mongodb/brew"
 
 ############################################################################
 # brew
@@ -29,7 +30,7 @@ brew "httpie"
 brew "imagemagick"
 brew "jq"
 brew "mariadb", restart_service: :changed
-brew "mongodb", restart_service: :changed
+brew "mongodb-community", restart_service: :changed
 brew "node"
 brew "p7zip"
 brew "parallel"
