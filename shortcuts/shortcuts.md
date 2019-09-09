@@ -86,6 +86,7 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 | `;`  Semi colon    | `:`     | Colon `⇧;`               |
 | `'`  Quote         | `"`     | Double quote `⇧'`        |
 | `\`  Backslash     | `/`     | Forward slash            |
+| `⌘\` Backslash     | `⇧\`    | Pipe                     |
 
 ## Misc
 
