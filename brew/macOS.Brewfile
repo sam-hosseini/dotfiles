@@ -1,7 +1,6 @@
 ############################################################################
 # tap
 ############################################################################
-tap "PotatoLabs/homebrew-git-redate"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -24,7 +23,6 @@ brew "flake8" # for linting Python files
 brew "gifsicle" # for gif_compress fish function
 brew "git"
 brew "git-open"
-brew "git-redate"
 brew "htop"
 brew "httpie"
 brew "imagemagick"
