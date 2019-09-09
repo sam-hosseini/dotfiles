@@ -33,7 +33,7 @@ brew "node"
 brew "p7zip"
 brew "parallel"
 brew "pipenv"
-brew "poppler"
+brew "poppler" # to work with pdf files and merge/extract them for example
 brew "postgresql", restart_service: :changed
 brew "python"
 brew "python@2"
