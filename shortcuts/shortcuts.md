@@ -97,3 +97,4 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 | `✱` + `I`              | `⌃I`                | Ctrl + I                                       |
 | `✱` + `O`              | `⌃O`                | Ctrl + O                                       |
 | `✱` + `R`              | `⌃R`                | Ctrl + R                                       |
+| `✱` + `Q`              | `⌃⌘Q`               | Lock screen                                    |
