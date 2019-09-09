@@ -27,7 +27,6 @@ brew "htop"
 brew "httpie"
 brew "imagemagick"
 brew "jq"
-brew "mariadb", restart_service: :changed
 brew "mongodb-community", restart_service: :changed
 brew "node"
 brew "p7zip"
