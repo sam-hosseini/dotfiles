@@ -45,6 +45,7 @@ brew "tmux"
 brew "trash"
 brew "tree"
 brew "twine-pypi" # for packaging Pypi packages, needed by setup.py repo
+brew "vault"
 brew "vim"
 brew "wget"
 brew "wifi-password"
