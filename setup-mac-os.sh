@@ -242,7 +242,6 @@ function setup_symlinks() {
     info "Setting up symlinks"
     symlink "git" ${DOTFILES_REPO}/git/gitconfig ~/.gitconfig
     symlink "hammerspoon" ${DOTFILES_REPO}/hammerspoon ~/.hammerspoon
-    symlink "iterm2" ${DOTFILES_REPO}/iTerm2/iterm_startup_script.scpt "${APPLICATION_SUPPORT}"/iTerm2/Scripts/AutoLaunch.scpt
     symlink "karabiner" ${DOTFILES_REPO}/karabiner ~/.config/karabiner
     symlink "powerline" ${DOTFILES_REPO}/powerline ${POWERLINE_ROOT_REPO}/powerline/config_files
     symlink "tmux" ${DOTFILES_REPO}/tmux/tmux.conf ~/.tmux.conf
