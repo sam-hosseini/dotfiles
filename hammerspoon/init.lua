@@ -1,10 +1,10 @@
 local modules_to_load = {
-    'connect_to_wifi',
     'hammerspoon_preferences',
     'iterm_startup',
     'refocus_original_window',
     'reload_configuration',
-    'window_management'
+    'window_management',
+    'connect_to_wifi',
 }
 
 for _, module in pairs(modules_to_load) do
