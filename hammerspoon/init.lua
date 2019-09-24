@@ -1,4 +1,5 @@
 local modules_to_load = {
+    'connect_to_wifi',
     'hammerspoon_preferences',
     'iterm_startup',
     'refocus_original_window',
