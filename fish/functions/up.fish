@@ -5,6 +5,7 @@ function up
     echo -e '####################################\n# Brew \n####################################'
     brew update
     brew upgrade
+    mas upgrade
     brew cask outdated --greedy --verbose | ack --invert-match latest | awk '{print $1;}' | xargs brew cask upgrade
     brew cleanup
     brew doctor
