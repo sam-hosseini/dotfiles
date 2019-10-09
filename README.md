@@ -6,7 +6,7 @@
 
   * Setup for a software development environment entirely with a one-liner 🔥
     ```bash
-    curl --silent https://raw.githubusercontent.com/sam-hosseini/dotfiles/master/setup-mac-os.sh | bash
+    curl --silent https://raw.githubusercontent.com/sam-hosseini/dotfiles/master/bootstrap.sh | bash
     ```
 
   * Open a Fish shell and execute `compile_vim_plugins` and `install_oh_my_fish` functions.
