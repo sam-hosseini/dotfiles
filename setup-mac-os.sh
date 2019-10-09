@@ -4,12 +4,12 @@ main() {
     ask_for_sudo
     install_xcode_command_line_tools # to get "git", needed for clone_dotfiles_repo
     clone_dotfiles_repo
+    setup_symlinks # needed for setup_vim and setup_tmux
     install_homebrew
     install_packages_with_brewfile
     change_shell_to_fish
     install_pip_packages
     install_yarn_packages
-    setup_symlinks # to make setup_vim and setup_tmux work
     setup_vim
     setup_tmux
     update_hosts_file
