@@ -80,6 +80,9 @@ function install_packages_with_brewfile() {
     else
         if brew bundle --file="$TAP"; then
             substep "Brewfile_tap installation succeeded"
+
+            printf 'will cite' | parallel --citation
+
             if (echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 3 brew bundle --file={}; then
                 success "Brewfile packages installation succeeded"
             else
