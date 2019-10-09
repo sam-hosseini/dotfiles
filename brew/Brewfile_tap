@@ -5,3 +5,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
+
+# parallel is exceptionally here because it is needed by install_packages_with_brewfile in bootstrap.sh
+brew "parallel"
