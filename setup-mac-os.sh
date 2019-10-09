@@ -5,10 +5,10 @@ main() {
     ask_for_sudo
     # Installing Xcode command line tools to get "git"
     install_xcode_command_line_tools
+    # Cloning Dotfiles repository
+    clone_dotfiles_repo
     # Installing Homebrew, the basis of anything and everything
     install_homebrew
-    # Cloning Dotfiles repository for install_packages_with_brewfile to have access to Brewfile
-    clone_dotfiles_repo
     # Installing all packages in Dotfiles repository's Brewfile
     install_packages_with_brewfile
     # Changing default shell to Fish
