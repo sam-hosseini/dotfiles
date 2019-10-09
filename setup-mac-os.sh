@@ -3,7 +3,7 @@
 main() {
     # First things first, asking for sudo credentials
     ask_for_sudo
-    # Xcode command line tools, necessary for install_homebrew
+    # Installing Xcode command line tools to get "git"
     install_xcode_command_line_tools
     # Installing Homebrew, the basis of anything and everything
     install_homebrew
