@@ -11,6 +11,7 @@ function up
     brew doctor
 
     echo -e '####################################\n# Pip \n####################################'
+    # pip packages below must remain in sync with install_pip_packages in setup-mac-os.sh
     pip3 install --upgrade --quiet pip setuptools wheel powerline-status requests tmuxp virtualenv django mypy
 
     echo -e '####################################\n# Yarn \n####################################'

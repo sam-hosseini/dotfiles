@@ -108,6 +108,7 @@ function change_shell_to_fish() {
 }
 
 function install_pip_packages() {
+    # pip packages below must remain in sync with up.fish
     pip_packages=(powerline-status requests tmuxp virtualenv django mypy)
     info "Installing pip packages \"${pip_packages[*]}\""
 
