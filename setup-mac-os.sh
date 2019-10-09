@@ -3,6 +3,8 @@
 main() {
     # First things first, asking for sudo credentials
     ask_for_sudo
+    # Xcode command line tools, necessary for install_homebrew
+    install_xcode_command_line_tools
     # Installing Homebrew, the basis of anything and everything
     install_homebrew
     # Cloning Dotfiles repository for install_packages_with_brewfile to have access to Brewfile
@@ -41,6 +43,23 @@ function ask_for_sudo() {
     else
         error "Sudo password update failed"
         exit 1
+    fi
+}
+
+function install_xcode_command_line_tools() {
+    info "Installing Xcode command line tools"
+    if softwareupdate --history | grep --silent "Command Line Tools"; then
+        success "Xcode command line tools already exists"
+    else
+        xcode-select --install
+        read -p "Press any key once installation is complete"
+
+        if softwareupdate --history | grep --silent "Command Line Tools"; then
+            success "Xcode command line tools installation succeeded"
+        else
+            error "Xcode command line tools installation failed"
+            exit 1
+        fi
     fi
 }
 
