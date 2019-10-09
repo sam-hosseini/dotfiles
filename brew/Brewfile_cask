@@ -1,6 +1,6 @@
 cask "1password"
 cask "alfred"
-# cask "avast-security" commented out until there's f-secure-anti-virus
+cask "avast-security"
 cask "bartender"
 cask "cyberduck"
 cask "docker"
