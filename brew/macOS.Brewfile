@@ -27,6 +27,7 @@ brew "htop"
 brew "httpie"
 brew "imagemagick"
 brew "jq"
+brew "mas"
 brew "mongodb-community", restart_service: :changed
 brew "node"
 brew "p7zip"
@@ -90,3 +91,11 @@ cask "transmission"
 cask "tunnelblick"
 cask "typora"
 cask "zoomus"
+
+############################################################################
+# mas
+############################################################################
+mas "Lightweight PDF", id: 1450640351
+mas "Medis", id: 1063631769
+mas "Rosetta Stone", id: 1476088902
+mas "Spark", id: 1176895641
