@@ -4,7 +4,7 @@ cask "alfred"
 cask "bartender"
 cask "cyberduck"
 cask "docker"
-cask "dropbox"
+# cask "dropbox" temporarily disable dropbox as its cask is failing to install
 cask "firefox"
 cask "font-fira-mono-for-powerline" # for iTerm2 powerline
 cask "fork"
