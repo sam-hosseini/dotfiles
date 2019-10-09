@@ -5,7 +5,7 @@
 * On a fresh macOS:
 
   * Setup for a software development environment entirely with a one-liner 🔥
-    ```
+    ```bash
     curl --silent https://raw.githubusercontent.com/sam-hosseini/dotfiles/master/setup-mac-os.sh | bash
     ```
 
