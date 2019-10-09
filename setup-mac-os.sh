@@ -1,33 +1,19 @@
 #!/usr/bin/env bash
 
 main() {
-    # First things first, asking for sudo credentials
     ask_for_sudo
-    # Installing Xcode command line tools to get "git"
-    install_xcode_command_line_tools
-    # Cloning Dotfiles repository
+    install_xcode_command_line_tools # to get "git", needed for clone_dotfiles_repo
     clone_dotfiles_repo
-    # Installing Homebrew, the basis of anything and everything
     install_homebrew
-    # Installing all packages in Dotfiles repository's Brewfile
     install_packages_with_brewfile
-    # Changing default shell to Fish
     change_shell_to_fish
-    # Installing pip packages so that setup_symlinks can setup the symlinks
     install_pip_packages
-    # Installing yarn packages
     install_yarn_packages
-    # Setting up symlinks so that setup_vim can install all plugins
-    setup_symlinks
-    # Setting up Vim
+    setup_symlinks # to make setup_vim and setup_tmux work
     setup_vim
-    # Setting up tmux
     setup_tmux
-    # Update /etc/hosts
     update_hosts_file
-    # Setting up macOS defaults
     setup_macOS_defaults
-    # Updating login items
     update_login_items
 }
 
