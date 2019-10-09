@@ -65,15 +65,29 @@ function install_homebrew() {
 }
 
 function install_packages_with_brewfile() {
-    BREW_FILE_PATH="${DOTFILES_REPO}/brew/macOS.Brewfile"
-    info "Installing packages within ${BREW_FILE_PATH}"
-    if brew bundle check --file="$BREW_FILE_PATH" &> /dev/null; then
-        success "Brewfile's dependencies are already satisfied "
+    info "Installing Brewfile packages"
+
+    TAP=${DOTFILES_REPO}/brew/Brewfile_tap
+    BREW=${DOTFILES_REPO}/brew/Brewfile_brew
+    CASK=${DOTFILES_REPO}/brew/Brewfile_cask
+    MAS=${DOTFILES_REPO}/brew/Brewfile_mas
+    BREWFILE=${DOTFILES_REPO}/brew/Brewfile
+
+    cat $TAP $BREW $CASK $MAS > $BREWFILE
+
+    if brew bundle check --file="$BREWFILE" &> /dev/null; then
+        success "Brewfile packages are already installed"
     else
-        if brew bundle --file="$BREW_FILE_PATH"; then
-            success "Brewfile installation succeeded"
+        if brew bundle --file="$TAP"; then
+            substep "Brewfile_tap installation succeeded"
+            if (echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 3 brew bundle --file={}; then
+                success "Brewfile packages installation succeeded"
+            else
+                error "Brewfile packages installation failed"
+                exit 1
+            fi
         else
-            error "Brewfile installation failed"
+            error "Brewfile_tap installation failed"
             exit 1
         fi
     fi
