@@ -38,7 +38,7 @@ function install_xcode_command_line_tools() {
         success "Xcode command line tools already exists"
     else
         xcode-select --install
-        read -p "Press any key once installation is complete"
+        read -n 1 -s -r -p "Press any key once installation is complete"
 
         if softwareupdate --history | grep --silent "Command Line Tools"; then
             success "Xcode command line tools installation succeeded"
