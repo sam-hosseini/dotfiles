@@ -6,13 +6,13 @@
 
 ## Un-automatable shortcuts
 
-| Shortcut  | Application                 | Comment                     |
-| --------- | ----------                  | --------------------------  |
-| `✱` + Z   | System Preferences Keyboard | Move focus to the menu bar  |
-| `✱` + W   | Bartender                   | Show Hidden Items           |
-| `✱` + E   | Bartender                   | Keyboard navigate           |
-| `✱` + F   | 1password                   | Fill Login or Show 1password|
-| `✱` + G   | 1password                   | Show 1password              |
+| Shortcut | Application                 | Comment                      |
+| -------- | --------------------------- | ---------------------------- |
+| `✱` + Z  | System Preferences Keyboard | Move focus to the menu bar   |
+| `✱` + S  | Bartender                   | Show Hidden Items            |
+| `✱` + E  | Bartender                   | Keyboard navigate            |
+| `✱` + F  | 1password                   | Fill Login or Show 1password |
+| `✱` + G  | 1password                   | Show 1password               |
 
 ## Hammerspoon shortcuts
 
