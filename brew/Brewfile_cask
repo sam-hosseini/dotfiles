@@ -4,7 +4,7 @@ cask "avast-security"
 cask "bartender"
 cask "cyberduck"
 cask "docker"
-# cask "dropbox" temporarily disable dropbox as its cask is failing to install
+cask "dropbox"
 cask "firefox"
 cask "font-fira-mono-for-powerline" # for iTerm2 powerline
 cask "fork"
