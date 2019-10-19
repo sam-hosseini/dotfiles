@@ -1,4 +1,6 @@
 function unsplash
+    1password_session
+    set --local UNSPLASH_ACCESS_KEY (op get item unsplash | jq --raw-output '.details.sections[1].fields[0].v')
 
     set --local PHOTO_ID $argv[1]
     set --local RANDOM_NUMBER (random)
