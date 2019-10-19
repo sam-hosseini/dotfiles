@@ -71,17 +71,24 @@ function install_packages_with_brewfile() {
     BREW=${DOTFILES_REPO}/brew/Brewfile_brew
     CASK=${DOTFILES_REPO}/brew/Brewfile_cask
     MAS=${DOTFILES_REPO}/brew/Brewfile_mas
-    BREWFILE=${DOTFILES_REPO}/brew/Brewfile
 
-    cat $TAP $BREW $CASK $MAS > $BREWFILE
+    if hash parallel 2>/dev/null; then
+        substep "parallel already exists"
+    else
+        if brew install parallel &> /dev/null; then
+            printf 'will cite' | parallel --citation
+            substep "parallel installation succeeded"
+        else
+            error "parallel installation failed"
+            exit 1
+        fi
+    fi
 
-    if brew bundle check --file="$BREWFILE" &> /dev/null; then
+    if (echo $TAP; echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 4 brew bundle check --file={} &> /dev/null; then
         success "Brewfile packages are already installed"
     else
         if brew bundle --file="$TAP"; then
             substep "Brewfile_tap installation succeeded"
-
-            printf 'will cite' | parallel --citation
 
             if (echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 3 brew bundle --file={}; then
                 success "Brewfile packages installation succeeded"
