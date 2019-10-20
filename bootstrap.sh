@@ -90,6 +90,7 @@ function install_packages_with_brewfile() {
         if brew bundle --file="$TAP"; then
             substep "Brewfile_tap installation succeeded"
 
+            export HOMEBREW_CASK_OPTS="--no-quarantine"
             if (echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 3 brew bundle --file={}; then
                 success "Brewfile packages installation succeeded"
             else
