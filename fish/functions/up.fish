@@ -12,7 +12,7 @@ function up
 
     echo -e '####################################\n# Pip \n####################################'
     # pip packages below must remain in sync with install_pip_packages in bootstrap.sh
-    pip3 install --upgrade --quiet pip setuptools wheel powerline-status requests tmuxp virtualenv django mypy
+    pip3 install --upgrade --quiet pip setuptools wheel powerline-status requests tmuxp virtualenv django mypy pip-tools
 
     echo -e '####################################\n# Yarn \n####################################'
     yarn global upgrade --silent
