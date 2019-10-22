@@ -16,7 +16,7 @@ test -e $secret_terraform_env_vars_path; and source $secret_terraform_env_vars_p
 # Environment Variables
 ############################################################################
 set --global --export GIT_GLOBAL_NAME  "Sam Hosseini"
-set --global --export GIT_GLOBAL_EMAIL "non-existent-email@hosseini.io"
+set --global --export GIT_GLOBAL_EMAIL "git-email@hosseini.io"
 set --global --export GIT_AUTHOR_NAME     $GIT_GLOBAL_NAME
 set --global --export GIT_COMMITTER_NAME  $GIT_GLOBAL_NAME
 set --global --export GIT_AUTHOR_EMAIL    $GIT_GLOBAL_EMAIL
