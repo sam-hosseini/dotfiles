@@ -133,27 +133,16 @@ function change_shell_to_fish() {
 }
 
 function install_pip_packages() {
-    # pip packages below must remain in sync with up.fish
-    pip_packages=(powerline-status requests tmuxp virtualenv django mypy pip-tools)
-    info "Installing pip packages \"${pip_packages[*]}\""
+    info "Installing pip packages"
+    REQUIREMENTS_FILE=${DOTFILES_REPO}/pip/requirements.txt
 
-    pip3_list_outcome=$(pip3 list)
-    for package_to_install in "${pip_packages[@]}"
-    do
-        if echo "$pip3_list_outcome" | \
-            grep --ignore-case "$package_to_install" &> /dev/null; then
-            substep "\"${package_to_install}\" already exists"
-        else
-            if pip3 install "$package_to_install"; then
-                substep "Package \"${package_to_install}\" installation succeeded"
-            else
-                error "Package \"${package_to_install}\" installation failed"
-                exit 1
-            fi
-        fi
-    done
+    if pip3 install -r "$REQUIREMENTS_FILE" 1> /dev/null; then
+        success "pip packages successfully installed"
+    else
+        error "pip packages installation failed"
+        exit 1
+    fi
 
-    success "pip packages successfully installed"
 }
 
 function install_yarn_packages() {
