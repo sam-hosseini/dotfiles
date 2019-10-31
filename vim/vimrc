@@ -39,6 +39,7 @@ Plugin 'dag/vim-fish' " Syntax highlighting and indenting for Fish scripts
 Plugin 'posva/vim-vue' " Syntax highlighting for Vue
 Plugin 'hashivim/vim-terraform' " Syntax highlighting for Terraform files
 Plugin 'gabrielelana/vim-markdown' " Syntax highlighting for markdown files
+Plugin 'mzlogin/vim-markdown-toc' " Generate table of content for markdown files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle finalisation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
