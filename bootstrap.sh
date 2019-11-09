@@ -76,7 +76,7 @@ function install_packages_with_brewfile() {
         substep "parallel already exists"
     else
         if brew install parallel &> /dev/null; then
-            printf 'will cite' | parallel --citation
+            printf 'will cite' | parallel --citation &> /dev/null
             substep "parallel installation succeeded"
         else
             error "parallel installation failed"
