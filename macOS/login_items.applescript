@@ -5,6 +5,7 @@ set login_item_list to {¬
     "Docker",¬
     "Dropbox",¬
     "Hammerspoon",¬
+    "NordVPN",¬
     "Numi",¬
     "iTerm"¬
 }
