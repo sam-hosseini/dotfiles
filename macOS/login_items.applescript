@@ -4,6 +4,7 @@ set login_item_list to {¬
     "Bartender 3",¬
     "Docker",¬
     "Dropbox",¬
+    "Fantastical 2",¬
     "Hammerspoon",¬
     "NordVPN",¬
     "Numi",¬
