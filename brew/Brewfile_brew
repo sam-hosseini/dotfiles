@@ -14,17 +14,17 @@ brew "httpie"
 brew "imagemagick"
 brew "jq"
 brew "mas"
-brew "mongodb-community", restart_service: :changed
+brew "mongodb-community"
 brew "node"
 brew "p7zip"
 brew "parallel"
 brew "pipenv"
 brew "poppler" # to work with pdf files and merge/extract them for example
-brew "postgresql", restart_service: :changed
+brew "postgresql"
 brew "python"
 brew "python@2"
 brew "reattach-to-user-namespace" # for tmux commands to work
-brew "redis", restart_service: :changed
+brew "redis"
 brew "ruby" # for Vim command-t plugin to work
 brew "terraform"
 brew "tldr"
