@@ -21,6 +21,7 @@ set --global --export GIT_AUTHOR_NAME     $GIT_GLOBAL_NAME
 set --global --export GIT_COMMITTER_NAME  $GIT_GLOBAL_NAME
 set --global --export GIT_AUTHOR_EMAIL    $GIT_GLOBAL_EMAIL
 set --global --export GIT_COMMITTER_EMAIL $GIT_GLOBAL_EMAIL
+set --global --export HOMEBREW_BUNDLE_NO_LOCK true
 set --global --export HOMEBREW_NO_AUTO_UPDATE true
 set --global --export EDITOR vim
 set --global --export PYTHONDONTWRITEBYTECODE true
