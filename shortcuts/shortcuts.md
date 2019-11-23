@@ -100,3 +100,4 @@ Directly inspired from amazing [Capslock Enhancement](https://github.com/Vonng/C
 | `✱` + `O`              | `⌃O`                | Ctrl + O                                       |
 | `✱` + `R`              | `⌃R`                | Ctrl + R                                       |
 | `✱` + `Q`              | `⌃⌘Q`               | Lock screen                                    |
+| `✱` + `Y`              | `⌃⌘␢`               | Native macOS emoji keyboard popup              |
