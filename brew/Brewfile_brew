@@ -18,7 +18,6 @@ brew "mongodb-community"
 brew "node"
 brew "p7zip"
 brew "parallel"
-brew "pipenv"
 brew "poppler" # to work with pdf files and merge/extract them for example
 brew "postgresql"
 brew "python"
