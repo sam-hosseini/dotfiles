@@ -1,6 +1,7 @@
 django
 mypy
 pip-tools
+pipenv
 powerline-status
 requests
 tmuxp

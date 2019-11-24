@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements.in
 #
-certifi==2019.9.11        # via requests
+certifi==2019.9.11        # via pipenv, requests
 chardet==3.0.4            # via requests
 click==7.0                # via pip-tools, tmuxp
 colorama==0.4.1           # via tmuxp
@@ -15,6 +15,7 @@ libtmux==0.8.2            # via tmuxp
 mypy-extensions==0.4.3    # via mypy
 mypy==0.740
 pip-tools==4.2.0
+pipenv==2018.11.26
 powerline-status==2.7
 pytz==2019.3              # via django
 pyyaml==5.1.2             # via kaptan
@@ -25,4 +26,9 @@ tmuxp==1.5.3
 typed-ast==1.4.0          # via mypy
 typing-extensions==3.7.4  # via mypy
 urllib3==1.25.6           # via requests
+virtualenv-clone==0.5.3   # via pipenv
 virtualenv==16.7.7
+
+# The following packages are considered to be unsafe in a requirements file:
+# pip==19.3.1               # via pipenv
+# setuptools==42.0.0        # via pipenv
