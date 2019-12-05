@@ -8,7 +8,7 @@ certifi==2019.9.11        # via pipenv, requests
 chardet==3.0.4            # via requests
 click==7.0                # via pip-tools, tmuxp
 colorama==0.4.1           # via tmuxp
-django==2.2.6
+django==2.2.8
 idna==2.8                 # via requests
 kaptan==0.5.12            # via tmuxp
 libtmux==0.8.2            # via tmuxp
@@ -30,5 +30,5 @@ virtualenv-clone==0.5.3   # via pipenv
 virtualenv==16.7.7
 
 # The following packages are considered to be unsafe in a requirements file:
-# pip==19.3.1               # via pipenv
-# setuptools==42.0.0        # via pipenv
+# pip
+# setuptools
