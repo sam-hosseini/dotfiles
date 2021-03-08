@@ -1,0 +1,5 @@
+- name: Copy rectangle config
+  ansible.builtin.copy:
+    src: '{{ DOTFILES_REPO }}/roles/rectangle/files/config.plist'
+    dest: ~/Library/Preferences/com.knollsoft.Rectangle.plist
+    force: no

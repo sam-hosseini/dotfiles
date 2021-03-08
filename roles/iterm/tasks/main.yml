@@ -1,0 +1,15 @@
+- name: Set iterm to load preferences from custom folder
+  community.general.osx_defaults:
+    domain: com.googlecode.iterm2
+    key: LoadPrefsFromCustomFolder
+    type: int
+    value: 1
+    state: present
+
+- name: Set iterm preferences custom folder
+  community.general.osx_defaults:
+    domain: com.googlecode.iterm2
+    key: PrefsCustomFolder
+    type: string
+    value: '{{ DOTFILES_REPO }}/roles/iterm/files/'
+    state: present

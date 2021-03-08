@@ -1,0 +1,3 @@
+function o
+    open .
+end

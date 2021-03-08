@@ -1,0 +1,24 @@
+add_newline = false
+
+[battery]
+disabled = true
+
+[character]
+success_symbol = "[ꫝ](bold green)"
+error_symbol   = "[ꫝ](bold red)"
+
+[directory]
+truncation_length = 100
+style = "bold blue"
+
+[git_status]
+style = "bold cyan"
+
+[line_break]
+disabled = true
+
+[python]
+python_binary = "python3"
+
+[status]
+disabled = false

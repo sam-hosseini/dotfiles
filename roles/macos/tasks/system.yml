@@ -1,0 +1,36 @@
+- name: Setup system preferences
+  changed_when: false
+  ansible.builtin.shell:
+    cmd: |
+      {% for item in preferences %}
+      defaults write {{ item.domain }} {{ item.key }} -{{ item.type }} {{ item.value }} {% if not loop.last %} && {% endif %}
+      {% endfor %}
+  vars:
+    preferences:
+      # Disable natural scrolling
+      - { domain: NSGlobalDomain, key: com.apple.swipescrolldirection, type: bool, value: false }
+
+      # Enable tab selection for all elements in modal dialogs
+      - { domain: NSGlobalDomain, key: AppleKeyboardUIMode, type: int, value: 3 }
+
+      # Set "Delay Until Repeat" to shortest and "Key Repeat" to fastest
+      - { domain: NSGlobalDomain, key: InitialKeyRepeat, type: int, value: 15 }
+      - { domain: NSGlobalDomain, key: KeyRepeat,        type: int, value: 2  }
+
+      # Disable "Correct spelling automatically"
+      - { domain: NSGlobalDomain, key: NSAutomaticSpellingCorrectionEnabled, type: bool, value: false }
+
+      # Always show filename extensions
+      - { domain: NSGlobalDomain, key: AppleShowAllExtensions, type: bool, value: true }
+
+      # Enable tap to click
+      - { domain: com.apple.AppleMultitouchTrackpad, key: Clicking, type: bool, value: true }
+
+      # Use "HH:mm" format in clock
+      - { domain: com.apple.menuextra.clock, key: DateFormat, type: string, value: HH:mm }
+
+      # Disable screenshots preview thumbnails
+      - { domain: com.apple.screencapture, key: show-thumbnail, type: bool, value: false }
+
+      # Save screenshots to ~/Downloads
+      - { domain: com.apple.screencapture, key: location, type: string, value: '${HOME}/Downloads' }

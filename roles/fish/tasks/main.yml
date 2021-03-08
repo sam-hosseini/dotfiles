@@ -1,0 +1,81 @@
+- name: Extend sudo timeout
+  become: yes
+  ansible.builtin.lineinfile:
+    line: Defaults timestamp_timeout=120 # 2 hours
+    path: /private/etc/sudoers.d/timeout
+    state: present
+    create: yes
+
+- name: Add fish to /etc/shells
+  become: yes
+  ansible.builtin.lineinfile:
+    line: /usr/local/bin/fish
+    path: /etc/shells
+    state: present
+
+- name: Set fish as default shell
+  become: yes
+  ansible.builtin.user:
+    name: '{{ USERNAME }}'
+    shell: /usr/local/bin/fish
+
+- name: Create fish directories
+  ansible.builtin.file:
+    path: '{{ item.path }}'
+    state: directory
+  loop:
+   - { path: ~/.config/fish           }
+   - { path: ~/.config/fish/autoload  }
+
+- name: Install fish config template
+  ansible.builtin.template:
+    src: '{{ DOTFILES_REPO }}/roles/fish/templates/config.j2'
+    dest: ~/.config/fish/config.fish
+
+- name: Setup fish symlinks
+  ansible.builtin.file:
+    src:  '{{ DOTFILES_REPO }}/roles/fish/{{ item.src }}'
+    path: '{{ item.path }}'
+    state: link
+  loop:
+    - { src: files/functions,        path: ~/.config/fish/functions                      }
+    - { src: files/path.fish,        path: ~/.config/fish/autoload/fish_path.fish        }
+    - { src: files/environment.fish, path: ~/.config/fish/autoload/fish_environment.fish }
+
+- name: Check if fisher function exists
+  register: fisher_function
+  ansible.builtin.stat:
+    path: '{{ DOTFILES_REPO }}/roles/fish/files/functions/fisher.fish'
+
+- name: Check if fisher function is outdated
+  register: fisher_function_is_outdated
+  ansible.builtin.find:
+    paths: '{{ DOTFILES_REPO }}/roles/fish/files/functions/'
+    patterns: fisher.fish
+    age: 4w
+
+- name: Download fisher function
+  when: not fisher_function.stat.exists or fisher_function_is_outdated.matched == 1
+  ansible.builtin.get_url:
+    url:  https://git.io/fisher
+    dest: '{{ DOTFILES_REPO }}/roles/fish/files/functions/fisher.fish'
+
+- name: Get installed fish plugins
+  register: installed_fish_plugins
+  changed_when: false
+  failed_when: false
+  ansible.builtin.shell:
+    executable: /usr/local/bin/fish
+    cmd: fisher list
+
+- name: Install fish plugins
+  loop: '{{ fish_plugins }}'
+  when: item not in installed_fish_plugins.stdout
+  ansible.builtin.shell:
+    executable: /usr/local/bin/fish
+    cmd: fisher install {{ item }}
+
+- name: Disable shell login message
+  ansible.builtin.copy:
+    src: /dev/null
+    dest: ~/.hushlogin

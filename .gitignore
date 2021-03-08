@@ -1,0 +1,10 @@
+.DS_Store
+
+roles/fish/files/functions/__z*.fish
+roles/fish/files/functions/_pisces*.fish
+roles/fish/files/functions/fisher.fish
+roles/hosts/files/curated_hosts
+roles/hosts/files/curated_hosts_updated
+roles/karabiner/files/assets
+roles/karabiner/files/automatic_backups
+roles/karabiner/files/karabiner.json

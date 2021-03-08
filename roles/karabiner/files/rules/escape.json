@@ -1,0 +1,20 @@
+{
+    "description": "escape",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "escape"
+            },
+            "to": [
+                {
+                    "key_code": "q",
+                    "modifiers": [
+                        "left_control",
+                        "left_command"
+                    ]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}

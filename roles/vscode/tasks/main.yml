@@ -1,0 +1,46 @@
+- name: Create vscode config directory
+  ansible.builtin.file:
+    path: ~/Library/Application Support/Code/User
+    state: directory
+
+- name: Setup vscode symlinks
+  ansible.builtin.file:
+    src:  '{{ DOTFILES_REPO }}/roles/vscode/{{ item.src }}'
+    path: '{{ item.path }}'
+    state: link
+  loop:
+    - { src: files/config.json,      path: ~/Library/Application Support/Code/User/settings.json    }
+    - { src: files/keybindings.json, path: ~/Library/Application Support/Code/User/keybindings.json }
+
+- name: Disable press and hold while typing in vscode
+  community.general.osx_defaults:
+    domain: com.microsoft.VSCode
+    key: ApplePressAndHoldEnabled
+    type: bool
+    value: false
+    state: present
+
+- name: Get adhoc vscode extensions
+  register: adhoc_vscode_extensions
+  ansible.builtin.find:
+    paths: ~/.vscode/extensions/
+    excludes: '{{ vscode_extensions }}'
+    file_type: directory
+    use_regex: yes
+    patterns: .*
+
+- name: Delete adhoc vscode extensions
+  loop: '{{ adhoc_vscode_extensions.files }}'
+  ansible.builtin.file:
+    path: '{{ item.path }}'
+    state: absent
+
+- name: Install vscode extensions
+  register: result
+  changed_when: '"successfully installed" in result.stdout'
+  ansible.builtin.command:
+    cmd: |
+      code
+      {% for item in vscode_extensions %}
+      --install-extension {{ item }}
+      {% endfor %}

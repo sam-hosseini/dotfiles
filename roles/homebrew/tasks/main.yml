@@ -1,0 +1,69 @@
+- name: Setup homebrew environment
+  ansible.builtin.file:
+    src: '{{ DOTFILES_REPO }}/roles/homebrew/files/environment.fish'
+    path: ~/.config/fish/autoload/homebrew.fish
+    state: link
+
+- name: Install homebrew taps
+  community.general.homebrew_tap:
+    name: '{{ homebrew_taps }}'
+    state: present
+
+- name: Get installed homebrew formulae
+  register: installed_homebrew_formulae
+  changed_when: false
+  ansible.builtin.command:
+    cmd: brew list --formulae
+
+- name: Install homebrew formulae
+  loop: '{{ homebrew_formulae }}'
+  when: item not in installed_homebrew_formulae.stdout_lines
+  retries: 5
+  delay: 3
+  register: result
+  until: result is succeeded
+  community.general.homebrew:
+    name: '{{ item }}'
+    state: present
+
+- name: Get high level homebrew formulae
+  register: high_level_homebrew_formulae
+  changed_when: false
+  ansible.builtin.command:
+    cmd: brew leaves
+
+- name: Delete adhoc homebrew formulae
+  loop: '{{ high_level_homebrew_formulae.stdout_lines }}'
+  when: item not in homebrew_formulae
+  retries: 5
+  delay: 3
+  register: result
+  until: result is succeeded
+  community.general.homebrew:
+    name: '{{ item }}'
+    state: absent
+
+- name: Get installed homebrew casks
+  register: installed_homebrew_casks
+  changed_when: false
+  ansible.builtin.command:
+    cmd: brew list --casks
+
+- name: Install homebrew casks
+  loop: '{{ homebrew_casks }}'
+  when: item not in installed_homebrew_casks.stdout_lines
+  retries: 5
+  delay: 3
+  register: result
+  until: result is succeeded
+  community.general.homebrew_cask:
+    name: '{{ item }}'
+    state: present
+    install_options: no-quarantine
+
+- name: Delete adhoc homebrew casks
+  loop: '{{ installed_homebrew_casks.stdout_lines }}'
+  when: item not in homebrew_casks
+  community.general.homebrew_cask:
+    name: '{{ item }}'
+    state: absent

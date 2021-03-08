@@ -1,0 +1,32 @@
+- name: Check if curated_hosts exists
+  register: curated_hosts
+  ansible.builtin.stat:
+    path: '{{ DOTFILES_REPO }}/roles/hosts/files/curated_hosts'
+
+- name: Check if curated_hosts is outdated
+  register: curated_hosts_is_outdated
+  ansible.builtin.find:
+    paths: '{{ DOTFILES_REPO }}/roles/hosts/files/'
+    patterns: curated_hosts
+    age: 4w
+
+- name: Download curated_hosts
+  when: not curated_hosts.stat.exists or curated_hosts_is_outdated.matched == 1
+  register: curated_hosts_downloaded
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
+    dest: '{{ DOTFILES_REPO }}/roles/hosts/files/curated_hosts'
+
+- name: Remove ignored_hosts from curated_hosts
+  when: curated_hosts_downloaded.changed
+  ansible.builtin.shell:
+    cmd: >
+      rg --invert-match '{{ ignored_hosts | join('|') }}'
+      '{{ DOTFILES_REPO }}/roles/hosts/files/curated_hosts' >
+      '{{ DOTFILES_REPO }}/roles/hosts/files/curated_hosts_updated'
+
+- name: Install hosts template
+  become: yes
+  ansible.builtin.template:
+    src: '{{ DOTFILES_REPO }}/roles/hosts/templates/hosts.j2'
+    dest: /private/etc/hosts

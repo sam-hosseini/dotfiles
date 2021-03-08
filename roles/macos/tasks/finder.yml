@@ -1,0 +1,27 @@
+- name: Setup finder preferences
+  changed_when: false
+  ansible.builtin.shell:
+    cmd: |
+      {% for item in preferences %}
+      defaults write com.apple.finder {{ item.key }} -{{ item.type }} {{ item.value }} {% if not loop.last %} && {% endif %}
+      {% endfor %}
+  vars:
+    preferences:
+      # Open to ~/Downloads
+      - { key: NewWindowTarget,     type: string, value: PfLo                        }
+      - { key: NewWindowTargetPath, type: string, value: 'file://${HOME}/Downloads/' }
+
+      # Display full file path
+      - { key: _FXShowPosixPathInTitle, type: bool, value: true }
+
+      # Keep folders on top when sorting by name
+      - { key: _FXSortFoldersFirst, type: bool, value: true }
+
+      # Use "Columns" view
+      - { key: FXPreferredViewStyle, type: string, value: clmv }
+
+      # Disable trash emptying warning
+      - { key: WarnOnEmptyTrash, type: bool, value: false }
+
+      # Disable file extension changing warning
+      - { key: FXEnableExtensionChangeWarning, type: bool, value: false }

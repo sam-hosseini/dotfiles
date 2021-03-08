@@ -1,0 +1,47 @@
+- name: Allow apps downloaded from anywhere
+  changed_when: false
+  become: yes
+  ansible.builtin.command:
+    cmd: spctl --master-disable
+
+- name: Install Mac App Store applications
+  community.general.mas:
+    id: '{{ mas_applications }}'
+    state: present
+
+- name: Setup login items
+  changed_when: false
+  ansible.builtin.command:
+    cmd: |
+      osascript
+      -e 'tell application "System Events" to delete every login item'
+      {% for item in login_items %}
+      -e 'tell application "System Events" to make login item with properties { path: "/Applications/{{ item }}.app", hidden: true }'
+      {% endfor %}
+
+- name: Setup 1.1.1.1 DNS servers
+  changed_when: false
+  ansible.builtin.shell:
+    cmd: |
+      networksetup -setdnsservers Wi-Fi Empty &&
+      networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
+
+- name: Disable sleep
+  become: yes
+  changed_when: false
+  ansible.builtin.command:
+    cmd: pmset -a displaysleep 0 disksleep 0 sleep 0
+
+- name: Disable screen saver
+  changed_when: false
+  ansible.builtin.command:
+    cmd: defaults -currentHost write com.apple.screensaver idleTime 0
+
+- name: Import dock.yml
+  import_tasks: '{{ DOTFILES_REPO }}/roles/macos/tasks/dock.yml'
+
+- name: Import finder.yml
+  import_tasks: '{{ DOTFILES_REPO }}/roles/macos/tasks/finder.yml'
+
+- name: Import system.yml
+  import_tasks: '{{ DOTFILES_REPO }}/roles/macos/tasks/system.yml'

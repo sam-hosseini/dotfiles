@@ -1,0 +1,12 @@
+- name: Setup starship initializer
+  ansible.builtin.lineinfile:
+    line: starship init fish | source
+    path: ~/.config/fish/autoload/starship.fish
+    state: present
+    create: yes
+
+- name: Setup starship config symlink
+  ansible.builtin.file:
+    src: '{{ DOTFILES_REPO }}/roles/starship/files/config.toml'
+    path: ~/.config/starship.toml
+    state: link

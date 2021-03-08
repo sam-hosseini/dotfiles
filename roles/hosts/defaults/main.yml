@@ -1,0 +1,14 @@
+ignored_hosts:
+  - buysellads
+  - linkedin
+  - redd.it
+  - reddit
+  - t.co
+  - twimg.com
+  - twitter
+  - whatsapp
+
+disabled_hosts:
+  - bbc.com
+  - mesghal.com
+  - yle.fi

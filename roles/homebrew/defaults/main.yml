@@ -1,0 +1,73 @@
+homebrew_formulae:
+  - less             # required for bat to have the latest version of less as its pager
+  - imagemagick      # for "convert" tool
+  - poppler          # for "pdfunite" and "pdfseparate" tools
+
+  - ansible
+  - bandwhich
+  - bat
+  - dust
+  - exa
+  - fd
+  - ffmpeg
+  - fish
+  - git
+  - git-extras
+  - httpie
+  - jq
+  - mas
+  - node
+  - p7zip
+  - parallel
+  - pipx
+  - python@3.9
+  - rename
+  - ripgrep
+  - sd
+  - starship
+  - terraform
+  - tldr
+  - trash
+  - yarn
+  - youtube-dl
+
+homebrew_casks:
+  - font-fira-mono-nerd-font        # required for starship
+
+  - 1password
+  - 1password-cli
+  - bartender
+  - basecamp
+  - chrome-remote-desktop-host
+  - cyberduck
+  - docker
+  - dropbox
+  - dynalist
+  - fantastical
+  - firefox
+  - google-chrome
+  - iina
+  - insomnia
+  - iterm2
+  - kap
+  - karabiner-elements
+  - krisp
+  - ngrok
+  - nordvpn
+  - numi
+  - postico
+  - rectangle
+  - robo-3t
+  - signal
+  - spotify
+  - steam
+  - sublime-text
+  - the-unarchiver
+  - ticktick
+  - transmission
+  - visual-studio-code
+  - whatsapp
+  - zoom
+
+homebrew_taps:
+  - homebrew/cask-fonts    # required for font-fira-mono-nerd-font

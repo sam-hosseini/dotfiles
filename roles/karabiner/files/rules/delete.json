@@ -1,0 +1,24 @@
+{
+    "description": "delete",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "delete_or_backspace",
+                "modifiers": {
+                    "mandatory": [
+                        "right_command",
+                        "right_control",
+                        "right_shift",
+                        "right_option"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "osascript -e 'tell app \"Finder\" to empty the trash'"
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}

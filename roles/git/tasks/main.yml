@@ -1,0 +1,10 @@
+- name: Create git config directory
+  ansible.builtin.file:
+    path: ~/.config/git
+    state: directory
+
+- name: Setup git config symlink
+  ansible.builtin.file:
+    src: '{{ DOTFILES_REPO }}/roles/git/files/config.ini'
+    path: ~/.config/git/config
+    state: link

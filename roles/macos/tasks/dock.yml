@@ -1,0 +1,27 @@
+- name: Setup dock preferences
+  changed_when: false
+  ansible.builtin.shell:
+    cmd: |
+      {% for item in preferences %}
+      defaults write com.apple.dock {{ item.key }} -{{ item.type }} {{ item.value }} {% if not loop.last %} && {% endif %}
+      {% endfor %}
+  vars:
+    preferences:
+      # Don’t show recent applications
+      - { key: show-recents, type: bool, value: false }
+
+      # Remove application icons
+      - { key: persistent-apps, type: array, value: null }
+
+      # Lock body size
+      - { key: tilesize,       type: int,  value: 40   }
+      - { key: size-immutable, type: bool, value: true }
+
+      # Enable autohide
+      - { key: autohide, type: bool, value: true }
+
+      # Remove autohide delay
+      - { key: autohide-delay, type: float, value: 0 }
+
+      # Disable re-arranging of Spaces based on most recent use
+      - { key: mru-spaces, type: bool, value: false }

@@ -1,0 +1,13 @@
+{% include 'files/base_hosts' %}
+
+
+{% for host in disabled_hosts %}
+0.0.0.0     {{ host }}
+::          {{ host }}
+0.0.0.0     www.{{ host }}
+::          www.{{ host }}
+
+{% endfor %}
+
+
+{% include 'files/curated_hosts_updated' %}
