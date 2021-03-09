@@ -16,6 +16,8 @@
 * Input licenses of applications in 1password software licenses
 * Set [un-automatable shortcuts](https://github.com/sam-hosseini/dotfiles/blob/main/roles/karabiner/files/shortcuts.md)
 * Tweak system preferences settings
+    * Users & Groups
+        * Current User => Update picture
     * Accessibility
         * Display => Check Reduce transparency
     * Sound
