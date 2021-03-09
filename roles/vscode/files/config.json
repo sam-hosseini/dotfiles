@@ -5,6 +5,12 @@
     "[markdown]": {
         "editor.wordWrap": "off"
     },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": false,
     "editor.acceptSuggestionOnEnter": "off",
@@ -24,6 +30,7 @@
     "git.autofetch": true,
     "git.inputValidationSubjectLength": 72,
     "path-autocomplete.triggerOutsideStrings": true,
+    "python.pythonPath": "venv/bin/python",
     "python.showStartPage": false,
     "tabnine.experimentalAutoImports": true,
     "telemetry.enableCrashReporter": false,
