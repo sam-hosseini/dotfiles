@@ -25,7 +25,6 @@ homebrew_formulae:
   - ripgrep
   - sd
   - starship
-  - terraform
   - tldr
   - trash
   - yarn

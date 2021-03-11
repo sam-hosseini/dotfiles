@@ -5,7 +5,6 @@ vscode_extensions:
   - donjayamanne.githistory                   # git log
   - dracula-theme.theme-dracula               # dracula theme
   - fabiospampinato.vscode-open-in-github     # open repo in github
-  - hashicorp.terraform                       # terraform syntax highlighting
   - ionutvmi.path-autocomplete                # path completion
   - miguelsolorio.fluent-icons                # product icon theme
   - ms-python.python                          # support for python
