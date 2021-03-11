@@ -15,6 +15,7 @@
     "diffEditor.renderSideBySide": false,
     "editor.acceptSuggestionOnEnter": "off",
     "editor.cursorSurroundingLines": 15,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
     "editor.renderFinalNewline": false,
