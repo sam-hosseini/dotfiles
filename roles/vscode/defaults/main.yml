@@ -7,6 +7,7 @@ vscode_extensions:
   - dracula-theme.theme-dracula               # dracula theme
   - esbenp.prettier-vscode                    # prettier code formatter
   - fabiospampinato.vscode-open-in-github     # open repo in github
+  - formulahendry.auto-rename-tag             # auto rename html elements
   - ionutvmi.path-autocomplete                # path completion
   - miguelsolorio.fluent-icons                # product icon theme
   - ms-python.python                          # support for python
