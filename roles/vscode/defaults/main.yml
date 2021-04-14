@@ -14,4 +14,3 @@ vscode_extensions:
   - ms-python.python                          # support for python
   - ms-toolsai.jupyter                        # ms-python.python dependency
   - samuelcolvin.jinjahtml                    # jinja syntax highlighting
-  - tabnine.tabnine-vscode                    # magical auto completion
