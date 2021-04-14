@@ -10,6 +10,7 @@ vscode_extensions:
   - formulahendry.auto-rename-tag             # auto rename html elements
   - ionutvmi.path-autocomplete                # path completion
   - miguelsolorio.fluent-icons                # product icon theme
+  - ms-azuretools.vscode-docker               # support for docker
   - ms-python.python                          # support for python
   - ms-toolsai.jupyter                        # ms-python.python dependency
   - samuelcolvin.jinjahtml                    # jinja syntax highlighting
