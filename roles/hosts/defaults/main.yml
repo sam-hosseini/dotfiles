@@ -6,6 +6,7 @@ ignored_hosts:
   - t.co
   - twimg.com
   - twitter
+  - veikkaus
   - whatsapp
 
 disabled_hosts:
