@@ -35,6 +35,8 @@
     "git.inputValidationSubjectLength": 72,
     "path-autocomplete.triggerOutsideStrings": true,
     "python.formatting.provider": "black",
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
     "python.pythonPath": "venv/bin/python",
     "python.showStartPage": false,
     "tabnine.experimentalAutoImports": true,
