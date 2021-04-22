@@ -6,7 +6,12 @@
         "editor.wordWrap": "off"
     },
     "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": [
+            "source.organizeImports",
+            "source.formatDocument"
+        ]
     },
     "workbench.editorAssociations": [
         {

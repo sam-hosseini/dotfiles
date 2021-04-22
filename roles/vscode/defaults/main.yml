@@ -13,4 +13,5 @@ vscode_extensions:
   - ms-azuretools.vscode-docker               # support for docker
   - ms-python.python                          # support for python
   - ms-toolsai.jupyter                        # ms-python.python dependency
+  - rohit-gohri.format-code-action            # chain multiple actions on save
   - samuelcolvin.jinjahtml                    # jinja syntax highlighting
