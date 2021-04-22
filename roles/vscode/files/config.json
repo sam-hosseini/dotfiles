@@ -5,6 +5,9 @@
     "[markdown]": {
         "editor.wordWrap": "off"
     },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
     "workbench.editorAssociations": [
         {
             "viewType": "jupyter.notebook.ipynb",
@@ -31,6 +34,7 @@
     "git.autofetch": true,
     "git.inputValidationSubjectLength": 72,
     "path-autocomplete.triggerOutsideStrings": true,
+    "python.formatting.provider": "black",
     "python.pythonPath": "venv/bin/python",
     "python.showStartPage": false,
     "tabnine.experimentalAutoImports": true,
