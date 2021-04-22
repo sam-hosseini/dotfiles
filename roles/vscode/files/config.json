@@ -20,6 +20,7 @@
     "editor.cursorSurroundingLines": 15,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.fontSize": 13,
+    "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.renderFinalNewline": false,
     "editor.renderWhitespace": "trailing",
