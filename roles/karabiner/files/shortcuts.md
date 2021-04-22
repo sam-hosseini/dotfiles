@@ -39,6 +39,7 @@
 * <kbd>E</kbd>
     * vscode => command + E = open explorer
 * <kbd>R</kbd>
+    * vscode => command + R = trigger save
 * <kbd>T</kbd>
 * <kbd>Y</kbd>
 * <kbd>U</kbd>
