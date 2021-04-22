@@ -39,6 +39,7 @@
     "python.linting.pylintEnabled": false,
     "python.pythonPath": "venv/bin/python",
     "python.showStartPage": false,
+    "python.sortImports.path": "isort",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "window.zoomLevel": 1,
