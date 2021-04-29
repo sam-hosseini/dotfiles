@@ -8,6 +8,7 @@ vscode_extensions:
   - esbenp.prettier-vscode                    # prettier code formatter
   - fabiospampinato.vscode-open-in-github     # open repo in github
   - formulahendry.auto-rename-tag             # auto rename html elements
+  - graphql.vscode-graphql                    # graphql syntax highlighting
   - ionutvmi.path-autocomplete                # path completion
   - miguelsolorio.fluent-icons                # product icon theme
   - ms-azuretools.vscode-docker               # support for docker
