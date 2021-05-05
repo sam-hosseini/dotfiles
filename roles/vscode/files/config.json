@@ -13,6 +13,13 @@
             "source.formatDocument"
         ]
     },
+    "[javascript]": {
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": [
+            "source.fixAll.eslint",
+            "source.formatDocument"
+        ]
+    },
     "workbench.editorAssociations": [
         {
             "viewType": "jupyter.notebook.ipynb",
