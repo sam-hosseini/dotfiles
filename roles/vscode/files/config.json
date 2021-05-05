@@ -1,64 +1,64 @@
 {
-    "path-autocomplete.pathMappings": {
-        "/": "/"
-    },
-    "[markdown]": {
-        "editor.wordWrap": "off"
-    },
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python",
-        "editor.formatOnSave": false,
-        "editor.codeActionsOnSave": [
-            "source.organizeImports",
-            "source.formatDocument"
-        ]
-    },
-    "[javascript]": {
-        "editor.formatOnSave": false,
-        "editor.codeActionsOnSave": [
-            "source.fixAll.eslint",
-            "source.formatDocument"
-        ]
-    },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "diffEditor.ignoreTrimWhitespace": false,
-    "diffEditor.renderSideBySide": false,
-    "editor.acceptSuggestionOnEnter": "off",
-    "editor.cursorSurroundingLines": 15,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.fontSize": 13,
-    "editor.formatOnSave": true,
-    "editor.minimap.enabled": false,
-    "editor.renderFinalNewline": false,
-    "editor.renderWhitespace": "trailing",
-    "editor.scrollBeyondLastLine": false,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 100,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "git.autofetch": true,
-    "git.inputValidationSubjectLength": 72,
-    "path-autocomplete.triggerOutsideStrings": true,
-    "python.formatting.provider": "black",
-    "python.linting.flake8Enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.pythonPath": "venv/bin/python",
-    "python.showStartPage": false,
-    "python.sortImports.path": "isort",
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
-    "window.zoomLevel": 1,
-    "workbench.colorTheme": "Dracula",
-    "workbench.enableExperiments": false,
-    "workbench.productIconTheme": "fluent-icons",
-    "workbench.startupEditor": "none",
-    "workbench.tips.enabled": false
+  "path-autocomplete.pathMappings": {
+    "/": "/"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "off"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": [
+      "source.organizeImports",
+      "source.formatDocument"
+    ]
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": [
+      "source.fixAll.eslint",
+      "source.formatDocument"
+    ]
+  },
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.cursorSurroundingLines": 15,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.renderFinalNewline": false,
+  "editor.renderWhitespace": "trailing",
+  "editor.scrollBeyondLastLine": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 100,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.inputValidationSubjectLength": 72,
+  "path-autocomplete.triggerOutsideStrings": true,
+  "python.formatting.provider": "black",
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.pythonPath": "venv/bin/python",
+  "python.showStartPage": false,
+  "python.sortImports.path": "isort",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Dracula",
+  "workbench.enableExperiments": false,
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false
 }
