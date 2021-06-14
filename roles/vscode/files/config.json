@@ -20,12 +20,9 @@
       "source.formatDocument"
     ]
   },
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "off",
@@ -53,6 +50,7 @@
   "python.pythonPath": "venv/bin/python",
   "python.showStartPage": false,
   "python.sortImports.path": "isort",
+  "security.workspace.trust.untrustedFiles": "open",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "window.zoomLevel": 1,
