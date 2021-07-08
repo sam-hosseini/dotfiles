@@ -10,5 +10,6 @@ ignored_hosts:
 
 disabled_hosts:
   - bbc.com
+  - coinmarketcap.com
   - mesghal.com
   - yle.fi
