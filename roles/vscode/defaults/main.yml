@@ -2,7 +2,6 @@ vscode_extensions:
   - be5invis.toml                             # toml syntax highlighting
   - bmalehorn.vscode-fish                     # fish syntax highlighting
   - britesnow.vscode-toggle-quotes            # cycle between single and double quotes
-  - coenraads.bracket-pair-colorizer-2        # colorizes matching brackets
   - dbaeumer.vscode-eslint                    # support for eslint
   - donjayamanne.githistory                   # git log
   - dracula-theme.theme-dracula               # dracula theme
