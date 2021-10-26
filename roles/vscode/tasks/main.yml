@@ -1,7 +1,10 @@
-- name: Create vscode config directory
+- name: Create vscode directories
   ansible.builtin.file:
-    path: ~/Library/Application Support/Code/User
+    path: '{{ item.path }}'
     state: directory
+  loop:
+   - { path: ~/Library/Application Support/Code/User }
+   - { path: ~/.vscode/extensions  }
 
 - name: Setup vscode symlinks
   ansible.builtin.file:
