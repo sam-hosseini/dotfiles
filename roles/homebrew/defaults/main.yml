@@ -37,7 +37,6 @@ homebrew_casks:
   - 1password-cli
   - bartender
   - basecamp
-  - chrome-remote-desktop-host
   - cyberduck
   - docker
   - dropbox
