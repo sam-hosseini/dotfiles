@@ -4,9 +4,3 @@ login_items:
   - Fantastical
   - iTerm
   - Rectangle
-
-mas_applications:
-  - 1063631769    # Medis
-  - 1091189122    # Bear
-  - 1176895641    # Spark
-  - 1450640351    # Lightweight PDF

@@ -16,7 +16,6 @@ homebrew_formulae:
   - git-extras
   - httpie
   - jq
-  - mas
   - node
   - p7zip
   - parallel

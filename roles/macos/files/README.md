@@ -1,9 +1,9 @@
 * Ensure that you're signed in to the App Store
 * Install Homebrew from [brew.sh](https://brew.sh)
 * Clone dotfiles repository from [github](https://github.com/sam-hosseini/dotfiles)
-* Install Ansible, Fish and Mac App Store cli:
+* Install Ansible and Fish:
     ```
-    brew install ansible fish mas
+    brew install ansible fish
     ```
 * Install fish and macos roles
     ```

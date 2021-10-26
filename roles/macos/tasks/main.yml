@@ -4,11 +4,6 @@
   ansible.builtin.command:
     cmd: spctl --master-disable
 
-- name: Install Mac App Store applications
-  community.general.mas:
-    id: '{{ mas_applications }}'
-    state: present
-
 - name: Setup login items
   changed_when: false
   ansible.builtin.command:
