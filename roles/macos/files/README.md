@@ -1,4 +1,3 @@
-* Ensure that you're signed in to the App Store
 * Install Homebrew from [brew.sh](https://brew.sh)
 * Clone dotfiles repository from [github](https://github.com/sam-hosseini/dotfiles)
 * Install Ansible and Fish:
@@ -10,6 +9,7 @@
     sudo --validate; ansible-playbook bootstrap.yml --tags fish --tags macos
     ```
 * Open a fish shell and execute `bootstrap`
+* Sign in to the App Store and install all purchased applications
 * Initiate `git push` and use Github personal access token in 1password for it
 * Initiate `op signin my 1password_email`
 * Clone all repositories with `clone_repos`
