@@ -86,7 +86,6 @@
     * iterm => command + HJKL = move between panes
     * iterm => command + shift + HJKL = resize panes
     * iterm => page up/down = scroll one page up/down
-    * [un-automatable] firefox link hints => command + J,K = click, click and switch
 * <kbd>;</kbd>
     * karabiner => hyper acts as shift
 * <kbd>'</kbd>
