@@ -5,5 +5,5 @@ function update_everything
 
     fisher update > /dev/null
 
-    tldr --update
+    tldr --update > /dev/null
 end
