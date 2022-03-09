@@ -54,6 +54,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
+  "update.mode": "manual",
   "window.zoomLevel": 1,
   "workbench.colorTheme": "Dracula",
   "workbench.enableExperiments": false,
