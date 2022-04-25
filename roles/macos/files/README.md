@@ -11,7 +11,7 @@
 * Open a fish shell and execute `bootstrap`
 * Sign in to the App Store and install all purchased applications
 * Initiate `git push` and use Github personal access token in 1password for it
-* Initiate `op signin my 1password_email`
+* Initiate `op account add --address my.1password.com`
 * Clone all repositories with `clone_repos`
 * Input licenses of applications in 1password software licenses
 * Set [un-automatable shortcuts](https://github.com/sam-hosseini/dotfiles/blob/main/roles/karabiner/files/shortcuts.md)
