@@ -1,6 +1,6 @@
 function url_shortener
     1password_session
-    set --local BITLY_API_TOKEN (op get item bitly | jq --raw-output '.details.sections[1].fields[0].v')
+    set --local BITLY_API_TOKEN (op item get 'Bitly' --fields label=BITLY_API_TOKEN | jq --raw-output .value)
 
     set --local LONG_URL        $argv[1]
     set --local API_URL         https://api-ssl.bitly.com/v4/shorten
