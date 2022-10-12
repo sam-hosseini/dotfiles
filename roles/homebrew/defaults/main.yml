@@ -28,7 +28,7 @@ homebrew_formulae:
   - tldr
   - trash
   - yarn
-  - youtube-dl
+  - yt-dlp
 
 homebrew_casks:
   - font-fira-mono-nerd-font        # required for starship
