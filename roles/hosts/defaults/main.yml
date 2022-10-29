@@ -1,5 +1,7 @@
 ignored_hosts:
   - buysellads
+  - facebook
+  - fbcdn
   - instagram
   - linkedin
   - redd.it
@@ -7,10 +9,10 @@ ignored_hosts:
   - t.co
   - twimg
   - twitter
+  - veikkaus
   - whatsapp
 
 disabled_hosts:
   - bbc.com
   - coinmarketcap.com
-  - mesghal.com
   - yle.fi
