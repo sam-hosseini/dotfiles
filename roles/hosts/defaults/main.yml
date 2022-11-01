@@ -3,6 +3,7 @@ ignored_hosts:
   - facebook
   - fbcdn
   - instagram
+  - licdn.com
   - linkedin
   - redd.it
   - reddit
