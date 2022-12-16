@@ -35,6 +35,7 @@ homebrew_casks:
 
   - 1password
   - 1password-cli
+  - anydesk
   - bartender
   - basecamp
   - cyberduck
