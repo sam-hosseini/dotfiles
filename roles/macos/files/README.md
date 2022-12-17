@@ -2,7 +2,7 @@
 * Clone dotfiles repository from [github](https://github.com/sam-hosseini/dotfiles)
 * Install Ansible, Python and Fish:
     ```
-    brew install ansible python fish
+    brew install ansible python3 fish
     ```
 * Install fish and macos roles
     ```
