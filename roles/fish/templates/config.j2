@@ -1,5 +1,7 @@
 set --global --export DOTFILES_REPO {{ DOTFILES_REPO }}
 
+fish_config theme choose "Dracula Official"
+
 for file in ~/.config/fish/autoload/*
     source $file
 end
