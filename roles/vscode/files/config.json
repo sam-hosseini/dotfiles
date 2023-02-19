@@ -32,7 +32,7 @@
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
-  "editor.renderFinalNewline": false,
+  "editor.renderFinalNewline": "off",
   "editor.renderWhitespace": "trailing",
   "editor.scrollBeyondLastLine": false,
   "explorer.confirmDelete": false,
