@@ -55,6 +55,7 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "update.mode": "manual",
+  "update.showReleaseNotes": false,
   "window.zoomLevel": 1,
   "workbench.colorTheme": "Dracula",
   "workbench.enableExperiments": false,
