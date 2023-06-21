@@ -27,7 +27,6 @@ homebrew_formulae:
   - starship
   - tldr
   - trash
-  - yarn
   - yt-dlp
 
 homebrew_casks:
