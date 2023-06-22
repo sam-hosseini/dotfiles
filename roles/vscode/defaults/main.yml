@@ -1,6 +1,7 @@
 vscode_extensions:
   - be5invis.toml                             # toml syntax highlighting
   - bmalehorn.vscode-fish                     # fish syntax highlighting
+  - bradlc.vscode-tailwindcss                 # support for tailwind
   - britesnow.vscode-toggle-quotes            # cycle between single and double quotes
   - dbaeumer.vscode-eslint                    # support for eslint
   - donjayamanne.githistory                   # git log
