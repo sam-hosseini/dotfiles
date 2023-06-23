@@ -26,6 +26,9 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "off",
