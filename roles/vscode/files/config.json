@@ -61,6 +61,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "update.mode": "manual",
   "update.showReleaseNotes": false,
   "window.zoomLevel": 1,
