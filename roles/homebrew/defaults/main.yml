@@ -6,6 +6,7 @@ homebrew_formulae:
   - ansible
   - bandwhich
   - bat
+  - cloudflared
   - dust
   - entr
   - exa
@@ -47,7 +48,6 @@ homebrew_casks:
   - iterm2
   - kap
   - karabiner-elements
-  - ngrok
   - nordvpn
   - numi
   - postico
