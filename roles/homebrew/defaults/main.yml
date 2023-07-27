@@ -42,6 +42,7 @@ homebrew_casks:
   - docker
   - dropbox
   - fantastical
+  - gitkraken
   - google-chrome
   - iina
   - insomnia
