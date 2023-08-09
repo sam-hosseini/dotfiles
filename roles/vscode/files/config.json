@@ -29,6 +29,9 @@
   "editor.quickSuggestions": {
     "strings": true
   },
+  "search.exclude": {
+    "**/var/folders/**": true
+  },
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "off",
