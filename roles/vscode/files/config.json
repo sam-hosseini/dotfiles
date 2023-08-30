@@ -27,7 +27,7 @@
     "*.css": "tailwindcss"
   },
   "editor.quickSuggestions": {
-    "strings": true
+    "strings": "on"
   },
   "search.exclude": {
     "**/var/folders/**": true
