@@ -32,6 +32,9 @@
   "search.exclude": {
     "**/var/folders/**": true
   },
+  "workbench.colorCustomizations": {
+    "tree.indentGuidesStroke": "#ffb86c"
+  },
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "off",
@@ -72,5 +75,7 @@
   "workbench.enableExperiments": false,
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
-  "workbench.tips.enabled": false
+  "workbench.tips.enabled": false,
+  "workbench.tree.indent": 16,
+  "workbench.tree.renderIndentGuides": "always"
 }
