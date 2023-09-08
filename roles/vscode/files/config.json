@@ -61,8 +61,6 @@
   "python.formatting.provider": "black",
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": false,
-  "python.pythonPath": "venv/bin/python",
-  "python.showStartPage": false,
   "python.sortImports.path": "isort",
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "error",
