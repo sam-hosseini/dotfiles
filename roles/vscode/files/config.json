@@ -6,7 +6,7 @@
     "editor.wordWrap": "off"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": [
       "source.organizeImports",
@@ -35,6 +35,7 @@
   "workbench.colorCustomizations": {
     "tree.indentGuidesStroke": "#ffb86c"
   },
+  "black-formatter.path": ["black"],
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "off",
@@ -60,7 +61,6 @@
   "git.inputValidationSubjectLength": 72,
   "isort.path": ["isort"],
   "path-autocomplete.triggerOutsideStrings": true,
-  "python.formatting.provider": "black",
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "error",
   "typescript.updateImportsOnFileMove.enabled": "always",

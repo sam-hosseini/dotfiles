@@ -12,6 +12,7 @@ vscode_extensions:
   - ionutvmi.path-autocomplete                # path completion
   - miguelsolorio.fluent-icons                # product icon theme
   - ms-azuretools.vscode-docker               # support for docker
+  - ms-python.black-formatter                 # black formatter for python
   - ms-python.flake8                          # flake8 linter for python
   - ms-python.isort                           # import sorting for python
   - ms-python.python                          # support for python
