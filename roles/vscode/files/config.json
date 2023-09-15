@@ -35,6 +35,9 @@
   "workbench.colorCustomizations": {
     "tree.indentGuidesStroke": "#ffb86c"
   },
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
   "black-formatter.path": ["black"],
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
