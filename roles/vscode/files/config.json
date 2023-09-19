@@ -66,6 +66,7 @@
   "path-autocomplete.triggerOutsideStrings": true,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "error",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "update.mode": "manual",
   "update.showReleaseNotes": false,
