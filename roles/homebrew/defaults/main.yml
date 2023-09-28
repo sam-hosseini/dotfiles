@@ -9,7 +9,7 @@ homebrew_formulae:
   - cloudflared
   - dust
   - entr
-  - exa
+  - eza
   - fd
   - ffmpeg
   - fish

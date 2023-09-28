@@ -1,3 +1,3 @@
-function ll --wraps "exa"
-    clear; exa --long --classify --group-directories-first --group $argv
+function ll --wraps "eza"
+    clear; eza --long --classify --group-directories-first --group $argv
 end
