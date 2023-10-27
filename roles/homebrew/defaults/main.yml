@@ -21,7 +21,7 @@ homebrew_formulae:
   - p7zip
   - parallel
   - pipx
-  - python@3.11
+  - python@3.12
   - rename
   - ripgrep
   - sd
