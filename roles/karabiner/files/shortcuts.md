@@ -110,6 +110,7 @@
     * karabiner => hyper + command + , = «
 * <kbd>.</kbd>
     * karabiner => hyper acts as shift
+    * karabiner => hyper + command + . = »
 * <kbd>/</kbd>
     * karabiner => hyper acts as shift
 ---
