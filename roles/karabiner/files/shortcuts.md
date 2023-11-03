@@ -44,6 +44,7 @@
 * <kbd>Y</kbd>
 * <kbd>U</kbd>
 * <kbd>I</kbd>
+    * karabiner => hyper + I = inspect element in Chrome
 * <kbd>O</kbd>
     * karabiner => hyper + O = open Chrome dev tools
     * vscode => command + O = quick open
