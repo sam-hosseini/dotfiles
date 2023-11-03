@@ -107,6 +107,7 @@
     * karabiner => hyper + command + shift + NM = delete until end/head of line
 * <kbd>,</kbd>
     * karabiner => hyper acts as shift
+    * karabiner => hyper + command + , = «
 * <kbd>.</kbd>
     * karabiner => hyper acts as shift
 * <kbd>/</kbd>
