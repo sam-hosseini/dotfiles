@@ -1,0 +1,28 @@
+{
+    "description": "o",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "o",
+                "modifiers": {
+                    "mandatory": [
+                        "right_command",
+                        "right_control",
+                        "right_shift",
+                        "right_option"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "i",
+                    "modifiers": [
+                        "left_option",
+                        "left_command"
+                    ]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}

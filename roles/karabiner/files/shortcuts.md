@@ -45,6 +45,7 @@
 * <kbd>U</kbd>
 * <kbd>I</kbd>
 * <kbd>O</kbd>
+    * karabiner => hyper + O = open Chrome dev tools
     * vscode => command + O = quick open
 * <kbd>P</kbd>
     * vscode => command + P = show commands
