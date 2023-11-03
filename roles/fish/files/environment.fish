@@ -5,3 +5,4 @@ set --global --export LC_ALL                    en_US.UTF-8 # Set locale https:/
 set --global --export OP_FORMAT                 json
 set --global --export PYTHONDONTWRITEBYTECODE   true
 set --global --export TLDR_AUTO_UPDATE_DISABLED true
+set --global --export NPM_CONFIG_FUND           false
