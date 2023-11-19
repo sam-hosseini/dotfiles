@@ -24,7 +24,8 @@
     "*.ipynb": "jupyter-notebook"
   },
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "tailwindcss",
+    "*.svg": "html"
   },
   "editor.quickSuggestions": {
     "strings": "on"
