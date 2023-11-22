@@ -12,7 +12,7 @@
 * Sign in to the App Store and install all purchased applications
 * Initiate `git push` and use Github personal access token in 1password for it
 * Initiate `op account add --address my.1password.com`
-* Clone all repositories with `clone_repos`
+* Clone all repos with `clone_repos` and move the `repos` directory under the home directory.
 * Input licenses of applications in 1password software licenses
 * Set [un-automatable shortcuts](https://github.com/sam-hosseini/dotfiles/blob/main/roles/karabiner/files/shortcuts.md)
 * Tweak system preferences settings
