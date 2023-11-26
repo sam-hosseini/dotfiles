@@ -6,3 +6,4 @@ set --global --export OP_FORMAT                 json
 set --global --export PYTHONDONTWRITEBYTECODE   true
 set --global --export TLDR_AUTO_UPDATE_DISABLED true
 set --global --export NPM_CONFIG_FUND           false
+set --global --export NPM_CONFIG_AUDIT          false
