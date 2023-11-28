@@ -5,5 +5,6 @@ set --global --export LC_ALL en_GB.UTF-8
 set --global --export NPM_CONFIG_AUDIT false
 set --global --export NPM_CONFIG_FUND false
 set --global --export OP_FORMAT json
+set --global --export PIP_DISABLE_PIP_VERSION_CHECK true
 set --global --export PYTHONDONTWRITEBYTECODE true
 set --global --export TLDR_AUTO_UPDATE_DISABLED true
