@@ -37,7 +37,7 @@
 * <kbd>W</kbd>
     * karabiner => hyper + W = open emoji box
 * <kbd>E</kbd>
-    * vscode => command + E = open explorer
+    * vscode => command + E = toggle explorer
 * <kbd>R</kbd>
     * vscode => command + R = trigger save
 * <kbd>T</kbd>

@@ -73,7 +73,13 @@
   },
   {
     "key": "cmd+e",
-    "command": "workbench.view.explorer"
+    "command": "workbench.explorer.fileView.focus",
+    "when": "activeViewlet != 'workbench.view.explorer'"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.closeSidebar",
+    "when": "activeViewlet == 'workbench.view.explorer'"
   },
   {
     "key": "shift+cmd+e",
