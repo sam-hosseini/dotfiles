@@ -1,5 +1,4 @@
 fish_plugins:
   - dracula/fish                # Dracula theme which influences the colors of what you type
-  - halostatue/fish-docker      # Docker completions
   - jethrokuan/z                # Pure-fish z directory jumping
   - laughedelic/pisces          # Plugin to help you work with paired symbols
