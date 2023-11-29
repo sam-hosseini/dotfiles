@@ -19,6 +19,7 @@ style = "bold cyan"
 disabled = true
 
 [python]
+symbol = "⚡"
 python_binary = "python3"
 
 [status]
