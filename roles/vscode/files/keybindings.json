@@ -103,7 +103,16 @@
   },
   {
     "key": "cmd+s",
-    "command": "workbench.view.scm"
+    "command": "runCommands",
+    "args": {
+      "commands": ["workbench.scm.focus", "list.focusFirst", "list.select"]
+    },
+    "when": "activeViewlet != 'workbench.view.scm'"
+  },
+  {
+    "key": "cmd+s",
+    "command": "workbench.action.closeSidebar",
+    "when": "activeViewlet == 'workbench.view.scm'"
   },
   {
     "key": "ctrl+shift+g",

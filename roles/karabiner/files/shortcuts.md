@@ -69,7 +69,7 @@
     * karabiner => hyper + A = screenshot to clipboard
     * karabiner => hyper + command + A = screenshot to file
 * <kbd>S</kbd>
-    * vscode => command + S = open source control
+    * vscode => command + S = toggle source control
 * <kbd>D</kbd>
     * iterm => hyper + D = toggle iterm
 * <kbd>F</kbd>
