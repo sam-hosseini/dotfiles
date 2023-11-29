@@ -23,3 +23,6 @@ python_binary = "python3"
 
 [status]
 disabled = false
+
+[package]
+disabled = true
