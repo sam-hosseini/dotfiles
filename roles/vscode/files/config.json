@@ -6,12 +6,11 @@
     "editor.wordWrap": "off"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": false,
-    "editor.codeActionsOnSave": [
-      "source.organizeImports",
-      "source.formatDocument"
-    ]
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": true,
+      "source.organizeImports.ruff": true
+    }
   },
   "[javascript]": {
     "editor.formatOnSave": false,
@@ -65,6 +64,7 @@
   "git.inputValidationSubjectLength": 72,
   "isort.path": ["isort"],
   "path-autocomplete.triggerOutsideStrings": true,
+  "ruff.path": ["venv/bin/ruff"],
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "error",
   "typescript.tsdk": "node_modules/typescript/lib",
