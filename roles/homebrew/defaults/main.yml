@@ -16,7 +16,7 @@ homebrew_formulae:
   - git-extras
   - httpie
   - jq
-  - node
+  - node@20
   - p7zip
   - parallel
   - pipx
