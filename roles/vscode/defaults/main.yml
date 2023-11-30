@@ -1,10 +1,8 @@
 vscode_extensions:
   - bmalehorn.vscode-fish                     # support for fish
   - bradlc.vscode-tailwindcss                 # support for tailwind
-  - britesnow.vscode-toggle-quotes            # cycle between single and double quotes
   - charliermarsh.ruff                        # support for ruff
   - dbaeumer.vscode-eslint                    # support for eslint
-  - donjayamanne.githistory                   # git log
   - dracula-theme.theme-dracula               # dracula theme
   - esbenp.prettier-vscode                    # prettier code formatter
   - ionutvmi.path-autocomplete                # path completion
