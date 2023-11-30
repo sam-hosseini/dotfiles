@@ -44,8 +44,8 @@ homebrew_casks:
   - fantastical
   - gitkraken
   - google-chrome
+  - httpie
   - iina
-  - insomnia
   - iterm2
   - kap
   - karabiner-elements
