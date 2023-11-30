@@ -4,7 +4,6 @@ homebrew_formulae:
   - poppler          # for "pdfunite" and "pdfseparate" tools
 
   - ansible
-  - bandwhich
   - bat
   - cloudflared
   - dust
@@ -56,7 +55,6 @@ homebrew_casks:
   - rectangle
   - robo-3t
   - spotify
-  - steam
   - sublime-text
   - the-unarchiver
   - ticktick
