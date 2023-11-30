@@ -61,6 +61,7 @@
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.lightbulb.enabled": false,
+  "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.renderFinalNewline": "off",
   "editor.renderWhitespace": "trailing",

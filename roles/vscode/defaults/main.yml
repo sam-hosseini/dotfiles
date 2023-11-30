@@ -7,7 +7,6 @@ vscode_extensions:
   - donjayamanne.githistory                   # git log
   - dracula-theme.theme-dracula               # dracula theme
   - esbenp.prettier-vscode                    # prettier code formatter
-  - formulahendry.auto-rename-tag             # auto rename html elements
   - ionutvmi.path-autocomplete                # path completion
   - miguelsolorio.fluent-icons                # product icon theme
   - ms-azuretools.vscode-docker               # support for docker
