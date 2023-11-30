@@ -38,7 +38,6 @@
   "tailwindCSS.experimental.classRegex": [
     ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-  "black-formatter.path": ["black"],
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "off",
@@ -59,10 +58,8 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "flake8.path": ["flake8"],
   "git.autofetch": true,
   "git.inputValidationSubjectLength": 72,
-  "isort.path": ["isort"],
   "path-autocomplete.triggerOutsideStrings": true,
   "ruff.path": ["venv/bin/ruff"],
   "security.workspace.trust.untrustedFiles": "open",
