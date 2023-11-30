@@ -179,5 +179,12 @@
   {
     "key": "cmd+r",
     "command": "workbench.action.files.save"
+  },
+  {
+    "key": "cmd+y",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "open (string replace '.git' '/commits' (git ls-remote --get-url origin))\u000D"
+    }
   }
 ]

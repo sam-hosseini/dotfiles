@@ -42,6 +42,7 @@
     * vscode => command + R = trigger save
 * <kbd>T</kbd>
 * <kbd>Y</kbd>
+    * vscode => command + Y = open repo commits on GitHub
 * <kbd>U</kbd>
 * <kbd>I</kbd>
     * karabiner => hyper + I = inspect element in Chrome
