@@ -10,6 +10,9 @@
   "path-autocomplete.pathMappings": {
     "/": "/"
   },
+  "[fish]": {
+    "editor.defaultFormatter": "bmalehorn.vscode-fish"
+  },
   "[markdown]": {
     "editor.wordWrap": "off"
   },
