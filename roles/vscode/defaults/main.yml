@@ -1,5 +1,4 @@
 vscode_extensions:
-  - be5invis.toml                             # toml syntax highlighting
   - bmalehorn.vscode-fish                     # fish syntax highlighting
   - bradlc.vscode-tailwindcss                 # support for tailwind
   - britesnow.vscode-toggle-quotes            # cycle between single and double quotes
@@ -15,3 +14,4 @@ vscode_extensions:
   - ms-python.python                          # support for python
   - rohit-gohri.format-code-action            # format document action for codeActionsOnSave
   - samuelcolvin.jinjahtml                    # jinja syntax highlighting
+  - tamasfe.even-better-toml                  # support for toml

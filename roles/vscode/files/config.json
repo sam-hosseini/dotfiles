@@ -1,9 +1,20 @@
 {
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "support.type.property-name.table",
+        "settings": { "foreground": "#4AB68C" }
+      }
+    ]
+  },
   "path-autocomplete.pathMappings": {
     "/": "/"
   },
   "[markdown]": {
     "editor.wordWrap": "off"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
