@@ -72,7 +72,6 @@
   "window.zoomLevel": 1,
   "workbench.colorCustomizations": { "tree.indentGuidesStroke": "#ffb86c" },
   "workbench.colorTheme": "Dracula",
-  "workbench.editorAssociations": { "*.ipynb": "jupyter-notebook" },
   "workbench.enableExperiments": false,
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
