@@ -76,6 +76,7 @@
   "path-autocomplete.includeExtension": true,
   "path-autocomplete.pathMappings": { "/": "/" },
   "path-autocomplete.triggerOutsideStrings": true,
+  "python.defaultInterpreterPath": "venv/bin/python",
   "ruff.path": ["venv/bin/ruff"],
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "error",
