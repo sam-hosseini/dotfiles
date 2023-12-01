@@ -7,15 +7,6 @@
       }
     ]
   },
-  "[fish]": {
-    "editor.defaultFormatter": "bmalehorn.vscode-fish"
-  },
-  "[markdown]": {
-    "editor.wordWrap": "off"
-  },
-  "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml"
-  },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
@@ -23,27 +14,14 @@
       "source.organizeImports.ruff": true
     }
   },
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
-  },
-  "files.associations": {
-    "*.css": "tailwindcss",
-    "*.svg": "html"
-  },
-  "editor.quickSuggestions": {
-    "strings": "on"
-  },
-  "search.exclude": {
-    "**/var/folders/**": true
-  },
-  "workbench.colorCustomizations": {
-    "tree.indentGuidesStroke": "#ffb86c"
-  },
   "tailwindCSS.experimental.classRegex": [
     ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
+  "[fish]": { "editor.defaultFormatter": "bmalehorn.vscode-fish" },
   "[javascript]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
   "[javascriptreact]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
+  "[markdown]": { "editor.wordWrap": "off" },
+  "[toml]": { "editor.defaultFormatter": "tamasfe.even-better-toml" },
   "[typescript]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
   "[typescriptreact]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
   "diffEditor.ignoreTrimWhitespace": false,
@@ -57,11 +35,13 @@
   "editor.lightbulb.enabled": false,
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
+  "editor.quickSuggestions": { "strings": "on" },
   "editor.renderFinalNewline": "off",
   "editor.renderWhitespace": "trailing",
   "editor.scrollBeyondLastLine": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "files.associations": { "*.css": "tailwindcss", "*.svg": "html" },
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 100,
   "files.insertFinalNewline": true,
@@ -81,6 +61,7 @@
   "python.analysis.userFileIndexingLimit": -1,
   "python.defaultInterpreterPath": "venv/bin/python",
   "ruff.path": ["venv/bin/ruff"],
+  "search.exclude": { "**/var/folders/**": true },
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "error",
   "typescript.tsdk": "node_modules/typescript/lib",
@@ -89,7 +70,9 @@
   "update.mode": "manual",
   "update.showReleaseNotes": false,
   "window.zoomLevel": 1,
+  "workbench.colorCustomizations": { "tree.indentGuidesStroke": "#ffb86c" },
   "workbench.colorTheme": "Dracula",
+  "workbench.editorAssociations": { "*.ipynb": "jupyter-notebook" },
   "workbench.enableExperiments": false,
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
