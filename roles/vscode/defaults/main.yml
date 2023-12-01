@@ -9,6 +9,7 @@ vscode_extensions:
   - miguelsolorio.fluent-icons                # product icon theme
   - ms-azuretools.vscode-docker               # support for docker
   - ms-python.python                          # support for python
+  - ms-python.vscode-pylance                  # language server for Python
   - rohit-gohri.format-code-action            # format document action for codeActionsOnSave
   - samuelcolvin.jinjahtml                    # jinja syntax highlighting
   - tamasfe.even-better-toml                  # support for toml
