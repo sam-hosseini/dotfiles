@@ -7,9 +7,6 @@
       }
     ]
   },
-  "path-autocomplete.pathMappings": {
-    "/": "/"
-  },
   "[fish]": {
     "editor.defaultFormatter": "bmalehorn.vscode-fish"
   },
@@ -75,6 +72,9 @@
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
   "git.inputValidationSubjectLength": 72,
+  "path-autocomplete.extensionOnImport": true,
+  "path-autocomplete.includeExtension": true,
+  "path-autocomplete.pathMappings": { "/": "/" },
   "path-autocomplete.triggerOutsideStrings": true,
   "ruff.path": ["venv/bin/ruff"],
   "security.workspace.trust.untrustedFiles": "open",
