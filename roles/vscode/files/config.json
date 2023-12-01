@@ -43,7 +43,7 @@
   "explorer.confirmDragAndDrop": false,
   "files.associations": { "*.css": "tailwindcss", "*.svg": "html" },
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 100,
+  "files.autoSaveDelay": 200,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
