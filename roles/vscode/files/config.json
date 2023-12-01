@@ -30,7 +30,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.cursorSurroundingLines": 15,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontSize": 13,
+  "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.lightbulb.enabled": false,
   "editor.linkedEditing": true,
