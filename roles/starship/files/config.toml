@@ -29,3 +29,6 @@ disabled = false
 
 [package]
 disabled = true
+
+[docker_context]
+disabled = true
