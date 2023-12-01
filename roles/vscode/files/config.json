@@ -23,11 +23,6 @@
       "source.organizeImports.ruff": true
     }
   },
-  "[javascript]": {
-    "editor.codeActionsOnSave": [
-      "source.fixAll.eslint"
-    ]
-  },
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
@@ -47,6 +42,10 @@
   "tailwindCSS.experimental.classRegex": [
     ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
+  "[javascript]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
+  "[javascriptreact]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
+  "[typescript]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
+  "[typescriptreact]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "off",
