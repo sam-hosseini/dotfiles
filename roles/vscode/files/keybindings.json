@@ -77,9 +77,18 @@
   },
   {
     "key": "cmd+y",
-    "command": "workbench.action.terminal.sendSequence",
+    "command": "runCommands",
     "args": {
-      "text": "open (string replace '.git' '/commits' (git ls-remote --get-url origin))\u000D"
+      "commands": [
+        "workbench.action.terminal.new",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "open (string replace '.git' '/commits' (git ls-remote --get-url origin))\u000D"
+          }
+        },
+        "workbench.action.terminal.toggleTerminal"
+      ]
     }
   }
 ]
