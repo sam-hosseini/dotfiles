@@ -60,6 +60,7 @@
   "python.analysis.typeCheckingMode": "off",
   "python.analysis.userFileIndexingLimit": -1,
   "python.defaultInterpreterPath": "venv/bin/python",
+  "python.terminal.activateEnvironment": false,
   "ruff.path": ["venv/bin/ruff"],
   "search.exclude": { "**/var/folders/**": true },
   "security.workspace.trust.untrustedFiles": "open",
