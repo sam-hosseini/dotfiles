@@ -7,6 +7,11 @@
       }
     ]
   },
+  "search.exclude": {
+    "**/usr/local/**": true,
+    "**/var/folders/**": true,
+    "**/venv/lib/**": true
+  },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": [
@@ -62,7 +67,6 @@
   "python.defaultInterpreterPath": "venv/bin/python",
   "python.terminal.activateEnvironment": false,
   "ruff.path": ["venv/bin/ruff"],
-  "search.exclude": { "**/var/folders/**": true },
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "error",
   "typescript.tsdk": "node_modules/typescript/lib",
