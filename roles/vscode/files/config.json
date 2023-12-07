@@ -54,6 +54,7 @@
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
   "git.inputValidationSubjectLength": 72,
+  "git.openRepositoryInParentFolders": "never",
   "path-autocomplete.extensionOnImport": true,
   "path-autocomplete.includeExtension": true,
   "path-autocomplete.pathMappings": { "/": "/" },
