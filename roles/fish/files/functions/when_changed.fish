@@ -1,3 +1,3 @@
 function when_changed
-    find | entr -c $argv
+    watchman-make --pattern "*" --run "clear; $argv"
 end
