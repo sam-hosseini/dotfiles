@@ -4,11 +4,6 @@
     path: ~/.config/fish/autoload/homebrew.fish
     state: link
 
-- name: Install homebrew taps
-  community.general.homebrew_tap:
-    name: '{{ homebrew_taps }}'
-    state: present
-
 - name: Get installed homebrew formulae
   register: installed_homebrew_formulae
   changed_when: false

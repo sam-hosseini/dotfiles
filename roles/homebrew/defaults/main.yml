@@ -62,6 +62,3 @@ homebrew_casks:
   - visual-studio-code
   - whatsapp
   - zoom
-
-homebrew_taps:
-  - homebrew/cask-fonts # required for font-fira-mono-nerd-font
