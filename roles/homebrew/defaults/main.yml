@@ -1,7 +1,7 @@
 homebrew_formulae:
-  - less             # required for bat to have the latest version of less as its pager
-  - imagemagick      # for "convert" tool
-  - poppler          # for "pdfunite" and "pdfseparate" tools
+  - less # required for bat to have the latest version of less as its pager
+  - imagemagick # for "convert" tool
+  - poppler # for "pdfunite" and "pdfseparate" tools
 
   - ansible
   - bat
@@ -31,7 +31,7 @@ homebrew_formulae:
   - yt-dlp
 
 homebrew_casks:
-  - font-fira-mono-nerd-font        # required for starship
+  - font-fira-mono-nerd-font # required for starship
 
   - 1password
   - 1password-cli
@@ -64,4 +64,4 @@ homebrew_casks:
   - zoom
 
 homebrew_taps:
-  - homebrew/cask-fonts    # required for font-fira-mono-nerd-font
+  - homebrew/cask-fonts # required for font-fira-mono-nerd-font
