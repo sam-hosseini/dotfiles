@@ -6,6 +6,7 @@ homebrew_formulae:
   - ansible
   - bat
   - cloudflared
+  - ddosify/tap/ddosify
   - dust
   - eza
   - fd
