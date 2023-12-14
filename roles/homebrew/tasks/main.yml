@@ -12,7 +12,7 @@
 
 - name: Install homebrew formulae
   loop: '{{ homebrew_formulae }}'
-  when: item not in installed_homebrew_formulae.stdout_lines
+  when: item.split('/')[-1] not in installed_homebrew_formulae.stdout_lines
   retries: 5
   delay: 3
   register: result
@@ -29,7 +29,7 @@
 
 - name: Delete adhoc homebrew formulae
   loop: '{{ high_level_homebrew_formulae.stdout_lines }}'
-  when: item not in homebrew_formulae
+  when: item.split('/')[-1] not in (homebrew_formulae | map('split', '/') | map('last'))
   retries: 5
   delay: 3
   register: result
@@ -46,7 +46,7 @@
 
 - name: Install homebrew casks
   loop: '{{ homebrew_casks }}'
-  when: item not in installed_homebrew_casks.stdout_lines
+  when: item.split('/')[-1] not in installed_homebrew_casks.stdout_lines
   retries: 5
   delay: 3
   register: result
@@ -58,7 +58,7 @@
 
 - name: Delete adhoc homebrew casks
   loop: '{{ installed_homebrew_casks.stdout_lines }}'
-  when: item not in homebrew_casks
+  when: item.split('/')[-1] not in (homebrew_casks | map('split', '/') | map('last'))
   community.general.homebrew_cask:
     name: '{{ item }}'
     state: absent
