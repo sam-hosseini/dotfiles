@@ -1,4 +1,5 @@
 set --local --append OWN_PATH /usr/local/opt/node@20/bin
+set --local --append OWN_PATH /usr/local/opt/postgresql@16/bin
 set --local --append OWN_PATH /usr/local/opt/python@3.12/libexec/bin
 
 set --local --append OWN_PATH /usr/local/bin      # Where brew symlinks most packages

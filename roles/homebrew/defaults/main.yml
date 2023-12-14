@@ -20,6 +20,7 @@ homebrew_formulae:
   - p7zip
   - parallel
   - pipx
+  - postgresql@16
   - pre-commit
   - python@3.12
   - rename
