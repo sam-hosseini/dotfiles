@@ -12,6 +12,7 @@ homebrew_formulae:
   - fd
   - ffmpeg
   - fish
+  - flyctl
   - git
   - git-extras
   - httpie
