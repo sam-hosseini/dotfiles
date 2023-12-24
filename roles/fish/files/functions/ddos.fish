@@ -1,5 +1,5 @@
 function ddos
-    set --local TARGET_URL $argv[1]
+    set --local TARGET $argv[1]
 
-    ddosify -t $TARGET_URL -n 1000 -d 10 -m GET -T 10 -l linear
+    ddosify -m GET -T 5 -l linear -n 500 -d 10 -t $TARGET
 end
