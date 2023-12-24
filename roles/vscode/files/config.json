@@ -67,6 +67,7 @@
   "python.analysis.userFileIndexingLimit": -1,
   "python.defaultInterpreterPath": "venv/bin/python",
   "python.terminal.activateEnvironment": false,
+  "ruff.lint.args": ["--config=pyproject.toml"],
   "ruff.path": ["venv/bin/ruff"],
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "error",
