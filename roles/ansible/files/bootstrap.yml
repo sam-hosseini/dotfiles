@@ -1,4 +1,4 @@
-- hosts: my_local_machine
+- hosts: macbook
   vars:
     USERNAME:      sam_hosseini
     DOTFILES_REPO: /Users/sam_hosseini/repos/dotfiles

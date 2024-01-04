@@ -1,0 +1,6 @@
+ungrouped:
+  hosts:
+    macbook:
+      ansible_connection: ansible.builtin.local
+      ansible_pipelining: true
+      ansible_python_interpreter: python3
