@@ -44,6 +44,7 @@
   "editor.renderFinalNewline": "off",
   "editor.renderWhitespace": "trailing",
   "editor.scrollBeyondLastLine": false,
+  "evenBetterToml.schema.enabled": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.associations": { "*.css": "tailwindcss", "*.svg": "html" },
