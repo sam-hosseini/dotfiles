@@ -22,6 +22,7 @@
   "tailwindCSS.experimental.classRegex": [
     ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
+  "[dockerfile]": { "editor.defaultFormatter": "ms-azuretools.vscode-docker" },
   "[fish]": { "editor.defaultFormatter": "bmalehorn.vscode-fish" },
   "[javascript]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
   "[javascriptreact]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
