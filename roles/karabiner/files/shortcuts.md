@@ -28,6 +28,7 @@
     * karabiner => hyper acts as shift
 * <kbd>\-</kbd>
     * karabiner => hyper acts as shift
+    * karabiner => hyper + command + \- = em dash (—)
 * <kbd>=</kbd>
     * karabiner => hyper acts as shift
 * <kbd>delete</kbd>
