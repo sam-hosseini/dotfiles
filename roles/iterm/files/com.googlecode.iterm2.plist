@@ -1157,7 +1157,7 @@ Maximize Active Pane</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FiraMonoNFM-Regular 20</string>
+			<string>FiraMonoNFM-Regular 15</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
