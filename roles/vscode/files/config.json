@@ -73,6 +73,7 @@
   "ruff.path": ["venv/bin/ruff"],
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "error",
+  "terminal.integrated.fontFamily": "FiraMono Nerd Font Mono",
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
