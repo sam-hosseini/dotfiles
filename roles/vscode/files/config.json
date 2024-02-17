@@ -30,6 +30,7 @@
   "[toml]": { "editor.defaultFormatter": "tamasfe.even-better-toml" },
   "[typescript]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
   "[typescriptreact]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
+  "debug.toolBarLocation": "commandCenter",
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "off",
