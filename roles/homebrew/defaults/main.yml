@@ -57,6 +57,7 @@ homebrew_casks:
   - numi
   - postico
   - rectangle
+  - redisinsight
   - spotify
   - sublime-text
   - the-unarchiver
