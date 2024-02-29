@@ -1,7 +1,7 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
 add_newline = false
-command_timeout = 2000
+command_timeout = 5000
 
 [battery]
 disabled = true
