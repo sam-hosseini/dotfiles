@@ -46,6 +46,7 @@
   "editor.renderFinalNewline": "off",
   "editor.renderWhitespace": "trailing",
   "editor.scrollBeyondLastLine": false,
+  "editor.stickyScroll.enabled": false,
   "evenBetterToml.schema.enabled": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
