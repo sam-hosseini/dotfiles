@@ -1,4 +1,5 @@
 vscode_extensions:
+  - batisteo.vscode-django                    # django template syntax highlighting
   - bmalehorn.vscode-fish                     # support for fish
   - bradlc.vscode-tailwindcss                 # support for tailwind
   - charliermarsh.ruff                        # support for ruff
