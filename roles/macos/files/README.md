@@ -1,8 +1,8 @@
 * Install Homebrew from [brew.sh](https://brew.sh)
 * Clone dotfiles repository from [github](https://github.com/sam-hosseini/dotfiles)
-* Install Ansible, Python and Fish:
+* Install the following formulae:
     ```
-    brew install ansible python3 fish
+    brew install ansible python3 fish mkcert
     ```
 * Install fish and macos roles
     ```
