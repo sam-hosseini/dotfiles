@@ -54,6 +54,7 @@ homebrew_casks:
   - iterm2
   - kap
   - karabiner-elements
+  - loom
   - nordvpn
   - numi
   - postico
