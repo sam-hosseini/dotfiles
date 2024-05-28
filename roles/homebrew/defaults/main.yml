@@ -27,6 +27,7 @@ homebrew_formulae:
   - python@3.12
   - rename
   - ripgrep
+  - ruby
   - ruff
   - sd
   - starship
