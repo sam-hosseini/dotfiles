@@ -7,6 +7,7 @@ vscode_extensions:
   - dracula-theme.theme-dracula               # dracula theme
   - esbenp.prettier-vscode                    # prettier code formatter
   - ionutvmi.path-autocomplete                # path completion
+  - mechatroner.rainbow-csv                   # support for csv
   - miguelsolorio.fluent-icons                # product icon theme
   - ms-azuretools.vscode-docker               # support for docker
   - ms-python.debugpy                         # support for python debugging
