@@ -84,7 +84,7 @@
   "update.showReleaseNotes": false,
   "window.zoomLevel": 1,
   "workbench.colorCustomizations": { "tree.indentGuidesStroke": "#ffb86c" },
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Dracula Theme",
   "workbench.enableExperiments": false,
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
