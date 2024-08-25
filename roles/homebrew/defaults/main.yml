@@ -38,7 +38,7 @@ homebrew_formulae:
   - yt-dlp
 
 homebrew_casks:
-  - homebrew/cask-fonts/font-fira-mono-nerd-font # required for starship
+  - font-fira-mono-nerd-font # required for starship
 
   - 1password
   - 1password-cli
