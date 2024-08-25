@@ -1,5 +1,5 @@
 function update_homebrew
-    brew update 2>/dev/null | grep --invert-match "Already up-to-date."
+    brew update 2>/dev/null | grep --invert-match --regexp "Already up-to-date." --regexp "Updating Homebrew..."
 
     brew upgrade --formulae
 
