@@ -3,10 +3,10 @@ homebrew_formulae:
   - imagemagick # for "convert" tool
   - poppler # for "pdfunite" and "pdfseparate" tools
 
+  - ali
   - ansible
   - bat
   - cloudflared
-  - ddosify/tap/ddosify
   - dust
   - eza
   - fd
