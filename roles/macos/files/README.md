@@ -6,7 +6,7 @@
     ```
 * Install fish and macos roles
     ```
-    ansible-playbook --ask-become-pass bootstrap.yml --tags fish --tags macos
+    ansible-playbook bootstrap.yml --tags fish --tags macos
     ```
 * Open a fish shell and execute `bootstrap`
 * Sign in to the App Store and install all purchased applications

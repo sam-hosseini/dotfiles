@@ -2,6 +2,10 @@
   vars:
     USERNAME:      sam_hosseini
     DOTFILES_REPO: /Users/sam_hosseini/repos/dotfiles
+  vars_prompt:
+    - name: ansible_become_password
+      prompt: "Please enter ansible_become_password"
+      private: true
   roles:
     - { role: '{{DOTFILES_REPO}}/roles/homebrew',     tags: homebrew     }
 
