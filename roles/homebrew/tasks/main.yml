@@ -55,6 +55,7 @@
     name: '{{ item }}'
     state: present
     install_options: no-quarantine
+    sudo_password: '{{ ansible_become_password }}'
 
 - name: Delete adhoc homebrew casks
   loop: '{{ installed_homebrew_casks.stdout_lines }}'
@@ -62,3 +63,4 @@
   community.general.homebrew_cask:
     name: '{{ item }}'
     state: absent
+    sudo_password: '{{ ansible_become_password }}'
