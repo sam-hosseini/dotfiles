@@ -59,7 +59,7 @@ homebrew_casks:
   - loom
   - nordvpn
   - numi
-  - postico
+  - postico@1
   - rectangle
   - redisinsight
   - spotify
