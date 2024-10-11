@@ -118,5 +118,7 @@
 ---
 * <kbd>fn</kbd>
     * system => switch language
+* <kbd>control</kbd>
+    * system => control + trackpad = zoom in
 * <kbd>spacebar</kbd>
 * <kbd>←↑↓→</kbd>
