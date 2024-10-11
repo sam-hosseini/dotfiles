@@ -75,9 +75,9 @@
 * <kbd>D</kbd>
     * iterm => hyper + D = toggle iterm
 * <kbd>F</kbd>
-    * [un-automatable] 1password => hyper + F = fill login
+    * [un-automatable] 1password => hyper + F = Autofill
 * <kbd>G</kbd>
-    * [un-automatable] 1password => hyper + G = show 1password
+    * [un-automatable] 1password => hyper + G = Show 1Password
 * <kbd>HJKL</kbd>
     * karabiner => hyper + HJKL = arrow keys
     * karabiner => hyper + option + HJKL = select text
