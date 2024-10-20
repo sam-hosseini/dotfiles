@@ -10,6 +10,9 @@
       # Disable natural scrolling
       - { domain: NSGlobalDomain, key: com.apple.swipescrolldirection, type: bool, value: false }
 
+      # Disable "Swipe between pages"
+      - { domain: NSGlobalDomain, key: AppleEnableSwipeNavigateWithScrolls, type: bool, value: false }
+
       # Enable tab selection for all elements in modal dialogs
       - { domain: NSGlobalDomain, key: AppleKeyboardUIMode, type: int, value: 3 }
 
