@@ -37,6 +37,12 @@
   ansible.builtin.command:
     cmd: defaults -currentHost write com.apple.screensaver idleTime 0
 
+- name: Disable emoji suggestion menu
+  become: yes
+  changed_when: false
+  ansible.builtin.command:
+    cmd: defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist emoji_enhancements -dict-add Enabled -bool NO
+
 - name: Import dock.yml
   import_tasks: '{{ DOTFILES_REPO }}/roles/macos/tasks/dock.yml'
 
