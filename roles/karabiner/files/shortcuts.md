@@ -42,6 +42,7 @@
 * <kbd>R</kbd>
     * vscode => command + R = trigger save
 * <kbd>T</kbd>
+    * [un-automatable] Calendar 366 II => hyper + T = Show calendar
 * <kbd>Y</kbd>
     * vscode => command + Y = open repo commits on GitHub
 * <kbd>U</kbd>
