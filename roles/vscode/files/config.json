@@ -51,6 +51,7 @@
   "evenBetterToml.schema.enabled": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
   "files.associations": { "*.css": "tailwindcss", "*.svg": "html" },
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 200,
