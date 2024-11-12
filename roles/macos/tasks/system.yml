@@ -37,3 +37,6 @@
 
       # Save screenshots to ~/Downloads
       - { domain: com.apple.screencapture, key: location, type: string, value: '${HOME}/Downloads' }
+
+      # Disable input source switch popup
+      - { domain: kCFPreferencesAnyApplication, key: TSMLanguageIndicatorEnabled, type: bool, value: false }
