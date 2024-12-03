@@ -12,6 +12,7 @@
 
       # Disable "Swipe between pages"
       - { domain: NSGlobalDomain, key: AppleEnableSwipeNavigateWithScrolls, type: bool, value: false }
+      - { domain: com.google.Chrome, key: AppleEnableSwipeNavigateWithScrolls, type: bool, value: false }
 
       # Enable tab selection for all elements in modal dialogs
       - { domain: NSGlobalDomain, key: AppleKeyboardUIMode, type: int, value: 3 }
