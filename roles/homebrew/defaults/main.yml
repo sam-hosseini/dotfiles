@@ -19,7 +19,7 @@ homebrew_formulae:
   - jq
   - magic-wormhole
   - mkcert
-  - node@20
+  - node@22
   - p7zip
   - parallel
   - pipx
