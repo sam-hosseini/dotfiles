@@ -6,6 +6,8 @@ vscode_extensions:
   - dbaeumer.vscode-eslint                    # support for eslint
   - dracula-theme.theme-dracula               # dracula theme
   - esbenp.prettier-vscode                    # prettier code formatter
+  - github.copilot                            # inline coding suggestions as you type
+  - github.copilot-chat                       # conversational AI assistance
   - ionutvmi.path-autocomplete                # path completion
   - mechatroner.rainbow-csv                   # support for csv
   - miguelsolorio.fluent-icons                # product icon theme
