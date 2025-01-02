@@ -61,7 +61,7 @@ homebrew_casks:
   - numi
   - postico@1
   - rectangle
-  - redisinsight
+  - redis-insight
   - sublime-text
   - the-unarchiver
   - ticktick
