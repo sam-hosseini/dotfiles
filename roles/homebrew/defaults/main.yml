@@ -5,6 +5,7 @@ homebrew_formulae:
 
   - ali
   - ansible
+  - awscli
   - bat
   - cloudflared
   - dust
