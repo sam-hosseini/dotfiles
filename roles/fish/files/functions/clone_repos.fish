@@ -1,6 +1,6 @@
 function clone_repos
     1password_session
-    set --local GITHUB_TOKEN (op item get 'Github' --fields label='Personal Access Token' | jq --raw-output .value)
+    set --local GITHUB_TOKEN (op item get 'Github Sam' --fields label='Personal Access Token' | jq --raw-output .value)
     set --local DESTINATION_FOLDER ~/Downloads/repos
 
     set --local URL                 'https://api.github.com/user/repos'
