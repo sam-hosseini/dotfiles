@@ -6,7 +6,7 @@ function clone_repos
     set --local URL                 'https://api.github.com/user/repos'
     set --local HEADER              "Authorization: token $GITHUB_TOKEN"
     set --local RESPONSE            (http --body $URL $HEADER)
-    set --local REPOS_URLS          (echo $RESPONSE | jq --raw-output '.[].clone_url')
+    set --local REPOS_URLS          (echo $RESPONSE | jq --raw-output '.[].ssh_url')
 
     mkdir -p $DESTINATION_FOLDER
     parallel --linebuffer -j (count $REPOS_URLS) git -C $DESTINATION_FOLDER clone {} ::: $REPOS_URLS
