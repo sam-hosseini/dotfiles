@@ -10,7 +10,7 @@
     ```
 * Open a fish shell and execute `bootstrap`
 * Sign in to the App Store and install all purchased applications
-* Initiate `git push` and use Github personal access token in 1password for it
+* Run `git remote set-url origin git@github.com:sam-hosseini/dotfiles.git` in `dotfiles` repo
 * Initiate `op account add --address my.1password.com`
 * Clone all repos with `clone_repos` and move them all (except `dotfiles`) under the `repos` directory
 * Input licenses of applications in 1password software licenses
