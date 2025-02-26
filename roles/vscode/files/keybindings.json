@@ -84,7 +84,7 @@
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "open (string replace '.git' '/commits' (git ls-remote --get-url origin))\u000D"
+            "text": "git_browse_commits\u000D"
           }
         },
         "workbench.action.terminal.toggleTerminal"
