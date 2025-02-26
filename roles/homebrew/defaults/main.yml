@@ -1,6 +1,6 @@
 homebrew_formulae:
   - less # required for bat to have the latest version of less as its pager
-  - imagemagick # for "convert" tool
+  - imagemagick # for "magick" tool
   - poppler # for "pdfunite" and "pdfseparate" tools
 
   - ali

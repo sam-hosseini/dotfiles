@@ -1,3 +1,3 @@
 function combine_pictures
-    convert +append $argv[1] $argv[2] combined_picture.png
+    magick $argv[1] $argv[2] +append combined_picture.png
 end
