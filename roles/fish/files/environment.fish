@@ -8,4 +8,3 @@ set --global --export OP_FORMAT json
 set --global --export PIP_DISABLE_PIP_VERSION_CHECK true
 set --global --export PYTHONDONTWRITEBYTECODE true
 set --global --export SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
-set --global --export TLDR_AUTO_UPDATE_DISABLED true

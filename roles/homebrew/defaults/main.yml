@@ -33,7 +33,6 @@ homebrew_formulae:
   - ruff
   - sd
   - starship
-  - tldr
   - trash
   - watchman
   - yt-dlp
