@@ -11,7 +11,7 @@ vscode_extensions:
   - ionutvmi.path-autocomplete                # path completion
   - mechatroner.rainbow-csv                   # support for csv
   - miguelsolorio.fluent-icons                # product icon theme
-  - ms-azuretools.vscode-docker               # support for docker
+  - ms-azuretools.vscode-containers           # support for docker
   - ms-python.debugpy                         # support for python debugging
   - ms-python.python                          # support for python
   - ms-python.vscode-pylance                  # language server for python
