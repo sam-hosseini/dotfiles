@@ -46,12 +46,12 @@ homebrew_casks:
   - basecamp
   - calendar-366
   - cyberduck
-  - docker
+  - docker-desktop
   - dropbox
   - fork
   - google-chrome
   - hiddenbar
-  - httpie
+  - httpie-desktop
   - iina
   - iterm2
   - kap
