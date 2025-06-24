@@ -25,7 +25,7 @@
         * Sound Effects => Uncheck Play sound on startup
     * Keyboard
         * Keyboard => Press Fn key to Change Input Source
-        * Input Sources => Add "Persian - Standard" and "Finnish" and "Italian"
+        * Input Sources => Add "Persian - Standard" and "Finnish"
     * Display
         * Display => Uncheck Automatically adjust brightness
         * Night Shift => Schedule: Sunset to Sunrise
