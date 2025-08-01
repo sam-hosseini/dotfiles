@@ -2,6 +2,7 @@ homebrew_formulae:
   - less # required for bat to have the latest version of less as its pager
   - imagemagick # for "magick" tool
   - poppler # for "pdfunite" and "pdfseparate" tools
+  - pandoc # for typora's export functionality
 
   - ali
   - ansible
@@ -66,6 +67,7 @@ homebrew_casks:
   - the-unarchiver
   - ticktick
   - transmission
+  - typora
   - visual-studio-code
   - whatsapp
   - zoom
