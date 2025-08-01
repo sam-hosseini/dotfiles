@@ -63,6 +63,7 @@ homebrew_casks:
   - postico@1
   - rectangle
   - redis-insight
+  - slack
   - sublime-text
   - the-unarchiver
   - ticktick
