@@ -61,7 +61,6 @@ homebrew_casks:
   - nordvpn
   - numi
   - postico@1
-  - raycast
   - rectangle
   - redis-insight
   - slack
