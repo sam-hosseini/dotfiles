@@ -33,3 +33,4 @@
         * Battery => Uncheck Slightly dim the display on battery
     * Control Center
         * Manu Bar Only => Clock Options => Show date: Never and Uncheck Show the day of the week
+        * Recent documents, applications and servers => None
