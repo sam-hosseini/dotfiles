@@ -45,11 +45,11 @@ homebrew_casks:
   - 1password-cli
   - anydesk
   - basecamp
-  - calendar-366
   - coconutbattery
   - cyberduck
   - docker-desktop
   - dropbox
+  - fantastical
   - fork
   - google-chrome
   - hiddenbar
