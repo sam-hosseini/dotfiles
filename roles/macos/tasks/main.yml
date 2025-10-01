@@ -1,5 +1,6 @@
 - name: Add mkcert local CA to system trust store
   changed_when: false
+  become: yes
   ansible.builtin.command:
     cmd: mkcert -install
 
