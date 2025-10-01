@@ -4,12 +4,6 @@
   ansible.builtin.command:
     cmd: mkcert -install
 
-- name: Allow apps downloaded from anywhere
-  changed_when: false
-  become: yes
-  ansible.builtin.command:
-    cmd: spctl --master-disable
-
 - name: Setup login items
   changed_when: false
   ansible.builtin.command:
