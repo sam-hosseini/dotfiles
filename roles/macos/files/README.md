@@ -36,3 +36,5 @@
         * Recent documents, applications and servers => None
     * Privacy & Security
         * Security => Allow applications from => Anywhere
+    * Desktop and Dock
+        * Desktop and Stage Manager => Click wallpaper to reveal desktop => only in stage manager
