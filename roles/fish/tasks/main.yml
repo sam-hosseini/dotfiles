@@ -1,3 +1,9 @@
+- name: Get brew prefix
+  register: brew_prefix_result
+  changed_when: false
+  ansible.builtin.command:
+    cmd: brew --prefix
+
 - name: Extend sudo timeout
   become: yes
   ansible.builtin.lineinfile:
@@ -9,7 +15,7 @@
 - name: Add fish to /etc/shells
   become: yes
   ansible.builtin.lineinfile:
-    line: /usr/local/bin/fish
+    line: '{{ brew_prefix_result.stdout }}/bin/fish'
     path: /etc/shells
     state: present
 
@@ -17,7 +23,7 @@
   become: yes
   ansible.builtin.user:
     name: '{{ USERNAME }}'
-    shell: /usr/local/bin/fish
+    shell: '{{ brew_prefix_result.stdout }}/bin/fish'
 
 - name: Create fish directories
   ansible.builtin.file:
@@ -65,14 +71,14 @@
   changed_when: false
   failed_when: false
   ansible.builtin.shell:
-    executable: /usr/local/bin/fish
+    executable: '{{ brew_prefix_result.stdout }}/bin/fish'
     cmd: fisher list
 
 - name: Install fish plugins
   loop: '{{ fish_plugins }}'
   when: item not in installed_fish_plugins.stdout
   ansible.builtin.shell:
-    executable: /usr/local/bin/fish
+    executable: '{{ brew_prefix_result.stdout }}/bin/fish'
     cmd: fisher install {{ item }}
 
 - name: Disable shell login message
