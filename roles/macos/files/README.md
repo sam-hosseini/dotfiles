@@ -15,26 +15,25 @@
 * Clone all repos with `clone_repos` and move them all (except `dotfiles`) under the `repos` directory
 * Input licenses of applications in 1password software licenses
 * Set [un-automatable shortcuts](https://github.com/sam-hosseini/dotfiles/blob/main/roles/karabiner/files/shortcuts.md)
-* Tweak system preferences settings
-    * Users & Groups
-        * Current User => Update picture
+* Tweak System Settings
+    * Battery
+        * Options => Uncheck Slightly dim the display on battery
     * Accessibility
         * Zoom => Check Use scroll gesture with modifier keys to zoom
-        * Display => Check Reduce transparency
+    * Menu Bar
+        * Recent documents, applications and servers => None
+        * Manu Bar Controls => Clock Options => Show date: Never and Uncheck Show the day of the week
+    * Desktop & Dock
+        * Desktop & Stage Manager => Show Desktop => Only in Stage Manager on Click
+    * Displays
+        * Displays => Uncheck Automatically adjust brightness
+        * Night Shift => Schedule: Sunset to Sunrise
     * Sound
         * Sound Effects => Uncheck Play sound on startup
-    * Keyboard
-        * Keyboard => Press Fn key to Change Input Source
-        * Input Sources => Add "Persian - Standard" and "Finnish"
-    * Display
-        * Display => Uncheck Automatically adjust brightness
-        * Night Shift => Schedule: Sunset to Sunrise
-    * Battery
-        * Battery => Uncheck Slightly dim the display on battery
-    * Control Center
-        * Manu Bar Only => Clock Options => Show date: Never and Uncheck Show the day of the week
-        * Recent documents, applications and servers => None
     * Privacy & Security
         * Security => Allow applications from => Anywhere
-    * Desktop & Dock
-        * Desktop & Stage Manager => Click wallpaper to reveal desktop => Only in Stage Manager
+    * Users & Groups
+        * Current User => Update picture
+    * Keyboard
+        * Keyboard => Press 🌐︎ key to Change Input Source
+        * Text Input => Input Sources => Add "Persian - Standard" and "Finnish"
