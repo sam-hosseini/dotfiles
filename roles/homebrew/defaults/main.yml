@@ -44,6 +44,7 @@ homebrew_casks:
   - 1password
   - 1password-cli
   - anydesk
+  - bartender
   - basecamp
   - coconutbattery
   - cyberduck
@@ -52,7 +53,6 @@ homebrew_casks:
   - fantastical
   - fork
   - google-chrome
-  - hiddenbar
   - httpie-desktop
   - iina
   - iterm2
