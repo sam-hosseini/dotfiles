@@ -25,6 +25,7 @@
         * Manu Bar Controls => Clock Options => Show date: Never and Uncheck Show the day of the week
     * Desktop & Dock
         * Desktop & Stage Manager => Show Desktop => Only in Stage Manager on Click
+        * Mission Control => Hot Corners => Disable everything
     * Displays
         * Displays => Uncheck Automatically adjust brightness
         * Night Shift => Schedule: Sunset to Sunrise
