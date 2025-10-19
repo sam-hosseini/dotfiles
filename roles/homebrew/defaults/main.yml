@@ -43,6 +43,7 @@ homebrew_casks:
 
   - 1password
   - 1password-cli
+  - alcove
   - anydesk
   - bartender
   - basecamp
