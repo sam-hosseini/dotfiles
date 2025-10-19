@@ -62,7 +62,7 @@ homebrew_casks:
   - loom
   - nordvpn
   - numi
-  - postico@1
+  - postico
   - rectangle
   - redis-insight
   - slack
