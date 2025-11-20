@@ -22,6 +22,7 @@ homebrew_formulae:
   - magic-wormhole
   - mkcert
   - node@22
+  - opencode
   - p7zip
   - parallel
   - pipx
