@@ -1,4 +1,5 @@
 set --global --export BAT_THEME Dracula
+set --global --export EDITOR 'code --wait'
 set --global --export fish_emoji_width 2
 set --global --export fish_greeting ''
 set --global --export LC_ALL en_GB.UTF-8
