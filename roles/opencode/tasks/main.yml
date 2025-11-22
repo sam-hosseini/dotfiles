@@ -1,0 +1,10 @@
+- name: Create opencode config directory
+  ansible.builtin.file:
+    path: ~/.config/opencode
+    state: directory
+
+- name: Setup opencode config symlink
+  ansible.builtin.file:
+    src: '{{ DOTFILES_REPO }}/roles/opencode/files/config.json'
+    path: ~/.config/opencode/opencode.json
+    state: link

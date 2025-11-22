@@ -15,6 +15,7 @@
     - { role: '{{DOTFILES_REPO}}/roles/iterm',        tags: iterm        }
     - { role: '{{DOTFILES_REPO}}/roles/karabiner',    tags: karabiner    }
     - { role: '{{DOTFILES_REPO}}/roles/macos',        tags: macos        }
+    - { role: '{{DOTFILES_REPO}}/roles/opencode',     tags: opencode     }
     - { role: '{{DOTFILES_REPO}}/roles/rectangle',    tags: rectangle    }
     - { role: '{{DOTFILES_REPO}}/roles/starship',     tags: starship     }
     - { role: '{{DOTFILES_REPO}}/roles/vscode',       tags: vscode       }
