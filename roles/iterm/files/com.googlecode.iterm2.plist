@@ -977,6 +977,8 @@ Maximize Active Pane</string>
 			<false/>
 			<key>Shortcut</key>
 			<string></string>
+			<key>Show Offscreen Command line</key>
+			<false/>
 			<key>Show Status Bar</key>
 			<false/>
 			<key>Silence Bell</key>
