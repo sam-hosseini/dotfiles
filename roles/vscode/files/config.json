@@ -3,24 +3,24 @@
     "textMateRules": [
       {
         "scope": "support.type.property-name.table",
-        "settings": { "foreground": "#4AB68C" }
-      }
-    ]
+        "settings": { "foreground": "#4AB68C" },
+      },
+    ],
   },
   "search.exclude": {
     "**/usr/local/**": true,
     "**/var/folders/**": true,
-    "**/venv/lib/**": true
+    "**/venv/lib/**": true,
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": [
       "source.fixAll.ruff",
-      "source.organizeImports.ruff"
-    ]
+      "source.organizeImports.ruff",
+    ],
   },
   "tailwindCSS.experimental.classRegex": [
-    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
   ],
   "[django-html]": { "editor.formatOnSave": false },
   "[dockerfile]": { "editor.defaultFormatter": "ms-azuretools.vscode-docker" },
@@ -91,5 +91,5 @@
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.tree.indent": 16,
-  "workbench.tree.renderIndentGuides": "always"
+  "workbench.tree.renderIndentGuides": "always",
 }
