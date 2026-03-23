@@ -8,3 +8,9 @@
     src: '{{ DOTFILES_REPO }}/roles/opencode/files/config.json'
     path: ~/.config/opencode/opencode.json
     state: link
+
+- name: Setup opencode tui config symlink
+  ansible.builtin.file:
+    src: '{{ DOTFILES_REPO }}/roles/opencode/files/tui.json'
+    path: ~/.config/opencode/tui.json
+    state: link
