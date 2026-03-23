@@ -62,6 +62,7 @@
   "git.autofetch": true,
   "git.inputValidationSubjectLength": 72,
   "git.openRepositoryInParentFolders": "never",
+  "json.schemaDownload.trustedDomains": { "*": true },
   "path-autocomplete.extensionOnImport": true,
   "path-autocomplete.includeExtension": true,
   "path-autocomplete.pathMappings": { "/": "/" },
