@@ -48,6 +48,7 @@ homebrew_casks:
   - anydesk
   - bartender
   - basecamp
+  - claude-code
   - coconutbattery
   - cyberduck
   - docker-desktop
