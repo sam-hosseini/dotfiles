@@ -32,6 +32,7 @@
   "[typescript]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
   "[typescriptreact]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
   "chat.agentsControl.enabled": false,
+  "chat.viewSessions.enabled": false,
   "debug.toolBarLocation": "commandCenter",
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
