@@ -45,6 +45,7 @@
   "editor.lightbulb.enabled": "off",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
+  "editor.multiCursorLimit": 50000,
   "editor.quickSuggestions": { "strings": "on" },
   "editor.renderFinalNewline": "off",
   "editor.renderWhitespace": "trailing",
