@@ -54,7 +54,6 @@
   community.general.homebrew_cask:
     name: '{{ item }}'
     state: present
-    install_options: no-quarantine
     sudo_password: '{{ ansible_become_password }}'
 
 - name: Delete adhoc homebrew casks
