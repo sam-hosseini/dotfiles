@@ -51,7 +51,6 @@ homebrew_casks:
   - claude-code
   - coconutbattery
   - cyberduck
-  - docker-desktop
   - dropbox
   - fantastical
   - fork
@@ -63,6 +62,7 @@ homebrew_casks:
   - loom
   - nordvpn
   - numi
+  - orbstack
   - postico
   - rectangle
   - redis-insight
