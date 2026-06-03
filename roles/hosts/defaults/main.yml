@@ -20,5 +20,6 @@ ignored_hosts:
 disabled_hosts:
   - bbc.com
   - coinmarketcap.com
+  - pkgs.tailscale.com
   - update.googleapis.com
   - yle.fi
