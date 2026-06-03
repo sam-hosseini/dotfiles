@@ -20,6 +20,7 @@ ignored_hosts:
 disabled_hosts:
   - bbc.com
   - coinmarketcap.com
+  - downloads.nordcdn.com
   - pkgs.tailscale.com
   - update.googleapis.com
   - yle.fi
