@@ -63,3 +63,10 @@
     name: '{{ item }}'
     state: absent
     sudo_password: '{{ ansible_become_password }}'
+
+- name: Remove quarantine flag from all applications
+  become: yes
+  failed_when: false
+  changed_when: false
+  ansible.builtin.command:
+    cmd: xattr -rd com.apple.quarantine /Applications/
