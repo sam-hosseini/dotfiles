@@ -17,6 +17,7 @@
 * Set [un-automatable shortcuts](https://github.com/sam-hosseini/dotfiles/blob/main/roles/karabiner/files/shortcuts.md)
 * Tweak System Settings
     * Battery
+        * Charging => Set Charge Limit to 95% and disable Optimized Battery Charging
         * Options => Uncheck Slightly dim the display on battery
     * Accessibility
         * Zoom => Check Use scroll gesture with modifier keys to zoom
