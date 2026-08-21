@@ -2,6 +2,7 @@
 
 add_newline = false
 command_timeout = 5000
+scan_timeout = 300
 
 [battery]
 disabled = true
