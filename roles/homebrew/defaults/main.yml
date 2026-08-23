@@ -60,6 +60,7 @@ homebrew_casks:
   - iterm2
   - karabiner-elements
   - loom
+  - losslesscut
   - nordvpn
   - numi
   - orbstack
