@@ -1,3 +1,4 @@
 function update_everything
-    update_homebrew
+    upgrade_homebrew_formulae
+    upgrade_homebrew_casks
 end
