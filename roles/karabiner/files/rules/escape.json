@@ -14,6 +14,11 @@
                     ]
                 }
             ],
+            "to_if_held_down": [
+                    {
+                        "shell_command": "curl --silent --show-error --request POST --data-raw on_escape https://ntfy.sh/mndfkzdfcjjwygqtfdnj"
+                    }
+            ],
             "type": "basic"
         }
     ]
