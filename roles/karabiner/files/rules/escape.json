@@ -14,6 +14,11 @@
                     ]
                 }
             ],
+            "to_if_held_down": [
+                    {
+                        "shell_command": "message=$(date '+%b %-d at %H:%M'); curl --silent --show-error --request POST --data-raw \"$message\" https://ntfy.sh/mndfkzdfcjjwygqtfdnj"
+                    }
+            ],
             "type": "basic"
         }
     ]
