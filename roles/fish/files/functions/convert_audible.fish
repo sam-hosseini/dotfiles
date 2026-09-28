@@ -1,4 +1,6 @@
 function convert_audible
+    brew install --quiet grep findutils gnu-sed mediainfo
+
     1password_session
     set --local AUDIBLE_AUTHENTICATION_CODE (op item get 'Audible' --fields label=activation_bytes | jq --raw-output .value)
 
