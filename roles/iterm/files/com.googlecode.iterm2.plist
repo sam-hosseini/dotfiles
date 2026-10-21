@@ -28,6 +28,8 @@
 	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
+	<key>ClaudeCodeWorkgroupUpsellSuppressed</key>
+	<true/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Dracula</key>
@@ -261,7 +263,7 @@
 	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
-		<key>0x48-0x120000-0x4</key>
+		<key>0x48-0x120000-0x4-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>25</integer>
@@ -271,7 +273,7 @@
 			<string>Move Divider Left
 Resize Split Pane.Move Divider Left</string>
 		</dict>
-		<key>0x4a-0x120000-0x26</key>
+		<key>0x4a-0x120000-0x26-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>25</integer>
@@ -281,7 +283,7 @@ Resize Split Pane.Move Divider Left</string>
 			<string>Move Divider Down
 Resize Split Pane.Move Divider Down</string>
 		</dict>
-		<key>0x4b-0x120000-0x28</key>
+		<key>0x4b-0x120000-0x28-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>25</integer>
@@ -291,7 +293,7 @@ Resize Split Pane.Move Divider Down</string>
 			<string>Move Divider Up
 Resize Split Pane.Move Divider Up</string>
 		</dict>
-		<key>0x4c-0x120000-0x25</key>
+		<key>0x4c-0x120000-0x25-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>25</integer>
@@ -301,7 +303,7 @@ Resize Split Pane.Move Divider Up</string>
 			<string>Move Divider Right
 Resize Split Pane.Move Divider Right</string>
 		</dict>
-		<key>0x5c-0x100000-0x2a</key>
+		<key>0x5c-0x100000-0x2a-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>29</integer>
@@ -310,7 +312,7 @@ Resize Split Pane.Move Divider Right</string>
 			<key>Text</key>
 			<string>EBDF7095-0EAF-4383-905B-5A46151162EB</string>
 		</dict>
-		<key>0x62-0x100000-0xb</key>
+		<key>0x62-0x100000-0xb-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>25</integer>
@@ -320,7 +322,7 @@ Resize Split Pane.Move Divider Right</string>
 			<string>Maximize Active Pane
 Maximize Active Pane</string>
 		</dict>
-		<key>0x68-0x100000-0x4</key>
+		<key>0x68-0x100000-0x4-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>18</integer>
@@ -329,7 +331,7 @@ Maximize Active Pane</string>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0x6a-0x100000-0x26</key>
+		<key>0x6a-0x100000-0x26-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>21</integer>
@@ -338,7 +340,7 @@ Maximize Active Pane</string>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0x6b-0x100000-0x28</key>
+		<key>0x6b-0x100000-0x28-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>20</integer>
@@ -347,7 +349,7 @@ Maximize Active Pane</string>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0x6c-0x100000-0x25</key>
+		<key>0x6c-0x100000-0x25-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>19</integer>
@@ -356,7 +358,7 @@ Maximize Active Pane</string>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0x7c-0x120000-0x2a</key>
+		<key>0x7c-0x120000-0x2a-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>28</integer>
@@ -365,7 +367,7 @@ Maximize Active Pane</string>
 			<key>Text</key>
 			<string>EBDF7095-0EAF-4383-905B-5A46151162EB</string>
 		</dict>
-		<key>0xf72c-0x0-0x74</key>
+		<key>0xf72c-0x0-0x74-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>9</integer>
@@ -374,7 +376,7 @@ Maximize Active Pane</string>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf72d-0x0-0x79</key>
+		<key>0xf72d-0x0-0x79-0x1</key>
 		<dict>
 			<key>Action</key>
 			<integer>8</integer>
