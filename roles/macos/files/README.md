@@ -37,5 +37,5 @@
     * Users & Groups
         * Current User => Update picture
     * Keyboard
-        * Keyboard => Press 🌐︎ key to Change Input Source
+        * Keyboard => Press 🌐︎ key to Do Nothing
         * Text Input => Input Sources => Add "Persian - Standard" and "Finnish"
