@@ -21,14 +21,14 @@ homebrew_formulae:
   - jq
   - magic-wormhole
   - mkcert
-  - node@22
+  - node@24
   - opencode
   - p7zip
   - parallel
   - pipx
-  - postgresql@16
+  - postgresql@18
   - pre-commit
-  - python@3.12
+  - python@3.15
   - rename
   - ripgrep
   - ruby
