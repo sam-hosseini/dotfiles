@@ -118,7 +118,7 @@
     * karabiner => hyper acts as shift
 ---
 * <kbd>fn</kbd>
-    * wispr-flow => push to talk
+    * system => switch language
 * <kbd>control</kbd>
     * system => control + trackpad = zoom in
 * <kbd>spacebar</kbd>
