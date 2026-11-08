@@ -122,4 +122,6 @@
 * <kbd>control</kbd>
     * system => control + trackpad = zoom in
 * <kbd>spacebar</kbd>
+* <kbd>⌥</kbd>
+    * handy => transcribe shortcut
 * <kbd>←↑↓→</kbd>
