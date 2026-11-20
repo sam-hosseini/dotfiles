@@ -28,6 +28,7 @@
   "[javascript]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
   "[javascriptreact]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
   "[markdown]": { "editor.wordWrap": "off" },
+  "[plaintext]": { "editor.wordWrap": "on", "files.trimFinalNewlines": false },
   "[toml]": { "editor.defaultFormatter": "tamasfe.even-better-toml" },
   "[typescript]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
   "[typescriptreact]": { "editor.codeActionsOnSave": ["source.fixAll.eslint"] },
