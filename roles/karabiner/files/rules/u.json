@@ -1,0 +1,24 @@
+{
+    "description": "u",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "u",
+                "modifiers": {
+                    "mandatory": [
+                        "right_command",
+                        "right_control",
+                        "right_shift",
+                        "right_option"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "file=\"$HOME/notes.txt\" && printf '%28s' '' | tr ' ' '\\n' > \"$file\" && /opt/homebrew/bin/code --goto \"$file:10\""
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}

@@ -46,6 +46,7 @@
 * <kbd>Y</kbd>
     * vscode => command + Y = open repo commits on GitHub
 * <kbd>U</kbd>
+    * karabiner => hyper + U = open notes.txt
 * <kbd>I</kbd>
     * karabiner => hyper + I = inspect element in Chrome
 * <kbd>O</kbd>
